@@ -1,0 +1,23 @@
+              Gujjar Brother Transport — TEST DATA ONLY
+              test@example.test · TEST · ·
+
+
+
+
+                                                                    VEHICLES OIL CHANGE RECORD
+                                                                  TEST accounting period · 2026-01-01 to 2026-12-31 · PKR
+
+S/N       Vehicle Number     Previous Oil Change      DATE               Oil Change Meter      DATE               Distance            Closing Meter (km)       Travel after Oil                 DRIVER
+                             Meter (km)                                  (km)                                                                                  Change(km)
+
+       1 TEST-001                            140000 01/01/2026                         144700 01/01/2026                       4700                  145382                               682 TEST Driver
+
+
+One row per vehicle: latest approved oil change through period end; previous stored reading or preceding approved change. Closing meter uses dated approved trip/maintenance observations through the
+cutoff, never today’s vehicle meter.
+
+
+
+
+                                                                                                                                       Gujjar Brother Transport · Generated 2026-10-06T19:37:02.286+00:00 · Page 1 / 1
+

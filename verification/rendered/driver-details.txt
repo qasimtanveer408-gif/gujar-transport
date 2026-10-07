@@ -1,0 +1,42 @@
+              Gujjar Brother Transport — TEST DATA ONLY
+              test@example.test · TEST · ·
+
+
+
+
+                                                                                              Driver Details
+                                                                       TEST accounting period · 2026-01-01 to 2026-12-31 · PKR
+
+                                                                                                    Identification
+Driver                                                  Joining Date                                          Report period                                          Vehicle
+
+TEST Driver                                             01/01/2026                                            TEST accounting period (2026-01-01 to 2026-12-31) TEST-001
+
+
+
+                                                                                             Supplementary driver details
+driver name       vehical no        Sale                expense          profit              tool             punjab police      ave             weight              cycle               Driver Cycle       remarks
+                                                                                                              challan                                                                    commision
+
+TEST Driver       TEST-001                   80000.00         36000.00            44000.00          3000.00             0.00             7.91              12.345                    1           2000.00 —
+
+
+
+                                                                                        Recorded operating result by trip
+Date                                                                                                          Operating profit
+
+07/10/2026                                                                                                                                                                                                         44000.00
+
+
+2026-10-07                                                                                                                                                                            44000.00 PKR
+
+Supplementary output: the handwritten sheet defines requested information, not a complete printed template.
+
+Sale, expense and profit here mean recorded approved trip fare, category expense and their difference. Average divides matched distance by litres; mixed or missing fuel bases are unavailable. Fuel basis:
+measured. Weight is in metric tonnes.
+
+
+
+
+                                                                                                                                                Gujjar Brother Transport · Generated 2026-10-06T19:37:04.646+00:00 · Page 1 / 1
+

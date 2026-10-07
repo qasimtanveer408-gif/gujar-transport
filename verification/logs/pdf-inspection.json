@@ -1,0 +1,23 @@
+{
+  "oil.pdf": {
+    "pages": 1
+  },
+  "combined-multipage.pdf": {
+    "pages": 5
+  },
+  "monthly.pdf": {
+    "pages": 1
+  },
+  "office-long-description.pdf": {
+    "pages": 6
+  },
+  "driver-details.pdf": {
+    "pages": 1
+  },
+  "combined.pdf": {
+    "pages": 2
+  },
+  "office.pdf": {
+    "pages": 1
+  }
+}

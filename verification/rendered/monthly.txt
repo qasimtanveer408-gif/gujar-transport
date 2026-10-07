@@ -1,0 +1,64 @@
+              Gujjar Brother Transport — TEST DATA ONLY
+              test@example.test · TEST · ·
+
+
+
+
+                                                                                                                      TRANPORT MONTHLY HISSAB
+                                                                                                                  TEST accounting period · 2026-01-01 to 2026-12-31 · PKR
+
+INCOMPLETE — review missing sources before finalizing.
+
+S/N      VEHICLE #    DRIVER         INCOME         CHALLAN      TOLL PLAZA DESEL            GBT      MONTH          DRIVER.       Last Main       Total Main   OFFICE             MAIN        MIST         TOTAL          PROFIT         KM             DESEL           AVE             WEGHT           chaker
+                                                                                                      MAINT.         COMM.                                      EXPENSE                                     EXPENSE        LOSS
+
+      1 TEST-001      TEST Driver               —         0.00        3000.00        29000.00 G            1800.00       2000.00               —            —               0.00          —            —        37800.00              —        538.000          68.000          7.9118          12.345                1
+                                                                                              B
+                                                                                              T
+
+  TOT —               —                         —         0.00        3000.00       29000.00 —             1800.00       2000.00               —            —               0.00          —            —        37800.00              —              —               —               —               —               —
+   AL
+
+
+
+                                                                                                                               Total / net sale and percentage adjustment
+Total Sale                                                                   In the Name of Allah                                                        Amount                                                                       Net Sale
+
+                                                                         —                                                                           —                                                                          —                                                                                    —
+
+
+
+                                                                                                                                          Profit / share allocation
+TOTAL PROFIT/LOSS                                                            SHARS                                                                       1 SHARE =                                                                    Allocation
+
+                                                                         —                                                                           —                                                                          — —
+
+
+
+                                                                                                                                  MONTH WISE INCOME COMPARISON
+Period                                                                       Sale                                                                        Expense                                                                      Result
+
+Unavailable                                                                                                                                          —                                                                          —                                                                                    —
+
+
+
+MANAGER SIGN                                                                                                                                             C.E.O SIGN
+
+
+
+
+                                                                                                            Canonical reconciliation (separate from unconfirmed printed subtotals)
+Gross recognized fare               Brokerage                        Trip expense                     Other current costs                Unallocated overhead               Operating profit                Trip result                        Carried balances                     Printed final result
+
+                       80000.00                               0.00                         36000.00                            1800.00                               0.00                        42200.00                           44000.00                                   —                                     —
+
+
+INCOME, Last Main, Total Main, MAIN, MIST, Total Sale and printed final PROFIT LOSS need confirmed business mappings. Percentages, shares, beneficiaries and comparison history are not configured; their slots remain blank.
+
+DESEL before MONTH MAINT. is PKR cost; DESEL after KM is matched measured litres. AVE uses four decimals. Carried balances are not current expenses.
+
+
+
+
+                                                                                                                                                                                                                                           Gujjar Brother Transport · Generated 2026-10-06T19:37:02.79+00:00 · Page 1 / 1
+

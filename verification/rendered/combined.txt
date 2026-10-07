@@ -1,0 +1,106 @@
+              Gujjar Brother Transport — TEST DATA ONLY
+              test@example.test · TEST · ·
+
+
+
+
+                                                                                                                                   CYCLE INCOME DETAIL
+                                                                                                                     TEST accounting period · 2026-01-01 to 2026-12-31 · PKR
+
+INCOMPLETE — review missing sources before finalizing.
+
+                                                                                                                                                       Identification
+Driver                                                         Joining Date                                                 Report period                                                       Vehicle                                                           Vehicle Advance
+
+TEST Driver                                                    01/01/2026                                                   TEST accounting period (2026-01-01 to 2026-12-31)                   TEST-001                                                                                                                          —
+
+
+
+                          VEHICLE MAINTENANCE                                                                                                                                                 CYCLE INCOME DETAIL
+Date             Detail                           Cost         OIL        Tyre        Date        Cycle                     Fare             Diesel       Chln          Toll Plaza     Food          inm          Other Exp. Mobil Oil        Driver         Total Exp.     Profit Loss Travl (km)       Diesel         Avg Km/L
+                                                                          Exp.                                                               (Price)                                                                                          com                                                        (Ltr)
+
+01/01/2026       TEST body structured invoice       400.00            —           —   07/10/2026 TEST Depot A / TEST             80000.00      29000.00          0.00       3000.00       1200.00          0.00        800.00          0.00       2000.00       36000.00       44000.00        538.000         68.000           7.91
+                 item                                                                            Depot B
+
+01/01/2026       TEST engine structured             500.00            —           —   TOTAL       —                              80000.00      29000.00          0.00      3000.00        1200.00          0.00        800.00          0.00       2000.00       36000.00       44000.00              —              —             —
+                 invoice item
+
+01/01/2026       TEST oil_change structured                —    200.00            —
+                 invoice item
+
+01/01/2026       TEST gearbox structured            250.00            —           —
+                 invoice item
+
+01/01/2026       TEST tyres structured invoice             —          —     300.00
+                 item
+
+01/01/2026       TEST cabin structured invoice      150.00            —           —
+                 item
+
+TOTAL            —                                 1300.00      200.00      300.00
+
+
+
+                                                                                                                                                  VEHICLE SUMMARY
+Start Meter                       Close Meter                         Total Travel                        Monthly Maintenance                Driver Commission                    TRACKER                             Total Expenses                       Total Sale                            Profit/Loss
+
+                     144844.000                          145382.000                           538.000                             1300.00                               2000.00                                   —                                    —                                    —                                     —
+
+
+
+                                                                                                                                                   Driver settlement
+Dr.Name            Driver Sale        Driver               Mobile Load           TOTAL            Absent             Call Fine              Salary Advance     Loan Install.         Irresponsible       Other              Total Deduction Driver Net                  Total Loan          Loan Return           Loan left
+                                      Commission                                                                                                                                     Vehicle loss                                           Payable
+
+TEST Driver                       —              2000.00                    —                 —                  —                    —                    —                   —                     —                  —                     —                   —             50000.00             15000.00             35000.00
+
+
+
+DRIVER SIGN                                                    DRIVER THUMB                                                 PAID BY                                                             SIGN                                                              PAID DATE
+
+
+
+
+                                                                                                                                                                                                                                                       Gujjar Brother Transport · Generated 2026-10-06T19:37:03.339+00:00 · Page 1 / 2
+              Gujjar Brother Transport — TEST DATA ONLY
+              test@example.test · TEST · ·
+
+
+
+
+                                                                                                                              CYCLE INCOME DETAIL
+                                                                                                                   TEST accounting period · 2026-01-01 to 2026-12-31 · PKR
+
+INCOMPLETE — review missing sources before finalizing.
+
+                                 ENGINE                                                                       GEAR                                                                     BODY / CABIN                                                                     TYRES
+Date               Detail                                       Cost        Date               Detail                                       Cost        Date              Detail                                        Cost        Date               Detail                                             Cost
+
+01/01/2026         TEST engine structured invoice item             500.00   01/01/2026         TEST gearbox structured invoice item            250.00   01/01/2026        TEST body structured invoice item               400.00    01/01/2026         TEST tyres structured invoice item                    300.00
+
+—                  TEST unposted engine work detail                     —   —                  TEST unposted gearbox work detail                    —   01/01/2026        TEST cabin structured invoice item              150.00    —                  TEST unposted tyres work detail                            —
+
+—                  Total Bill                                      500.00   —                  Total Bill                                      250.00   —                 TEST unposted body work detail                       —    —                  Total Bill                                            300.00
+
+                                                                                                                                                        —                 TEST unposted cabin work detail                      —
+
+                                                                                                                                                        —                 Total Bill                                      550.00
+
+
+
+GBT SIGN                                                                                                                                                C.E.O. SIGN
+
+
+
+
+Vehicle Advance, Driver Sale, Mobile Load, deductions, tracker and printed settlement totals lack confirmed sources/calculations. Payment and signature spaces remain blank; this is not a finalized payment voucher.
+
+Other Exp. includes other + service + parking to reconcile the ten-category trip total. Loan figures are cumulative through cutoff, including opening principal. Undated component notes are current notes without an assumed historical date. Maintenance totals and component history are separate views of
+the same items, not additional expenses.
+
+
+
+
+                                                                                                                                                                                                                                        Gujjar Brother Transport · Generated 2026-10-06T19:37:03.339+00:00 · Page 2 / 2
+

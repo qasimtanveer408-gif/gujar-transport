@@ -1,0 +1,19 @@
+[Unit]
+Description=Gujjar Brother Transport
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+User=gbt
+Group=gbt
+WorkingDirectory=/srv/gbt/current
+EnvironmentFile=/etc/gbt/gbt.env
+ExecStart=/usr/bin/node /srv/gbt/current/dist/server/index.js
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+[Install]
+WantedBy=multi-user.target

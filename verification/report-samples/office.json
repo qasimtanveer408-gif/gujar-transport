@@ -1,0 +1,149 @@
+{
+  "kind": "office",
+  "title": "OFFICE -TEST accounting period",
+  "metadata": {
+    "to": "2026-12-31",
+    "from": "2026-01-01",
+    "phone_1": "TEST",
+    "phone_2": "",
+    "phone_3": "",
+    "currency": "PKR",
+    "timezone": "Asia/Karachi",
+    "generated_at": "2026-10-06T19:37:01.34+00:00",
+    "period_label": "TEST accounting period",
+    "business_name": "Gujjar Brother Transport — TEST DATA ONLY",
+    "contact_email": "test@example.test"
+  },
+  "notes": [
+    "com = approved brokerage commission; total = daily commission; Bill = unallocated approved office expenses once per day; P/L = total − Bill. Quoted freight is not recognized brokerage revenue.",
+    "External driver names have no separate verified source; left unavailable. Existing driver_contact is displayed under Mobile-no pending confirmation of its contents."
+  ],
+  "sections": [
+    {
+      "title": "",
+      "columns": [
+        {
+          "key": "date",
+          "label": "Date",
+          "type": "date",
+          "width": 1
+        },
+        {
+          "key": "vehicle",
+          "label": "Vehical",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "driver",
+          "label": "driver",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "mobile",
+          "label": "Mobile-no",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "cargo",
+          "label": "Things",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "origin",
+          "label": "From",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "destination",
+          "label": "Where",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "freight",
+          "label": "Rent/U/N",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "commission",
+          "label": "com",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "total",
+          "label": "total",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "description",
+          "label": "Expense",
+          "type": "text",
+          "width": 3
+        },
+        {
+          "key": "bill",
+          "label": "Bill",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "profit",
+          "label": "P/L",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "date": "2026-10-07",
+          "vehicle": "TEST EXTERNAL 2",
+          "driver": null,
+          "mobile": "00000000000",
+          "cargo": "TEST cargo",
+          "origin": "TEST A",
+          "destination": "TEST B",
+          "freight": "45000.00",
+          "commission": "1500.00",
+          "total": "3000.00",
+          "description": "TEST stationery expense (400.00)",
+          "bill": "400.00",
+          "profit": "2600.00",
+          "_day": "2026-10-07"
+        },
+        {
+          "date": null,
+          "vehicle": "TEST EXTERNAL 1",
+          "driver": null,
+          "mobile": "00000000000",
+          "cargo": "TEST cargo",
+          "origin": "TEST A",
+          "destination": "TEST B",
+          "freight": "45000.00",
+          "commission": "1500.00",
+          "total": null,
+          "description": null,
+          "bill": null,
+          "profit": null,
+          "_day": "2026-10-07"
+        }
+      ],
+      "total": {
+        "date": "PERIOD TOTAL",
+        "commission": "3000.00",
+        "total": "3000.00",
+        "bill": "400.00",
+        "profit": "2600.00"
+      }
+    }
+  ],
+  "paper": "A4",
+  "incomplete": true
+}

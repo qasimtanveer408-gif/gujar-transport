@@ -1,0 +1,727 @@
+{
+  "kind": "combined",
+  "title": "CYCLE INCOME DETAIL",
+  "metadata": {
+    "to": "2026-12-31",
+    "from": "2026-01-01",
+    "phone_1": "TEST",
+    "phone_2": "",
+    "phone_3": "",
+    "currency": "PKR",
+    "timezone": "Asia/Karachi",
+    "generated_at": "2026-10-06T19:37:03.339+00:00",
+    "period_label": "TEST accounting period",
+    "business_name": "Gujjar Brother Transport — TEST DATA ONLY",
+    "contact_email": "test@example.test"
+  },
+  "notes": [
+    "Vehicle Advance, Driver Sale, Mobile Load, deductions, tracker and printed settlement totals lack confirmed sources/calculations. Payment and signature spaces remain blank; this is not a finalized payment voucher.",
+    "Other Exp. includes other + service + parking to reconcile the ten-category trip total. Loan figures are cumulative through cutoff, including opening principal. Undated component notes are current notes without an assumed historical date. Maintenance totals and component history are separate views of the same items, not additional expenses."
+  ],
+  "sections": [
+    {
+      "title": "Identification",
+      "role": "summary",
+      "columns": [
+        {
+          "key": "driver",
+          "label": "Driver",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "joining",
+          "label": "Joining Date",
+          "type": "date",
+          "width": 1
+        },
+        {
+          "key": "period",
+          "label": "Report period",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "vehicle",
+          "label": "Vehicle",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "advance",
+          "label": "Vehicle Advance",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "driver": "TEST Driver",
+          "joining": "2026-01-01",
+          "period": "TEST accounting period (2026-01-01 to 2026-12-31)",
+          "vehicle": "TEST-001"
+        }
+      ]
+    },
+    {
+      "title": "VEHICLE MAINTENANCE",
+      "role": "maintenance",
+      "columns": [
+        {
+          "key": "date",
+          "label": "Date",
+          "type": "date",
+          "width": 1.6
+        },
+        {
+          "key": "detail",
+          "label": "Detail",
+          "type": "text",
+          "width": 3
+        },
+        {
+          "key": "cost",
+          "label": "Cost",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "oil",
+          "label": "OIL",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "tyre",
+          "label": "Tyre Exp.",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "date": "2026-01-01",
+          "detail": "TEST body structured invoice item",
+          "cost": "400.00",
+          "oil": null,
+          "tyre": null
+        },
+        {
+          "date": "2026-01-01",
+          "detail": "TEST engine structured invoice item",
+          "cost": "500.00",
+          "oil": null,
+          "tyre": null
+        },
+        {
+          "date": "2026-01-01",
+          "detail": "TEST oil_change structured invoice item",
+          "cost": null,
+          "oil": "200.00",
+          "tyre": null
+        },
+        {
+          "date": "2026-01-01",
+          "detail": "TEST gearbox structured invoice item",
+          "cost": "250.00",
+          "oil": null,
+          "tyre": null
+        },
+        {
+          "date": "2026-01-01",
+          "detail": "TEST tyres structured invoice item",
+          "cost": null,
+          "oil": null,
+          "tyre": "300.00"
+        },
+        {
+          "date": "2026-01-01",
+          "detail": "TEST cabin structured invoice item",
+          "cost": "150.00",
+          "oil": null,
+          "tyre": null
+        }
+      ],
+      "total": {
+        "date": "TOTAL",
+        "cost": "1300.00",
+        "oil": "200.00",
+        "tyre": "300.00"
+      }
+    },
+    {
+      "title": "CYCLE INCOME DETAIL",
+      "role": "cycles",
+      "columns": [
+        {
+          "key": "business_date",
+          "label": "Date",
+          "type": "date",
+          "width": 1
+        },
+        {
+          "key": "route",
+          "label": "Cycle",
+          "type": "text",
+          "width": 2
+        },
+        {
+          "key": "fare",
+          "label": "Fare",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "diesel",
+          "label": "Diesel (Price)",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "fines_permits",
+          "label": "Chln",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "tolls",
+          "label": "Toll Plaza",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "food",
+          "label": "Food",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "reward",
+          "label": "inm",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "other_expense",
+          "label": "Other Exp.",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "engine_oil",
+          "label": "Mobil Oil",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "commission",
+          "label": "Driver com",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "total_expense",
+          "label": "Total Exp.",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "profit",
+          "label": "Profit Loss",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "total_km",
+          "label": "Travl (km)",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "fuel_litres",
+          "label": "Diesel (Ltr)",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "average",
+          "label": "Avg Km/L",
+          "type": "number",
+          "width": 1,
+          "decimals": 2
+        }
+      ],
+      "rows": [
+        {
+          "id": "a8a2000a-085f-4063-ac0f-115e63470b22",
+          "fare": "80000.00",
+          "food": "1200.00",
+          "cargo": null,
+          "other": "800.00",
+          "tolls": "3000.00",
+          "diesel": "29000.00",
+          "origin": "TEST Depot A",
+          "profit": "44000.00",
+          "reward": "0",
+          "weight": "12.345",
+          "average": "7.91",
+          "parking": "0",
+          "remarks": "TEST trip remarks",
+          "service": "0",
+          "version": 4,
+          "total_km": "538.000",
+          "driver_id": "e947f749-f485-4072-aa6b-50ffbcef1bff",
+          "commission": "2000.00",
+          "created_at": "2026-10-06T19:37:01.221+00:00",
+          "created_by": "e47e55ab-7416-4f36-b1ea-7c898525de15",
+          "engine_oil": "0",
+          "fuel_basis": "measured",
+          "vehicle_id": "0a52b669-b3ab-4b70-9103-59b909f307b0",
+          "destination": "TEST Depot B",
+          "fuel_litres": "68.000",
+          "trip_number": "GBT-0000001",
+          "weight_unit": "metric tonnes",
+          "cycle_number": "TEST-CYCLE-001",
+          "end_odometer": "145382.000",
+          "business_date": "2026-10-07",
+          "fines_permits": "0",
+          "total_expense": "36000.00",
+          "start_odometer": "144844.000",
+          "driver_id_label": "TEST Driver",
+          "financial_state": "Approved",
+          "vehicle_id_label": "TEST-001",
+          "operational_state": "Completed",
+          "route_description": "TEST Depot A / TEST Depot B",
+          "customer_reference": null,
+          "route": "TEST Depot A / TEST Depot B",
+          "other_expense": "800.00"
+        }
+      ],
+      "total": {
+        "business_date": "TOTAL",
+        "fare": "80000.00",
+        "diesel": "29000.00",
+        "fines_permits": "0.00",
+        "tolls": "3000.00",
+        "food": "1200.00",
+        "reward": "0.00",
+        "other_expense": "800.00",
+        "engine_oil": "0.00",
+        "commission": "2000.00",
+        "total_expense": "36000.00",
+        "profit": "44000.00"
+      }
+    },
+    {
+      "title": "VEHICLE SUMMARY",
+      "role": "summary",
+      "columns": [
+        {
+          "key": "start",
+          "label": "Start Meter",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "end",
+          "label": "Close Meter",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "travel",
+          "label": "Total Travel",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "maintenance",
+          "label": "Monthly Maintenance",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "commission",
+          "label": "Driver Commission",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "tracker",
+          "label": "TRACKER",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "expenses",
+          "label": "Total Expenses",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "sale",
+          "label": "Total Sale",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "profit",
+          "label": "Profit/Loss",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "start": "144844.000",
+          "end": "145382.000",
+          "travel": "538.00",
+          "maintenance": "1300.00",
+          "commission": "2000.00"
+        }
+      ]
+    },
+    {
+      "title": "Driver settlement",
+      "columns": [
+        {
+          "key": "driver",
+          "label": "Dr.Name",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "driver_sale",
+          "label": "Driver Sale",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "commission",
+          "label": "Driver Commission",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "mobile",
+          "label": "Mobile Load",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "total",
+          "label": "TOTAL",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "absent",
+          "label": "Absent",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "call_fine",
+          "label": "Call Fine",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "advance",
+          "label": "Salary Advance",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "installment",
+          "label": "Loan Install.",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "loss",
+          "label": "Irresponsible Vehicle loss",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "deductions",
+          "label": "Total Deduction",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "payable",
+          "label": "Driver Net Payable",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "taken",
+          "label": "Total Loan",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "paid",
+          "label": "Loan Return",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "left",
+          "label": "Loan left",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "driver": "TEST Driver",
+          "commission": "2000.00",
+          "taken": "50000.00",
+          "paid": "15000.00",
+          "left": "35000.00"
+        }
+      ]
+    },
+    {
+      "title": "",
+      "role": "signature",
+      "columns": [
+        {
+          "key": "sign",
+          "label": "DRIVER SIGN",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "thumb",
+          "label": "DRIVER THUMB",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "by",
+          "label": "PAID BY",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "signed",
+          "label": "SIGN",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "date",
+          "label": "PAID DATE",
+          "type": "date",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {}
+      ]
+    },
+    {
+      "title": "ENGINE",
+      "role": "component",
+      "columns": [
+        {
+          "key": "date",
+          "label": "Date",
+          "type": "date",
+          "width": 1.6
+        },
+        {
+          "key": "detail",
+          "label": "Detail",
+          "type": "text",
+          "width": 4
+        },
+        {
+          "key": "cost",
+          "label": "Cost",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "date": "2026-01-01",
+          "detail": "TEST engine structured invoice item",
+          "cost": "500.00"
+        },
+        {
+          "date": null,
+          "detail": "TEST unposted engine work detail",
+          "cost": null
+        }
+      ],
+      "total": {
+        "detail": "Total Bill",
+        "cost": "500.00"
+      }
+    },
+    {
+      "title": "GEAR",
+      "role": "component",
+      "columns": [
+        {
+          "key": "date",
+          "label": "Date",
+          "type": "date",
+          "width": 1.6
+        },
+        {
+          "key": "detail",
+          "label": "Detail",
+          "type": "text",
+          "width": 4
+        },
+        {
+          "key": "cost",
+          "label": "Cost",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "date": "2026-01-01",
+          "detail": "TEST gearbox structured invoice item",
+          "cost": "250.00"
+        },
+        {
+          "date": null,
+          "detail": "TEST unposted gearbox work detail",
+          "cost": null
+        }
+      ],
+      "total": {
+        "detail": "Total Bill",
+        "cost": "250.00"
+      }
+    },
+    {
+      "title": "BODY / CABIN",
+      "role": "component",
+      "columns": [
+        {
+          "key": "date",
+          "label": "Date",
+          "type": "date",
+          "width": 1.6
+        },
+        {
+          "key": "detail",
+          "label": "Detail",
+          "type": "text",
+          "width": 4
+        },
+        {
+          "key": "cost",
+          "label": "Cost",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "date": "2026-01-01",
+          "detail": "TEST body structured invoice item",
+          "cost": "400.00"
+        },
+        {
+          "date": "2026-01-01",
+          "detail": "TEST cabin structured invoice item",
+          "cost": "150.00"
+        },
+        {
+          "date": null,
+          "detail": "TEST unposted body work detail",
+          "cost": null
+        },
+        {
+          "date": null,
+          "detail": "TEST unposted cabin work detail",
+          "cost": null
+        }
+      ],
+      "total": {
+        "detail": "Total Bill",
+        "cost": "550.00"
+      }
+    },
+    {
+      "title": "TYRES",
+      "role": "component",
+      "columns": [
+        {
+          "key": "date",
+          "label": "Date",
+          "type": "date",
+          "width": 1.6
+        },
+        {
+          "key": "detail",
+          "label": "Detail",
+          "type": "text",
+          "width": 4
+        },
+        {
+          "key": "cost",
+          "label": "Cost",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "date": "2026-01-01",
+          "detail": "TEST tyres structured invoice item",
+          "cost": "300.00"
+        },
+        {
+          "date": null,
+          "detail": "TEST unposted tyres work detail",
+          "cost": null
+        }
+      ],
+      "total": {
+        "detail": "Total Bill",
+        "cost": "300.00"
+      }
+    },
+    {
+      "title": "",
+      "role": "signature",
+      "columns": [
+        {
+          "key": "manager",
+          "label": "GBT SIGN",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "ceo",
+          "label": "C.E.O. SIGN",
+          "type": "text",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {}
+      ]
+    }
+  ],
+  "paper": "A3",
+  "incomplete": true
+}
