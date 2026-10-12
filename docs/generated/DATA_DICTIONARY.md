@@ -21,6 +21,8 @@ Generated from applied migrations. API financial RPCs cast numeric values to dec
 | app_users | version | integer | NO |
 | app_users | created_at | timestamp with time zone | NO |
 | app_users | updated_at | timestamp with time zone | NO |
+| app_users | avatar_url | text | YES |
+| app_users | auth_provider | text | NO |
 | attachments | id | uuid | NO |
 | attachments | vehicle_id | uuid | YES |
 | attachments | driver_id | uuid | YES |
@@ -68,6 +70,34 @@ Generated from applied migrations. API financial RPCs cast numeric values to dec
 | companies | name | text | NO |
 | companies | created_by | uuid | YES |
 | companies | version | integer | NO |
+| custom_field_definitions | id | uuid | NO |
+| custom_field_definitions | resource | text | NO |
+| custom_field_definitions | key | text | NO |
+| custom_field_definitions | label | text | NO |
+| custom_field_definitions | type | text | NO |
+| custom_field_definitions | default_value | jsonb | YES |
+| custom_field_definitions | required | boolean | NO |
+| custom_field_definitions | display_order | integer | NO |
+| custom_field_definitions | show_form | boolean | NO |
+| custom_field_definitions | show_card | boolean | NO |
+| custom_field_definitions | show_table | boolean | NO |
+| custom_field_definitions | show_print | boolean | NO |
+| custom_field_definitions | hidden | boolean | NO |
+| custom_field_definitions | archived | boolean | NO |
+| custom_field_definitions | restricted | boolean | NO |
+| custom_field_definitions | options | ARRAY | NO |
+| custom_field_definitions | formula | text | NO |
+| custom_field_definitions | ast | jsonb | YES |
+| custom_field_definitions | dependencies | ARRAY | NO |
+| custom_field_definitions | required_permissions | ARRAY | NO |
+| custom_field_definitions | version | integer | NO |
+| custom_field_definitions | created_by | uuid | NO |
+| custom_field_definitions | created_at | timestamp with time zone | NO |
+| custom_field_values | resource | text | NO |
+| custom_field_values | record_id | uuid | NO |
+| custom_field_values | field_id | uuid | NO |
+| custom_field_values | value | jsonb | YES |
+| custom_field_values | updated_at | timestamp with time zone | NO |
 | driver_duty_sessions | id | uuid | NO |
 | driver_duty_sessions | driver_id | uuid | NO |
 | driver_duty_sessions | started_at | timestamp with time zone | NO |
@@ -123,6 +153,7 @@ Generated from applied migrations. API financial RPCs cast numeric values to dec
 | drivers | created_by | uuid | NO |
 | drivers | created_at | timestamp with time zone | NO |
 | drivers | version | integer | NO |
+| drivers | photo_attachment_id | uuid | YES |
 | expense_categories | code | text | NO |
 | expense_categories | label | text | NO |
 | expense_categories | active | boolean | NO |
@@ -189,6 +220,7 @@ Generated from applied migrations. API financial RPCs cast numeric values to dec
 | maintenance_records | created_by | uuid | NO |
 | maintenance_records | created_at | timestamp with time zone | NO |
 | maintenance_records | version | integer | NO |
+| maintenance_records | archived_at | timestamp with time zone | YES |
 | notification_reads | notification_id | uuid | NO |
 | notification_reads | user_id | uuid | NO |
 | notification_reads | read_at | timestamp with time zone | NO |
@@ -242,6 +274,10 @@ Generated from applied migrations. API financial RPCs cast numeric values to dec
 | period_close_snapshots | closed_at | timestamp with time zone | NO |
 | permissions | code | text | NO |
 | permissions | description | text | NO |
+| print_template_settings | kind | text | NO |
+| print_template_settings | orientation | text | NO |
+| print_template_settings | signatures | ARRAY | NO |
+| print_template_settings | version | integer | NO |
 | revenue_entries | id | uuid | NO |
 | revenue_entries | business_date | date | NO |
 | revenue_entries | amount | numeric | NO |
@@ -260,6 +296,13 @@ Generated from applied migrations. API financial RPCs cast numeric values to dec
 | roles | name | text | NO |
 | roles | reserved | boolean | NO |
 | roles | version | integer | NO |
+| routes | id | uuid | NO |
+| routes | origin | text | NO |
+| routes | destination | text | NO |
+| routes | archived | boolean | NO |
+| routes | version | integer | NO |
+| routes | created_by | uuid | NO |
+| routes | created_at | timestamp with time zone | NO |
 | settlement_allocations | id | uuid | NO |
 | settlement_allocations | cash_transaction_id | uuid | NO |
 | settlement_allocations | revenue_entry_id | uuid | YES |
@@ -302,6 +345,7 @@ Generated from applied migrations. API financial RPCs cast numeric values to dec
 | trips | created_by | uuid | NO |
 | trips | created_at | timestamp with time zone | NO |
 | trips | version | integer | NO |
+| trips | archived_at | timestamp with time zone | YES |
 | user_roles | user_id | uuid | NO |
 | user_roles | role_id | uuid | NO |
 | user_vehicle_scopes | user_id | uuid | NO |
@@ -313,6 +357,8 @@ Generated from applied migrations. API financial RPCs cast numeric values to dec
 | vehicle_driver_assignments | ended_at | timestamp with time zone | YES |
 | vehicle_driver_assignments | remarks | text | YES |
 | vehicle_driver_assignments | created_by | uuid | NO |
+| vehicle_driver_assignments | previous_assignment_id | uuid | YES |
+| vehicle_driver_assignments | transfer_date | date | YES |
 | vehicle_financials | vehicle_id | uuid | NO |
 | vehicle_financials | purchase_price | numeric | YES |
 | vehicles | id | uuid | NO |
@@ -335,3 +381,6 @@ Generated from applied migrations. API financial RPCs cast numeric values to dec
 | vehicles | version | integer | NO |
 | vehicles | purchase_year | integer | YES |
 | vehicles | major_maintenance_work | text | YES |
+| vehicles | address | text | YES |
+| vehicles | permit_expiry | date | YES |
+| vehicles | insurance_expiry | date | YES |

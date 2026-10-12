@@ -1,6 +1,6 @@
 import {PGlite} from '@electric-sql/pglite';
 import {readdir,readFile} from 'node:fs/promises';
-export async function createTestDatabase(){
+export async function createTestDatabase(options:{throughMigration?:string}={}){
  const db=new PGlite();await db.waitReady;
  // Isolated test fixtures only: production auth schema is owned by Supabase.
  await db.exec(`create role anon; create role authenticated; create role service_role bypassrls;
@@ -14,7 +14,7 @@ export async function createTestDatabase(){
  create table storage.objects(id uuid primary key default gen_random_uuid(),bucket_id text references storage.buckets(id),name text,owner uuid,metadata jsonb);
  alter table storage.objects enable row level security;grant usage on schema storage to authenticated;grant select,insert,update,delete on storage.objects to authenticated;
  `);
- for(const name of (await readdir('supabase/migrations')).filter(n=>n.endsWith('.sql')).sort()){
+ for(const name of (await readdir('supabase/migrations')).filter(n=>n.endsWith('.sql')&&(!options.throughMigration||n<=options.throughMigration)).sort()){
   try{await db.exec(await readFile('supabase/migrations/'+name,'utf8'));console.log('Migration applied in isolated PostgreSQL:',name);}catch(error){await db.close();throw new Error('Migration failed: '+name,{cause:error});}
  }
  return db;

@@ -1,23 +1,15 @@
-# Project state — runnable checkpoint
+# Project state — 11 October 2026 master review
 
-Version 0.1.0, 2026-10-06. Supabase-only architecture preserved. No real Supabase/Hostinger account connected and no production data changed. Local workspace returned to an earlier snapshot during continuation; setup/tests/alerts/imports were restored and rechecked. Test report refers only to this packaged source.
+The supplied existing React/Vite, Express and Supabase project is updated in place. Current rollout instructions are in `../MASTER-UPDATE-START-HERE.md`; current verification is in `MASTER_UPDATE_TEST_REPORT.md`.
 
-| Path | Purpose |
-|---|---|
-| client/src; client/public | React screens, supplied logo/template assets |
-| server | BFF/session security and protected APIs |
-| shared | Contracts, decimal calculations, generated schema catalogue |
-| supabase/migrations | Ordered schema, RLS and SQL actions |
-| supabase/optional; tests | Cron definition; real-stack pgTAP |
-| scripts; tests | Setup/admin/build helpers and isolated verification |
-| deploy; docs | Hostinger examples, guides, traceability/test evidence |
+The interface uses balanced professional sizing, readable light/dark controls, responsive desktop/tablet/mobile layouts and explicit vehicle/driver selection confirmations. The existing user-search control is retained, with corrected icon spacing and stale-request handling. Staff login uses email/password; session encryption, HttpOnly cookies, CSRF/Origin checks, role permissions, logout and account administration remain active.
 
-Phases 0–3 have core implemented workflows and local tests. Phase 4 is partial (maintenance, loans, accrual/payments, brokerage), Phase 5 partial (dashboard, alerts, reports, periods, operational imports), and Phase 6 has local tests/docs while external acceptance remains pending. This is not the complete requested system.
+Existing dated driver history/transfers, reusable routes, Punjab Police/Driver cycle commission labels, print signatures, separate notification bell/center, service/permit/insurance reminders, custom fields/formulas, fleet and financial modules are retained. Companies remains hidden in navigation while related database relationships stay intact.
 
-Remaining implementation: payroll-linked recovery, deductions/advances and loan/payment reversals; source-linked receivable/payable cash settlement entry; approved adjustments and odometer replacement; percentage commission rules; vehicle purchase-price editing; detailed driver statistics and tyre/warranty controls; maintenance/booking correction; full category/monthly reconciliation, dedicated fuel/oil reports and year comparison; historical financial imports; ordinary-user recovery UI; additional service/expense/loan alerts and safe automated orphan cleanup.
+The earlier `20261011120000_password_login_only.sql` migration drops an unused privileged social-login provisioning function. Existing user profiles, role assignments, sessions and business records remain unchanged, and applied historical migrations are preserved. Schema snapshots describe the resulting database.
 
-Exact next task: implement protected loan/payment reversal and payroll-linked recovery with typed source links, reason/audit, period lock and idempotency; add settlement UI/tests proving no duplicate operating expense. Then implement cash allocations, remaining reports/imports and real Supabase acceptance. Do not regenerate another stack on Continue. Once user migrations are installed, append new migration versions rather than editing applied files.
+Local regression tests exercise application SQL/HTTP behavior in isolated PostgreSQL with remote Auth/Storage mocked. Browser review uses deterministic fixtures plus isolated SQL-backed form workflows. A configured hosted Supabase database, real printer and hosting environment have not been exercised by this update.
 
-Checkpoint verification: clean npm ci, typecheck, lint, production build, 22 reported local tests, and fixture-backed desktop/mobile browser checks pass. CSV/XLSX HTTP generation and embedded logo round trip pass. Production dependency audit reports zero known vulnerabilities. See TEST_REPORT.md for mocks, warnings and unverified services.
+Inherited reference-report share/settlement/carried-balance mappings without confirmed business meaning remain explicitly incomplete. See `../REPORT_DATA_MAPPING.md`; existing financial formulas have not been replaced or invented.
 
-Database changes: nine ordered migrations through 20261006083000_alerts_imports.sql. The latest adds scoped notification/read/rule/job records and reviewed vehicle/driver imports with atomic commits. Generated schema catalogue/types reflect all nine migrations. Implemented API families are enumerated in DATABASE_AND_API.md.
+The forward `20261011160000_master_review.sql` migration caps sessions at 3 hours, permits the existing driver remarks column in the exact-form transaction and adds distinct approved-trip aggregate indexes. Requested fields, loans, assignments/history and canonical financial formulas reuse existing storage. Private crawler rules, lazy page modules, smaller brand assets, static-cache policy, choice/date validation and print layout fixes are included.

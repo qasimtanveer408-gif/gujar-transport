@@ -1,2 +1,2 @@
-﻿"vehical no","company","purchase year","purchase price","income","tool","punjab police","start km","end km","total km","liter","km","ave","major maintenence work","remarks"
-"TEST-001","TEST Manufacturer","2020","1234567.89","80000.00","3000.00","0","144844.000","145382.000","538.000","68.000","538.000","7.91","TEST overhaul notes","TEST vehicle remarks"
+﻿"Vehicle number","Company / manufacturer","Model","Vehicle status","Address","Opening odometer (km)","Service interval (km)","Document expiry","Permit expiry","Insurance expiry","Purchase year","Purchase price (PKR)","Revenue (PKR)","Tolls (PKR)","Punjab Police (PKR)","Start odometer (km)","End odometer (km)","Total distance (km)","Matched fuel (litres)","Average (km/L)","Major maintenance work","Remarks"
+"TEST-001","TEST Manufacturer","","Active","","0.000","","","","","2020","1234567.89","80000.00","3000.00","0","144844.000","145382.000","538.000","68.000","7.91","TEST overhaul notes","TEST vehicle remarks"

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-11",
+  "status": "passed",
+  "checks": [
+    "Compiled nested pages and client assets",
+    "Brand logo",
+    "API health and protected-route rejection",
+    "Production CSP/HSTS and no technology header",
+    "Secure HttpOnly Strict pre-login cookie",
+    "Foreign-origin rejection and missing-CSRF rejection",
+    "Exact-origin preflight",
+    "Environment file not served"
+  ],
+  "remoteRequests": 0,
+  "scope": "Local compiled-server smoke only; HTTPS deployment and hosted Auth/database are not tested."
+}

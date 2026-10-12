@@ -9,7 +9,7 @@
     "phone_3": "",
     "currency": "PKR",
     "timezone": "Asia/Karachi",
-    "generated_at": "2026-10-06T19:37:01.34+00:00",
+    "generated_at": "2026-10-11T16:34:22.165+00:00",
     "period_label": "TEST accounting period",
     "business_name": "Gujjar Brother Transport — TEST DATA ONLY",
     "contact_email": "test@example.test"
@@ -26,59 +26,59 @@
           "key": "date",
           "label": "Date",
           "type": "date",
-          "width": 1
+          "width": 1.1
         },
         {
           "key": "vehicle",
-          "label": "Vehical",
+          "label": "Vehicle",
           "type": "text",
-          "width": 1
+          "width": 1.2
         },
         {
           "key": "driver",
-          "label": "driver",
+          "label": "Driver",
           "type": "text",
-          "width": 1
+          "width": 1.1
         },
         {
           "key": "mobile",
-          "label": "Mobile-no",
+          "label": "Contact number",
           "type": "text",
-          "width": 1
+          "width": 1.35
         },
         {
           "key": "cargo",
-          "label": "Things",
+          "label": "Cargo",
           "type": "text",
           "width": 1
         },
         {
           "key": "origin",
-          "label": "From",
+          "label": "Origin",
           "type": "text",
           "width": 1
         },
         {
           "key": "destination",
-          "label": "Where",
+          "label": "Destination",
           "type": "text",
-          "width": 1
+          "width": 1.25
         },
         {
           "key": "freight",
-          "label": "Rent/U/N",
+          "label": "Freight",
           "type": "money",
           "width": 1
         },
         {
           "key": "commission",
-          "label": "com",
+          "label": "Commission",
           "type": "money",
-          "width": 1
+          "width": 1.25
         },
         {
           "key": "total",
-          "label": "total",
+          "label": "Total",
           "type": "money",
           "width": 1
         },
@@ -103,7 +103,7 @@
       ],
       "rows": [
         {
-          "date": "2026-10-07",
+          "date": "2026-10-11",
           "vehicle": "TEST EXTERNAL 2",
           "driver": null,
           "mobile": "00000000000",
@@ -116,7 +116,7 @@
           "description": "TEST stationery expense (400.00)",
           "bill": "400.00",
           "profit": "2600.00",
-          "_day": "2026-10-07"
+          "_day": "2026-10-11"
         },
         {
           "date": null,
@@ -132,7 +132,7 @@
           "description": null,
           "bill": null,
           "profit": null,
-          "_day": "2026-10-07"
+          "_day": "2026-10-11"
         }
       ],
       "total": {
@@ -142,8 +142,26 @@
         "bill": "400.00",
         "profit": "2600.00"
       }
+    },
+    {
+      "title": "",
+      "role": "signature",
+      "columns": [
+        {
+          "key": "signature_0",
+          "label": "Prepared by"
+        },
+        {
+          "key": "signature_1",
+          "label": "Authorized officer"
+        }
+      ],
+      "rows": [
+        {}
+      ]
     }
   ],
   "paper": "A4",
-  "incomplete": true
+  "incomplete": true,
+  "orientation": "landscape"
 }

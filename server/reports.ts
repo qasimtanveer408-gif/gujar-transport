@@ -7,11 +7,13 @@ import {existsSync} from 'node:fs';
 import {resolve} from 'node:path';
 import type {AuthContext} from './session.js';
 import {AppError,dbError} from './errors.js';
+import {formDate} from './form-validation.js';
 import {csv,safeCell} from '../shared/calculations.js';
 import {modules} from '../shared/modules.js';
-const query=z.object({kind:z.string().max(40),from:z.string().regex(/^\d{4}-\d{2}-\d{2}$/),to:z.string().regex(/^\d{4}-\d{2}-\d{2}$/),vehicle:z.string().uuid().optional(),driver:z.string().uuid().optional(),format:z.enum(['json','csv','xlsx']).default('json')});
+const query=z.object({kind:z.string().max(40),from:formDate,to:formDate,vehicle:z.string().uuid().optional(),driver:z.string().uuid().optional(),format:z.enum(['json','csv','xlsx']).default('json')});
 export function reportsRouter(){const router=Router();router.get('/reports',async(req,res)=>{
  const q=query.parse(req.query),auth=res.locals.auth as AuthContext;
+ if(q.to<q.from)throw new AppError(422,'INVALID_FILTER','Choose a valid date range.');
  const permission=q.kind==='monthly-accounts'||['revenue','expenses','cash'].includes(q.kind)?'reports.financial.view':q.kind==='loan-transactions'?'loans.view':modules[q.kind]?.permission;
  if(!permission||!auth.access.permissions.includes(permission))throw new AppError(403,'FORBIDDEN','This report is not available to your account.');
  if(!auth.access.permissions.includes('reports.export'))throw new AppError(403,'FORBIDDEN','Report export permission is required.');
@@ -28,6 +30,7 @@ export function reportsRouter(){const router=Router();router.get('/reports',asyn
  sheet.addRow([String(metadata.business_name)]);sheet.addRow([String(metadata.contact_email),String(metadata.phone_1),String(metadata.phone_2),String(metadata.phone_3)]);sheet.addRow([q.kind,q.from,q.to,'PKR',metadata.generated_at]);if(metadata.unallocated_overhead!==undefined)sheet.addRow(['Unallocated overhead (PKR)',String(metadata.unallocated_overhead)]);sheet.addRow([]);
  const header=sheet.addRow(columns);header.font={bold:true};header.fill={type:'pattern',pattern:'solid',fgColor:{argb:'FFECEFF2'}};
  for(const row of rows)sheet.addRow(columns.map(key=>safeCell(row[key])));
+ sheet.addRow([]);sheet.addRow(['Signature: __________________________']);sheet.pageSetup={paperSize:9,orientation:'landscape',fitToPage:true,fitToWidth:1,fitToHeight:0};
  sheet.columns.forEach(column=>{column.width=23;});sheet.getRow(1).font={bold:true,size:16};
  const logo=workbook.addImage({filename:resolve(existsSync('dist/client/brand/logo.png')?'dist/client/brand/logo.png':'client/public/brand/logo.png'),extension:'png'});sheet.addImage(logo,{tl:{col:Math.max(columns.length,5),row:0},ext:{width:95,height:95}});
  sheet.views=[{state:'frozen',ySplit:header.number}];sheet.autoFilter={from:{row:header.number,column:1},to:{row:header.number,column:columns.length}};

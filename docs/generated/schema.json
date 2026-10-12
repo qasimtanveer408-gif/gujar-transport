@@ -103,6 +103,18 @@
       "is_nullable": "NO"
     },
     {
+      "table_name": "app_users",
+      "column_name": "avatar_url",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "auth_provider",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
       "table_name": "attachments",
       "column_name": "id",
       "data_type": "uuid",
@@ -382,6 +394,174 @@
       "table_name": "companies",
       "column_name": "version",
       "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "resource",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "key",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "label",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "type",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "default_value",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "required",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "display_order",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "show_form",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "show_card",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "show_table",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "show_print",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "hidden",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "archived",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "restricted",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "options",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "formula",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "ast",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "dependencies",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "required_permissions",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_values",
+      "column_name": "resource",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_values",
+      "column_name": "record_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_values",
+      "column_name": "field_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_values",
+      "column_name": "value",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "custom_field_values",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
       "is_nullable": "NO"
     },
     {
@@ -713,6 +893,12 @@
       "column_name": "version",
       "data_type": "integer",
       "is_nullable": "NO"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "photo_attachment_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
     },
     {
       "table_name": "expense_categories",
@@ -1111,6 +1297,12 @@
       "is_nullable": "NO"
     },
     {
+      "table_name": "maintenance_records",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
       "table_name": "notification_reads",
       "column_name": "notification_id",
       "data_type": "uuid",
@@ -1429,6 +1621,30 @@
       "is_nullable": "NO"
     },
     {
+      "table_name": "print_template_settings",
+      "column_name": "kind",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "print_template_settings",
+      "column_name": "orientation",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "print_template_settings",
+      "column_name": "signatures",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "print_template_settings",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
       "table_name": "revenue_entries",
       "column_name": "id",
       "data_type": "uuid",
@@ -1534,6 +1750,48 @@
       "table_name": "roles",
       "column_name": "version",
       "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "origin",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "destination",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "archived",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
       "is_nullable": "NO"
     },
     {
@@ -1789,6 +2047,12 @@
       "is_nullable": "NO"
     },
     {
+      "table_name": "trips",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
       "table_name": "user_roles",
       "column_name": "user_id",
       "data_type": "uuid",
@@ -1853,6 +2117,18 @@
       "column_name": "created_by",
       "data_type": "uuid",
       "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "previous_assignment_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "transfer_date",
+      "data_type": "date",
+      "is_nullable": "YES"
     },
     {
       "table_name": "vehicle_financials",
@@ -1985,6 +2261,24 @@
       "column_name": "major_maintenance_work",
       "data_type": "text",
       "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "address",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "permit_expiry",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "insurance_expiry",
+      "data_type": "date",
+      "is_nullable": "YES"
     }
   ],
   "functions": [
@@ -2003,6 +2297,12 @@
     {
       "name": "approve_maintenance",
       "args": "p_id uuid, p_version integer, p_key uuid",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "archive_form_record",
+      "args": "p_resource text, p_id uuid, p_version integer, p_reason text",
       "returns": "void",
       "definer": true
     },
@@ -2043,6 +2343,12 @@
       "definer": true
     },
     {
+      "name": "custom_field_catalog",
+      "args": "p_resource text, p_archived boolean DEFAULT false",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
       "name": "dashboard",
       "args": "p_from date, p_to date, p_basis text DEFAULT 'measured'::text, p_min_distance numeric DEFAULT 100",
       "returns": "jsonb",
@@ -2059,6 +2365,12 @@
       "args": "p_driver uuid",
       "returns": "jsonb",
       "definer": false
+    },
+    {
+      "name": "driver_vehicle_history",
+      "args": "p_driver uuid, p_page integer DEFAULT 1, p_limit integer DEFAULT 25",
+      "returns": "jsonb",
+      "definer": true
     },
     {
       "name": "expense_action",
@@ -2092,7 +2404,7 @@
     },
     {
       "name": "form_register",
-      "args": "p_resource text, p_from date, p_to date, p_page integer DEFAULT 1, p_limit integer DEFAULT 25, p_search text DEFAULT ''::text, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid",
+      "args": "p_resource text, p_from date, p_to date, p_page integer DEFAULT 1, p_limit integer DEFAULT 25, p_search text DEFAULT ''::text, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid, p_status text DEFAULT ''::text, p_sort text DEFAULT 'name'::text, p_direction text DEFAULT 'asc'::text, p_include_archived boolean DEFAULT false",
       "returns": "jsonb",
       "definer": false
     },
@@ -2127,10 +2439,22 @@
       "definer": true
     },
     {
+      "name": "notification_center",
+      "args": "p_status text DEFAULT 'all'::text, p_page integer DEFAULT 1",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
       "name": "prepare_import",
       "args": "p_resource text, p_reference text, p_rows jsonb",
       "returns": "uuid",
       "definer": true
+    },
+    {
+      "name": "print_templates",
+      "args": "",
+      "returns": "jsonb",
+      "definer": false
     },
     {
       "name": "reconcile_alerts",
@@ -2193,6 +2517,12 @@
       "definer": true
     },
     {
+      "name": "save_custom_field",
+      "args": "p_id uuid, p_version integer, p_data jsonb",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
       "name": "save_driver",
       "args": "p_id uuid, p_version integer, p_data jsonb",
       "returns": "uuid",
@@ -2223,8 +2553,20 @@
       "definer": true
     },
     {
+      "name": "save_print_template",
+      "args": "p_kind text, p_version integer, p_orientation text, p_signatures text[]",
+      "returns": "void",
+      "definer": true
+    },
+    {
       "name": "save_role",
       "args": "p_id uuid, p_name text, p_version integer, p_grants jsonb",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "save_route",
+      "args": "p_id uuid, p_version integer, p_origin text, p_destination text, p_archived boolean DEFAULT false",
       "returns": "uuid",
       "definer": true
     },
@@ -2319,6 +2661,12 @@
       "definer": true
     },
     {
+      "name": "set_driver_photo",
+      "args": "p_driver uuid, p_attachment uuid, p_version integer",
+      "returns": "integer",
+      "definer": true
+    },
+    {
       "name": "set_user_access",
       "args": "p_user uuid, p_active boolean, p_role uuid, p_version integer, p_reason text",
       "returns": "void",
@@ -2333,6 +2681,12 @@
     {
       "name": "settle_driver_payment",
       "args": "p_driver uuid, p_date date, p_reference text, p_allocations jsonb, p_key uuid",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "transfer_driver",
+      "args": "p_driver uuid, p_vehicle uuid, p_date date, p_reason text, p_assignment uuid",
       "returns": "uuid",
       "definer": true
     },
@@ -2397,6 +2751,18 @@
       "policyname": "companies_read",
       "cmd": "SELECT",
       "qual": "private.can('vehicles.view'::text, NULL::uuid, created_by)"
+    },
+    {
+      "tablename": "custom_field_definitions",
+      "policyname": "field_read",
+      "cmd": "SELECT",
+      "qual": "(private.can('settings.manage'::text) OR (private.has_capability((resource || '.view'::text)) AND (NOT (EXISTS ( SELECT 1\n   FROM unnest(custom_field_definitions.required_permissions) p(p)\n  WHERE (NOT private.has_capability(p.p)))))))"
+    },
+    {
+      "tablename": "custom_field_values",
+      "policyname": "custom_value_read",
+      "cmd": "SELECT",
+      "qual": "(private.record_permission(resource, record_id, (resource || '.view'::text)) AND (EXISTS ( SELECT 1\n   FROM custom_field_definitions f\n  WHERE ((f.id = custom_field_values.field_id) AND (f.resource = custom_field_values.resource) AND (NOT (EXISTS ( SELECT 1\n           FROM unnest(f.required_permissions) p(p)\n          WHERE (NOT private.record_permission(custom_field_values.resource, custom_field_values.record_id, p.p)))))))))"
     },
     {
       "tablename": "driver_duty_sessions",
@@ -2543,6 +2909,12 @@
       "qual": "private.can('roles.view'::text)"
     },
     {
+      "tablename": "print_template_settings",
+      "policyname": "print_setting_read",
+      "cmd": "SELECT",
+      "qual": "private.active_session()"
+    },
+    {
       "tablename": "revenue_entries",
       "policyname": "revenue_read",
       "cmd": "SELECT",
@@ -2559,6 +2931,12 @@
       "policyname": "roles_read",
       "cmd": "SELECT",
       "qual": "(private.can('roles.view'::text) OR private.can('users.create'::text) OR private.can('users.view'::text))"
+    },
+    {
+      "tablename": "routes",
+      "policyname": "routes_read",
+      "cmd": "SELECT",
+      "qual": "(private.has_capability('trips.view'::text) OR private.has_capability('bookings.view'::text))"
     },
     {
       "tablename": "settlement_allocations",
@@ -3249,6 +3627,11 @@
     },
     {
       "role": "Super Admin",
+      "permission_code": "drivers.archive",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
       "permission_code": "drivers.create",
       "scope": "all"
     },
@@ -3334,6 +3717,11 @@
     },
     {
       "role": "Super Admin",
+      "permission_code": "maintenance.delete_draft",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
       "permission_code": "maintenance.view",
       "scope": "all"
     },
@@ -3395,6 +3783,11 @@
     {
       "role": "Super Admin",
       "permission_code": "trips.create",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "trips.delete_draft",
       "scope": "all"
     },
     {

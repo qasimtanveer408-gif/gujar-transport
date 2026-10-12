@@ -22,6 +22,8 @@ export interface SqlRows {
 "version": number;
 "created_at": string;
 "updated_at": string;
+"avatar_url": string | null;
+"auth_provider": string;
 };
 "attachments": {
 "id": string;
@@ -79,6 +81,38 @@ export interface SqlRows {
 "name": string;
 "created_by": string | null;
 "version": number;
+};
+"custom_field_definitions": {
+"id": string;
+"resource": string;
+"key": string;
+"label": string;
+"type": string;
+"default_value": unknown | null;
+"required": boolean;
+"display_order": number;
+"show_form": boolean;
+"show_card": boolean;
+"show_table": boolean;
+"show_print": boolean;
+"hidden": boolean;
+"archived": boolean;
+"restricted": boolean;
+"options": string;
+"formula": string;
+"ast": unknown | null;
+"dependencies": string;
+"required_permissions": string;
+"version": number;
+"created_by": string;
+"created_at": string;
+};
+"custom_field_values": {
+"resource": string;
+"record_id": string;
+"field_id": string;
+"value": unknown | null;
+"updated_at": string;
 };
 "driver_duty_sessions": {
 "id": string;
@@ -150,6 +184,7 @@ export interface SqlRows {
 "created_by": string;
 "created_at": string;
 "version": number;
+"photo_attachment_id": string | null;
 };
 "expense_categories": {
 "code": string;
@@ -236,6 +271,7 @@ export interface SqlRows {
 "created_by": string;
 "created_at": string;
 "version": number;
+"archived_at": string | null;
 };
 "notification_reads": {
 "notification_id": string;
@@ -304,6 +340,12 @@ export interface SqlRows {
 "code": string;
 "description": string;
 };
+"print_template_settings": {
+"kind": string;
+"orientation": string;
+"signatures": string;
+"version": number;
+};
 "revenue_entries": {
 "id": string;
 "business_date": string;
@@ -327,6 +369,15 @@ export interface SqlRows {
 "name": string;
 "reserved": boolean;
 "version": number;
+};
+"routes": {
+"id": string;
+"origin": string;
+"destination": string;
+"archived": boolean;
+"version": number;
+"created_by": string;
+"created_at": string;
 };
 "settlement_allocations": {
 "id": string;
@@ -379,6 +430,7 @@ export interface SqlRows {
 "created_by": string;
 "created_at": string;
 "version": number;
+"archived_at": string | null;
 };
 "user_roles": {
 "user_id": string;
@@ -396,6 +448,8 @@ export interface SqlRows {
 "ended_at": string | null;
 "remarks": string | null;
 "created_by": string;
+"previous_assignment_id": string | null;
+"transfer_date": string | null;
 };
 "vehicle_financials": {
 "vehicle_id": string;
@@ -422,5 +476,8 @@ export interface SqlRows {
 "version": number;
 "purchase_year": number | null;
 "major_maintenance_work": string | null;
+"address": string | null;
+"permit_expiry": string | null;
+"insurance_expiry": string | null;
 };
 }

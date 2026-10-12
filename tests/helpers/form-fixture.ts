@@ -1,7 +1,7 @@
 import {randomUUID} from 'node:crypto';
 import {createTestDatabase} from '../../scripts/test-sql.js';
 import type {DataRow} from '../../shared/report-contract.js';
-export async function formFixture(){const db=await createTestDatabase();
+export async function formFixture(options:{throughMigration?:string}={}){const db=await createTestDatabase(options);
  async function scalar<T>(sql:string,args:unknown[]=[]):Promise<T>{return Object.values((await db.query<Record<string,T>>(sql,args)).rows[0])[0];}
  const owner=randomUUID(),session=randomUUID(),viewer=randomUUID(),vs=randomUUID();
  const task=await scalar<{id:string}>('select public.server_bootstrap_begin($1)',['forms-owner@example.test']);await db.query('insert into auth.users(id,email,raw_app_meta_data) values($1,$2,$3)',[owner,'forms-owner@example.test',JSON.stringify({gbt_provisioning_id:task.id})]);await db.query('select public.server_provision_finish($1,$2)',[task.id,owner]);await db.query("insert into auth.users(id,email) values($1,'forms-viewer@example.test')",[viewer]);await db.query("insert into public.app_users(id,email,display_name) values($1,'forms-viewer@example.test','TEST Viewer')",[viewer]);await db.query("insert into public.user_roles select $1,id from public.roles where name='Viewer'",[viewer]);

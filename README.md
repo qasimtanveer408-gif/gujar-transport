@@ -1,37 +1,44 @@
-# Forms and reports patch
+# Gujjar Brother Transport
 
-Read [UPDATE_INSTRUCTIONS.md](UPDATE_INSTRUCTIONS.md) first. The exact four-form contract is in [FIELD_CONTRACT.md](FIELD_CONTRACT.md); reference mapping and unresolved values are in [REPORT_DATA_MAPPING.md](REPORT_DATA_MAPPING.md). New evidence is under `verification/` and `docs/forms-reports/`.
+This update improves the existing React/Vite, Express and Supabase application in place. It balances screen sizing, fixes dark-mode form readability and tablet layout, clarifies vehicle/driver selections, verifies the existing user search, and uses email/password staff login.
 
----
+Latest master review: 3-hour sessions, completed driver Remarks, clear commission/reward labels, CSS feedback, optimized assets/page loading and print/security checks.
 
-# Gujjar Brother Transport — v0.1.0
+Start with [MASTER-UPDATE-START-HERE.md](MASTER-UPDATE-START-HERE.md). Copy your existing private `.env` into the extracted `Gujjar-Transport` folder. Existing accounts, permissions, database records, accounting formulas and operating workflows are retained.
 
-Runnable cumulative source checkpoint, **not the complete requested production system**. React/Vite + Express; Supabase PostgreSQL, Auth and private Storage own all runtime persistence. PKR and Asia/Karachi are enforced. The supplied logo and template assets are integrated.
+## Windows / Antigravity
 
-Start with [Windows local setup](docs/LOCAL_SETUP_WINDOWS.md), then [Supabase setup](docs/SUPABASE_SETUP.md). Read [Project state](docs/PROJECT_STATE.md), [traceability](docs/REQUIREMENTS_TRACEABILITY.md) and [test report](docs/TEST_REPORT.md) before adoption. No real Supabase or Hostinger account was connected.
+Open the folder containing `package.json` in Antigravity. Use Node.js 24.x and run these commands separately in its PowerShell terminal:
 
-## Quick start
+```powershell
+npm.cmd ci
+npm.cmd run check:env
+npm.cmd run dev
+```
 
-1. Extract this ZIP and open the folder containing package.json in a terminal.
-2. Install Node.js 24; run `node --version`, then `npm ci`.
-3. Copy `.env.example` to `.env`; privately configure a disposable development Supabase project, apply migrations and explicitly provision the administrator as documented.
-4. Remove the setup password and disable bootstrap. Run `npm run check:env`, then `npm run dev`. Open http://localhost:5173.
-5. Production compilation: `npm run build`. The actual server entry is `dist/server/index.js`; Express also serves `dist/client`. Start from the repository root with `npm start`.
+Open `http://localhost:5173` and sign in with your existing email and password. `START-WINDOWS.cmd` also starts the configured development app.
 
-There is no default password or fake production login. Missing configuration deliberately prevents startup. The browser never receives Supabase access/refresh tokens.
+## Features retained
+
+The application includes fleet and driver management, dated vehicle-assignment history and transfers, arbitrary saved routes, trips and Driver cycle commission, Punjab Police expenses, maintenance/oil service, office expenses/bookings, loans/earnings/payments, accounting periods, private documents, CSV imports, reports and exports, signatures, notification bell/read states, dashboard charts and fuel ranking, user/role permissions, custom fields and bounded decimal formulas.
+
+Cards, tables, dialogs and long pages retain independent scrolling. Light/dark themes, the existing branding, logo and welcome animation remain available. Desktop controls use normal professional sizing; phone controls keep suitable touch targets and input text remains 16px.
+
+## Verification and deployment
+
+Local automated verification uses isolated PostgreSQL migrations and application HTTP handlers, with remote Auth/Storage mocked. Browser tests cover password login, saved forms/calculations/prints, search, selections and responsive light/dark layouts. See [docs/ENHANCEMENT_TEST_REPORT.md](docs/ENHANCEMENT_TEST_REPORT.md) for final results and test boundaries.
+
+Use Node.js 24 and `.env.production.example` for a hosted deployment. `npm run build` compiles the client/server; `npm start` serves both on `PORT`. Production requires HTTPS and environment origins matching the actual public URL. Private environment values stay outside the client assets.
 
 | Command | Purpose |
-|---|---|
-| npm run dev | Vite + Express development |
-| npm run build / npm start | Compile / serve full application |
-| npm run typecheck / npm run lint | Static checks |
-| npm test | Unit, mocked-Auth HTTP and isolated PostgreSQL tests |
-| npm run test:sql | Apply all SQL to disposable isolated PostgreSQL |
-| npm run schema:snapshot | Generate schema types/data dictionary locally |
-| npm run test:e2e | Browser UI tests using explicit HTTP fixtures |
-| npm run seed:admin / npm run reset:admin | Explicit interactive owner setup/recovery |
-| npm run secrets:generate | Write a random encryption key privately |
-| npm run db:migrate / npm run db:types | Confirmed linked-project schema/types via official CLI |
-| npm run db:test -- --local | Supplied pgTAP against disposable local Supabase |
+| --- | --- |
+| `npm run dev` | Vite frontend and Express development API |
+| `npm run build` / `npm start` | Compile and serve the application |
+| `npm run typecheck` / `npm run lint` | Static validation |
+| `npm test` | Formula, HTTP, SQL, permissions and accounting regressions |
+| `npm run test:e2e` | Password login, SQL-backed form workflows and UI review |
+| `npm run test:production` | Smoke-test the compiled server locally without remote services |
+| `npm run schema:snapshot` | Regenerate schema documentation/types locally |
+| `npm run check:env` | Validate your private environment configuration |
 
-All production data remains in Supabase across process restarts. Source includes no live credentials, records, node_modules or built distribution. Build from the included lockfile.
+The archive includes source, lockfile, ordered migrations, compiled output and setup guides. It excludes private `.env`, dependencies and live business data. Hosted database, printer and deployment acceptance require the configured installation. Unconfirmed inherited reference-report share/settlement mappings remain marked incomplete in `REPORT_DATA_MAPPING.md`.

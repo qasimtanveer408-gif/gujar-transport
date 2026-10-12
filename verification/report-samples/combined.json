@@ -9,7 +9,7 @@
     "phone_3": "",
     "currency": "PKR",
     "timezone": "Asia/Karachi",
-    "generated_at": "2026-10-06T19:37:03.339+00:00",
+    "generated_at": "2026-10-11T16:34:22.859+00:00",
     "period_label": "TEST accounting period",
     "business_name": "Gujjar Brother Transport — TEST DATA ONLY",
     "contact_email": "test@example.test"
@@ -101,8 +101,15 @@
       "rows": [
         {
           "date": "2026-01-01",
-          "detail": "TEST body structured invoice item",
-          "cost": "400.00",
+          "detail": "TEST gearbox structured invoice item",
+          "cost": "250.00",
+          "oil": null,
+          "tyre": null
+        },
+        {
+          "date": "2026-01-01",
+          "detail": "TEST cabin structured invoice item",
+          "cost": "150.00",
           "oil": null,
           "tyre": null
         },
@@ -115,16 +122,16 @@
         },
         {
           "date": "2026-01-01",
-          "detail": "TEST oil_change structured invoice item",
-          "cost": null,
-          "oil": "200.00",
+          "detail": "TEST body structured invoice item",
+          "cost": "400.00",
+          "oil": null,
           "tyre": null
         },
         {
           "date": "2026-01-01",
-          "detail": "TEST gearbox structured invoice item",
-          "cost": "250.00",
-          "oil": null,
+          "detail": "TEST oil_change structured invoice item",
+          "cost": null,
+          "oil": "200.00",
           "tyre": null
         },
         {
@@ -133,13 +140,6 @@
           "cost": null,
           "oil": null,
           "tyre": "300.00"
-        },
-        {
-          "date": "2026-01-01",
-          "detail": "TEST cabin structured invoice item",
-          "cost": "150.00",
-          "oil": null,
-          "tyre": null
         }
       ],
       "total": {
@@ -179,7 +179,7 @@
         },
         {
           "key": "fines_permits",
-          "label": "Chln",
+          "label": "Punjab Police",
           "type": "money",
           "width": 1
         },
@@ -197,55 +197,55 @@
         },
         {
           "key": "reward",
-          "label": "inm",
+          "label": "Inam / reward",
           "type": "money",
           "width": 1
         },
         {
           "key": "other_expense",
-          "label": "Other Exp.",
+          "label": "Other expense",
           "type": "money",
           "width": 1
         },
         {
           "key": "engine_oil",
-          "label": "Mobil Oil",
+          "label": "Engine oil",
           "type": "money",
           "width": 1
         },
         {
           "key": "commission",
-          "label": "Driver com",
+          "label": "Driver cycle commission",
           "type": "money",
           "width": 1
         },
         {
           "key": "total_expense",
-          "label": "Total Exp.",
+          "label": "Total expense",
           "type": "money",
           "width": 1
         },
         {
           "key": "profit",
-          "label": "Profit Loss",
+          "label": "Profit / loss",
           "type": "money",
           "width": 1
         },
         {
           "key": "total_km",
-          "label": "Travl (km)",
+          "label": "Travel (km)",
           "type": "number",
           "width": 1
         },
         {
           "key": "fuel_litres",
-          "label": "Diesel (Ltr)",
+          "label": "Diesel (L)",
           "type": "number",
           "width": 1
         },
         {
           "key": "average",
-          "label": "Avg Km/L",
+          "label": "Average (km/L)",
           "type": "number",
           "width": 1,
           "decimals": 2
@@ -253,7 +253,7 @@
       ],
       "rows": [
         {
-          "id": "a8a2000a-085f-4063-ac0f-115e63470b22",
+          "id": "4da62bcf-9dfe-4b09-824d-fce501407dd3",
           "fare": "80000.00",
           "food": "1200.00",
           "cargo": null,
@@ -270,20 +270,24 @@
           "service": "0",
           "version": 4,
           "total_km": "538.000",
-          "driver_id": "e947f749-f485-4072-aa6b-50ffbcef1bff",
+          "driver_id": "83966846-1259-40cf-831a-ab2b9eb0971a",
           "commission": "2000.00",
-          "created_at": "2026-10-06T19:37:01.221+00:00",
-          "created_by": "e47e55ab-7416-4f36-b1ea-7c898525de15",
+          "created_at": "2026-10-11T16:34:22.067+00:00",
+          "created_by": "6cfb1fb6-165c-4e71-af6c-a09acda084c5",
           "engine_oil": "0",
           "fuel_basis": "measured",
-          "vehicle_id": "0a52b669-b3ab-4b70-9103-59b909f307b0",
+          "vehicle_id": "aad25ddc-73c7-4c09-b687-cbcd2605ba44",
+          "archived_at": null,
           "destination": "TEST Depot B",
           "fuel_litres": "68.000",
           "trip_number": "GBT-0000001",
           "weight_unit": "metric tonnes",
           "cycle_number": "TEST-CYCLE-001",
           "end_odometer": "145382.000",
-          "business_date": "2026-10-07",
+          "business_date": "2026-10-11",
+          "custom_errors": {},
+          "custom_fields": [],
+          "custom_values": {},
           "fines_permits": "0",
           "total_expense": "36000.00",
           "start_odometer": "144844.000",
@@ -342,7 +346,7 @@
         },
         {
           "key": "commission",
-          "label": "Driver Commission",
+          "label": "Driver cycle commission",
           "type": "money",
           "width": 1
         },
@@ -386,7 +390,7 @@
       "columns": [
         {
           "key": "driver",
-          "label": "Dr.Name",
+          "label": "Driver name",
           "type": "text",
           "width": 1
         },
@@ -398,7 +402,7 @@
         },
         {
           "key": "commission",
-          "label": "Driver Commission",
+          "label": "Driver cycle commission",
           "type": "money",
           "width": 1
         },
@@ -434,7 +438,7 @@
         },
         {
           "key": "installment",
-          "label": "Loan Install.",
+          "label": "Loan installment",
           "type": "money",
           "width": 1
         },
@@ -470,13 +474,13 @@
         },
         {
           "key": "paid",
-          "label": "Loan Return",
+          "label": "Loan repaid",
           "type": "money",
           "width": 1
         },
         {
           "key": "left",
-          "label": "Loan left",
+          "label": "Loan balance",
           "type": "money",
           "width": 1
         }
@@ -492,45 +496,6 @@
       ]
     },
     {
-      "title": "",
-      "role": "signature",
-      "columns": [
-        {
-          "key": "sign",
-          "label": "DRIVER SIGN",
-          "type": "text",
-          "width": 1
-        },
-        {
-          "key": "thumb",
-          "label": "DRIVER THUMB",
-          "type": "text",
-          "width": 1
-        },
-        {
-          "key": "by",
-          "label": "PAID BY",
-          "type": "text",
-          "width": 1
-        },
-        {
-          "key": "signed",
-          "label": "SIGN",
-          "type": "text",
-          "width": 1
-        },
-        {
-          "key": "date",
-          "label": "PAID DATE",
-          "type": "date",
-          "width": 1
-        }
-      ],
-      "rows": [
-        {}
-      ]
-    },
-    {
       "title": "ENGINE",
       "role": "component",
       "columns": [
@@ -538,7 +503,7 @@
           "key": "date",
           "label": "Date",
           "type": "date",
-          "width": 1.6
+          "width": 2.2
         },
         {
           "key": "detail",
@@ -550,7 +515,7 @@
           "key": "cost",
           "label": "Cost",
           "type": "money",
-          "width": 1
+          "width": 1.7
         }
       ],
       "rows": [
@@ -578,7 +543,7 @@
           "key": "date",
           "label": "Date",
           "type": "date",
-          "width": 1.6
+          "width": 2.2
         },
         {
           "key": "detail",
@@ -590,7 +555,7 @@
           "key": "cost",
           "label": "Cost",
           "type": "money",
-          "width": 1
+          "width": 1.7
         }
       ],
       "rows": [
@@ -618,7 +583,7 @@
           "key": "date",
           "label": "Date",
           "type": "date",
-          "width": 1.6
+          "width": 2.2
         },
         {
           "key": "detail",
@@ -630,19 +595,19 @@
           "key": "cost",
           "label": "Cost",
           "type": "money",
-          "width": 1
+          "width": 1.7
         }
       ],
       "rows": [
         {
           "date": "2026-01-01",
-          "detail": "TEST body structured invoice item",
-          "cost": "400.00"
+          "detail": "TEST cabin structured invoice item",
+          "cost": "150.00"
         },
         {
           "date": "2026-01-01",
-          "detail": "TEST cabin structured invoice item",
-          "cost": "150.00"
+          "detail": "TEST body structured invoice item",
+          "cost": "400.00"
         },
         {
           "date": null,
@@ -668,7 +633,7 @@
           "key": "date",
           "label": "Date",
           "type": "date",
-          "width": 1.6
+          "width": 2.2
         },
         {
           "key": "detail",
@@ -680,7 +645,7 @@
           "key": "cost",
           "label": "Cost",
           "type": "money",
-          "width": 1
+          "width": 1.7
         }
       ],
       "rows": [
@@ -705,16 +670,20 @@
       "role": "signature",
       "columns": [
         {
-          "key": "manager",
-          "label": "GBT SIGN",
-          "type": "text",
-          "width": 1
+          "key": "signature_0",
+          "label": "Driver signature"
         },
         {
-          "key": "ceo",
-          "label": "C.E.O. SIGN",
-          "type": "text",
-          "width": 1
+          "key": "signature_1",
+          "label": "Driver thumb impression"
+        },
+        {
+          "key": "signature_2",
+          "label": "Paid by"
+        },
+        {
+          "key": "signature_3",
+          "label": "Authorized signature"
         }
       ],
       "rows": [
@@ -722,6 +691,7 @@
       ]
     }
   ],
-  "paper": "A3",
-  "incomplete": true
+  "paper": "A4",
+  "incomplete": true,
+  "orientation": "landscape"
 }

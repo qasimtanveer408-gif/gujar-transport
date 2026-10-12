@@ -9,7 +9,7 @@
     "phone_3": "",
     "currency": "PKR",
     "timezone": "Asia/Karachi",
-    "generated_at": "2026-10-06T19:37:04.646+00:00",
+    "generated_at": "2026-10-11T16:34:23.361+00:00",
     "period_label": "TEST accounting period",
     "business_name": "Gujjar Brother Transport — TEST DATA ONLY",
     "contact_email": "test@example.test"
@@ -62,13 +62,13 @@
       "columns": [
         {
           "key": "name",
-          "label": "driver name",
+          "label": "Driver name",
           "type": "text",
           "width": 1
         },
         {
           "key": "vehicle",
-          "label": "vehical no",
+          "label": "Vehicle number",
           "type": "text",
           "width": 1
         },
@@ -80,57 +80,57 @@
         },
         {
           "key": "expense",
-          "label": "expense",
+          "label": "Expense",
           "type": "money",
           "width": 1
         },
         {
           "key": "profit",
-          "label": "profit",
+          "label": "Profit",
           "type": "money",
           "width": 1
         },
         {
           "key": "tool",
-          "label": "tool",
+          "label": "Tolls",
           "type": "money",
           "width": 1
         },
         {
           "key": "pp",
-          "label": "punjab police challan",
+          "label": "Punjab Police",
           "type": "money",
           "width": 1
         },
         {
           "key": "average",
-          "label": "ave",
+          "label": "Average (km/L)",
           "type": "number",
           "width": 1,
           "decimals": 2
         },
         {
           "key": "weight",
-          "label": "weight",
+          "label": "Weight (tonnes)",
           "type": "number",
           "width": 1
         },
         {
           "key": "cycles",
-          "label": "cycle",
+          "label": "Cycles",
           "type": "number",
           "width": 1,
           "decimals": 0
         },
         {
           "key": "commission",
-          "label": "Driver Cycle commision",
+          "label": "Driver cycle commission",
           "type": "money",
           "width": 1
         },
         {
           "key": "remarks",
-          "label": "remarks",
+          "label": "Remarks",
           "type": "text",
           "width": 1
         }
@@ -171,12 +171,30 @@
       ],
       "rows": [
         {
-          "date": "2026-10-07",
+          "date": "2026-10-11",
           "profit": "44000.00"
         }
+      ]
+    },
+    {
+      "title": "",
+      "role": "signature",
+      "columns": [
+        {
+          "key": "signature_0",
+          "label": "Driver signature"
+        },
+        {
+          "key": "signature_1",
+          "label": "Authorized officer"
+        }
+      ],
+      "rows": [
+        {}
       ]
     }
   ],
   "paper": "A4",
-  "incomplete": false
+  "incomplete": false,
+  "orientation": "landscape"
 }

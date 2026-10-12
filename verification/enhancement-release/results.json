@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-11",
+  "baseline_tests": 71,
+  "final_tests": 71,
+  "failures": 0,
+  "skips": 0,
+  "typecheck": "passed",
+  "lint": "passed",
+  "production_build": "passed",
+  "fresh_dependency_install": "passed; npm ci --ignore-scripts",
+  "browser_scripts": [
+    "scripts/e2e.mjs",
+    "scripts/forms-e2e.ts",
+    "scripts/ui-review-e2e.ts",
+    "scripts/redesign-e2e.ts"
+  ],
+  "browser_result": "passed",
+  "ui_screens": 20,
+  "viewport_widths": [
+    1440,
+    1024,
+    768,
+    390,
+    360
+  ],
+  "browser_errors": 0,
+  "production_smoke": "passed; compiled server; no external requests",
+  "full_dependency_audit": {
+    "total_known_vulnerabilities": 0
+  },
+  "production_audit": {
+    "total_known_vulnerabilities": 0
+  },
+  "compatible_tooling_updates": {
+    "vite": "8.0.13 \u2192 8.3.4",
+    "typescript-eslint": "8.46.1 \u2192 8.71.1"
+  },
+  "migrations": "fresh ordered execution plus upgrade/account/role/session preservation in isolated PostgreSQL",
+  "authentication": "password-only; encrypted sessions, CSRF/Origin, permission checks and logout retained",
+  "historical_migrations": "unchanged",
+  "live_supabase": "not run",
+  "hosted_deployment": "not performed",
+  "chart_and_reference_print_controls": "passed; interactive charts, full register, five reference prints, role-gated screens"
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-11",
+  "status": "passed",
+  "automated_tests": 74,
+  "baseline_tests": 71,
+  "typecheck": "passed",
+  "lint": "passed",
+  "build": "passed",
+  "production_http_smoke": "passed",
+  "e2e": "passed",
+  "viewports": [
+    1440,
+    1024,
+    768,
+    390,
+    360
+  ],
+  "historical_migrations_unchanged": 15,
+  "production_dependency_vulnerabilities": 0,
+  "scope": "Local disposable PostgreSQL and browser tests; hosted Auth/Storage/services not accessed; no customer records changed",
+  "unconfirmed_print_rules": [
+    "share/percentage allocation",
+    "carried maintenance balances",
+    "settlement deductions"
+  ]
+}

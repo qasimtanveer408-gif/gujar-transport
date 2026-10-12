@@ -1,9 +1,10 @@
 import {z} from 'zod';
+import {normalizeDecimalInput} from './numeric-input.js';
 export const uuid=z.string().uuid();
 export const reason=z.string().trim().min(3).max(300);
 export const version=z.number().int().positive();
-export const money=z.string().regex(/^\d{1,14}(\.\d{1,2})?$/,'Use a positive amount with up to two decimal places');
-export const numberString=z.string().regex(/^\d{1,10}(\.\d{1,3})?$/,'Use a positive number with up to three decimals');
+export const money=z.preprocess(normalizeDecimalInput,z.string().regex(/^\d{1,14}(\.\d{1,2})?$/,'Use a nonnegative amount with up to two decimal places'));
+export const numberString=z.preprocess(normalizeDecimalInput,z.string().regex(/^\d{1,10}(\.\d{1,3})?$/,'Use a nonnegative number with up to three decimals'));
 export const loginInput=z.object({email:z.string().email().max(254),password:z.string().min(1).max(200)}).strict();
 export const userInput=z.object({email:z.string().email().max(254),display_name:z.string().trim().min(1).max(120),password:z.string().min(12).max(200),role_id:uuid}).strict();
 export const roleInput=z.object({id:uuid.nullable(),name:z.string().trim().min(2).max(80),version:version.nullable(),grants:z.array(z.object({permission_code:z.string().min(1).max(80),scope:z.enum(['all','assigned','own'])}).strict()).max(200)}).strict();

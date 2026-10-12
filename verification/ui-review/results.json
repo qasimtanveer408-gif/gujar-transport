@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-11",
+  "status": "passed",
+  "checks": [
+    "Existing user search: visible centered icon, typed-text padding, page reset, filtered results, empty state and stale-request protection",
+    "Light theme: all 20 screens, module create dialogs and trip-table scroll at 1440px",
+    "Light theme: all 20 screens, module create dialogs and trip-table scroll at 1024px",
+    "Light theme: all 20 screens, module create dialogs and trip-table scroll at 768px",
+    "Light theme: all 20 screens, module create dialogs and trip-table scroll at 390px",
+    "Light theme: all 20 screens, module create dialogs and trip-table scroll at 360px",
+    "Dark theme 1440px: all screens fit, inputs/selects/notes/placeholders/read-only totals meet 4.5:1 contrast, selected vehicle/driver stay visible after search and reload, long dialog scrolls",
+    "Dark theme 390px: all screens fit, inputs/selects/notes/placeholders/read-only totals meet 4.5:1 contrast, selected vehicle/driver stay visible after search and reload, long dialog scrolls",
+    "Session expiry clears the protected workspace and returns to sign-in"
+  ],
+  "viewports": [
+    1440,
+    1024,
+    768,
+    390,
+    360
+  ],
+  "browserErrors": [],
+  "unmatchedApiFixtures": [],
+  "scope": "Deterministic UI fixtures only; no hosted Supabase or business data."
+}

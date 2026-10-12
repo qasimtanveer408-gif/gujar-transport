@@ -9,7 +9,7 @@
     "phone_3": "",
     "currency": "PKR",
     "timezone": "Asia/Karachi",
-    "generated_at": "2026-10-06T19:37:02.286+00:00",
+    "generated_at": "2026-10-11T16:34:22.474+00:00",
     "period_label": "TEST accounting period",
     "business_name": "Gujjar Brother Transport — TEST DATA ONLY",
     "contact_email": "test@example.test"
@@ -76,7 +76,7 @@
         },
         {
           "key": "travel",
-          "label": "Travel after Oil Change(km)",
+          "label": "Travel after oil change (km)",
           "type": "number",
           "width": 1.5,
           "decimals": 0
@@ -102,8 +102,26 @@
           "driver": "TEST Driver"
         }
       ]
+    },
+    {
+      "title": "",
+      "role": "signature",
+      "columns": [
+        {
+          "key": "signature_0",
+          "label": "Driver signature"
+        },
+        {
+          "key": "signature_1",
+          "label": "Authorized officer"
+        }
+      ],
+      "rows": [
+        {}
+      ]
     }
   ],
   "paper": "A4",
-  "incomplete": false
+  "incomplete": false,
+  "orientation": "landscape"
 }

@@ -1,6 +1,7 @@
 import {randomUUID} from 'node:crypto';
 import type {Config} from './config.js';
 import {decrypt,encrypt,hash,token,csrfFor} from './crypto.js';
+import type {User} from '@supabase/supabase-js';
 import {publicClient,privilegedClient,userClient,type Client} from './supabase.js';
 import {AppError,dbError} from './errors.js';
 export interface Credentials{access_token:string;refresh_token:string;expires_at:number;}
@@ -30,6 +31,14 @@ export async function refreshCredentials(c:Config,broker:Broker,row:SessionRow,r
 export function createSessionService(c:Config){
  const admin=privilegedClient(c);
  const broker:Broker={rpc:async(name,args)=>{const {data,error}=await admin.rpc(name,args);return {data,error};}};
+ async function persist(user:User,credentials:Credentials){
+   const claims=JSON.parse(Buffer.from(credentials.access_token.split('.')[1],'base64url').toString()) as {session_id?:string;sub?:string};
+   if(claims.sub!==user.id||!claims.session_id)throw new AppError(401,'INVALID_LOGIN','Invalid session.');
+   const raw=token(),tokenHash=hash(raw);
+   const result=await broker.rpc('server_session_create',{p_hash:tokenHash,p_user:user.id,p_auth_session:claims.session_id,p_credentials:encrypt(c.SESSION_ENCRYPTION_KEY,credentials,tokenHash)});
+   if(result.error){await admin.auth.admin.signOut(credentials.access_token,'local');throw new AppError(403,'ACCOUNT_UNAVAILABLE','Your account has not been enabled for this application. Contact an administrator.');}
+   return {raw,csrf:csrfFor(c.SESSION_ENCRYPTION_KEY,tokenHash)};
+ }
  return {
   async login(email:string,password:string){
    const auth=publicClient(c);const {data,error}=await auth.auth.signInWithPassword({email,password});
@@ -37,18 +46,14 @@ export function createSessionService(c:Config){
    // Verify with Auth before reading a claim. Decoding alone is never authorization.
    const verified=await auth.auth.getUser(data.session.access_token);
    if(verified.error||!verified.data.user||verified.data.user.id!==data.user.id)throw new AppError(401,'INVALID_LOGIN','Sign in could not be verified.');
-   const claims=JSON.parse(Buffer.from(data.session.access_token.split('.')[1],'base64url').toString()) as {session_id?:string;sub?:string};
-   if(claims.sub!==verified.data.user.id||!claims.session_id)throw new AppError(401,'INVALID_LOGIN','Invalid session.');
-   const raw=token(),tokenHash=hash(raw);const credentials:Credentials={access_token:data.session.access_token,refresh_token:data.session.refresh_token,expires_at:data.session.expires_at??0};
-   const result=await broker.rpc('server_session_create',{p_hash:tokenHash,p_user:verified.data.user.id,p_auth_session:claims.session_id,p_credentials:encrypt(c.SESSION_ENCRYPTION_KEY,credentials,tokenHash)});
-   if(result.error){await auth.auth.signOut({scope:'local'});throw new AppError(403,'ACCOUNT_UNAVAILABLE','Your account has not been enabled for this application. Contact an administrator.');}
-   return {raw,csrf:csrfFor(c.SESSION_ENCRYPTION_KEY,tokenHash)};
+   return persist(verified.data.user,{access_token:data.session.access_token,refresh_token:data.session.refresh_token,expires_at:data.session.expires_at??0});
   },
   async authenticate(raw:string):Promise<AuthContext>{
    if(!/^[A-Za-z0-9_-]{43}$/.test(raw))throw new AppError(401,'SIGN_IN_REQUIRED','Sign in to continue.');
    const result=await broker.rpc('server_session_read',{p_hash:hash(raw)});dbError(result.error);
    if(!result.data)throw new AppError(401,'SESSION_EXPIRED','Your session ended. Sign in again.');
    const row=result.data as SessionRow;
+   if(!Number.isFinite(Date.parse(row.expires_at))||Date.parse(row.expires_at)<=Date.now())throw new AppError(401,'SESSION_EXPIRED','Your session ended. Sign in again.');
    const credentials=await refreshCredentials(c,broker,row,async refresh_token=>{
     const auth=publicClient(c);const {data,error}=await auth.auth.refreshSession({refresh_token});
     if(error||!data.session)throw new AppError(401,'SESSION_EXPIRED','Your session ended. Sign in again.');

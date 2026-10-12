@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit && tsc -p tsconfig.server.json --noEmit",
     "lint": "eslint client/src server shared scripts tests",
     "test": "node --import tsx --test tests/*.test.ts",
-    "test:e2e": "node scripts/e2e.mjs && node --import tsx scripts/forms-e2e.ts",
+    "test:e2e": "node scripts/e2e.mjs && node --import tsx scripts/forms-e2e.ts && node --import tsx scripts/ui-review-e2e.ts && node --import tsx scripts/redesign-e2e.ts && node scripts/master-performance-e2e.mjs",
+    "test:production": "node scripts/production-smoke.mjs",
     "check:env": "node --import tsx scripts/check-env.ts",
     "seed:admin": "node --import tsx scripts/admin.ts seed",
     "reset:admin": "node --import tsx scripts/admin.ts reset",
@@ -53,8 +54,8 @@
     "supabase": "^2.119.0",
     "tsx": "4.20.6",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.46.1",
-    "vite": "8.0.13"
+    "typescript-eslint": "8.71.1",
+    "vite": "8.3.4"
   },
   "overrides": {
     "exceljs": {

@@ -1,16 +1,15 @@
-# Image-to-template mapping
+# Uploaded print references — 2026-10-11
 
-The images were recovered and visually read. No people, handwritten names, signatures, historical amounts or percentages were imported into production or test configuration.
+The five supplied PNG photographs were visually reviewed. Layout structure is used without importing example people, handwriting, amounts or signatures as production data.
 
-| Supplied image | Template | Layout taken from it | Intentional boundary |
-|---|---|---|---|
-| WhatsApp Image 2026-10-05 at 7.28.31 PM.jpeg | Combined | Full page: identification; left maintenance/right cycles; vehicle summary; settlement; signatures; ENGINE/GEAR/BODY / CABIN/TYRES panels | Full page controls lower sections; camera rotation, folds and handwriting excluded |
-| WhatsApp Imamge 2026-10-05 at 7.28.34 PM.jpeg | Office | OFFICE title; thirteen printed headings; daily grouped cells; period total | Dynamic accounting-period label; quoted carrier rent is not brokerage revenue |
-| WhatseApp Image 2026-10-05 at 7.28.33 PM.jpeg | Driver details | Driver/vehicle, sale/expense/profit, fines/tolls, average, weight/cycles, commission, remarks and graph intent | Supplementary output; not claimed as an exact printed template |
-| WhatsApp Image d2026-10-05 at 7.28.33 PM.jpeg | Oil | Close-up meter/date header wrapping | Two DATE columns use distinct keys |
-| WhatsApp Image 2026-10-05 at 7.28.33,m PM.jpeg | Oil | Full landscape width, title/period bands and DRIVER column | Date-bound approved readings; missing/invalid sequences withheld |
-| WhatsApp Image 20s26-10-05 at 7.28.32 PM.jpeg | Monthly | Main-column order, four-decimal AVE, lower summary captions | Ambiguous MAIN/MIST and carried balances are not guessed |
-| WhatsApp Image 2026-10-05 ast 7.28.31 PM.jpeg | Monthly | Full width, vertical brand separator, percentage/share/comparison blocks and signatures | GBT identity retained; personal beneficiaries/percentages remain blank |
-| WhatsApp Image 2026-10-05 at 7.282.31 PM.jpeg | Combined | Close-up cycle/summary/settlement headings, vehicle-loss label and loan remaining area | Short crop does not omit bottom panels from the full-page photograph |
+| Uploaded image | Template | Structure adopted |
+|---|---|---|
+| image(20261011-152744).png | Oil change record | Landscape title/period bands; meter/date sequence; registration and driver columns |
+| image(20261011-152752).png | Office register | OFFICE heading; thirteen ordered columns; daily grouped cells and totals |
+| image(20261011-152723).png | Combined driver/vehicle sheet | Identification; maintenance/cycles; vehicle summary; settlement; component panels and signing areas |
+| image(20261011-152759).png | Supplementary driver details | Driver/vehicle, fare/expenses/profit, tolls/fines, fuel/weight/cycles, commission, remarks and chart |
+| image(20261011-152735).png | Monthly transport account | Wide vehicle summary; brand separator; allocation/comparison sections; manager/CEO signatures |
 
-Rendered evidence is in `verification/rendered`. These are faithful structural adaptations with explicit paper sizes and continuation rules, not a claim of pixel-identical reproduction. The supplementary driver sheet has no complete printed reference. PDF pagination is rendered directly; XLSX cell styles/merges were rendered through a workbook-to-HTML inspector, not native Microsoft Excel print preview. Native Excel/printer page breaks require a final local review.
+The report settings now use configurable A4 orientation and signatures. Long saved text or record collections continue across pages. The PDFs and rendered samples are TEST DATA ONLY.
+
+Ambiguous share/allocation and settlement meanings are not guessed. See ../../REPORT_DATA_MAPPING.md. The handwritten driver sheet is an information reference, rather than a complete typeset template. The adaptation preserves information order while correcting spelling and fitting A4.

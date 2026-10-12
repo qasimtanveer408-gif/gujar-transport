@@ -15,5 +15,5 @@ test('report HTTP exports produce safe CSV and readable XLSX with the supplied l
  const csv=await fetch(url+'csv');assert.equal(csv.status,200);const text=await csv.text();assert.match(text,/'=1\+1/);assert.match(text,/44000\.00/);assert.match(text,/Line, ""quoted""/);
  const xlsx=await fetch(url+'xlsx');assert.equal(xlsx.status,200);assert.match(xlsx.headers.get('content-type')??'',/spreadsheetml/);
  const book=new ExcelJS.Workbook();await book.xlsx.load(await xlsx.arrayBuffer());const sheet=book.getWorksheet('Full-field register')!;
- assert.equal(sheet.getCell('A1').value,'Gujjar Brother Transport');assert.equal(sheet.getCell('A5').value,"'=1+1");assert.equal(sheet.getCell('D5').value,44000);assert.equal(sheet.getImages().length,1);assert.ok(sheet.autoFilter);
+ assert.equal(sheet.getCell('A1').value,'Gujjar Brother Transport');assert.equal(sheet.getCell('A5').value,"'=1+1");assert.equal(sheet.getRow(5).getCell(Array.from({length:sheet.columnCount},(_,i)=>sheet.getRow(4).getCell(i+1).value).indexOf('Purchase price (PKR)')+1).value,44000);assert.equal(sheet.getImages().length,1);assert.ok(sheet.autoFilter);
 });

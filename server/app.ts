@@ -1,4 +1,6 @@
+import {enhancementsRouter} from './enhancements.js';
 import {referenceReportsRouter} from './reference-reports.js';
+import {customFieldsRouter} from './custom-fields.js';
 import {formsRouter} from './forms.js';
 import express,{type Request,type Response,type NextFunction} from 'express';
 import helmet from 'helmet';
@@ -12,6 +14,7 @@ import {createSessionService,type SessionService,type AuthContext} from './sessi
 import {csrfFor,hash,same,token} from './crypto.js';
 import {privilegedClient,type Client} from './supabase.js';
 import {AppError,dbError} from './errors.js';
+import {SESSION_TTL_SECONDS} from '../shared/session-policy.js';
 import {finishProvision,type ProvisionTask} from './provision.js';
 import {operationsRouter} from './operations.js';
 import {reportsRouter} from './reports.js';
@@ -21,14 +24,14 @@ import {accessInput,loginInput,roleInput,settingsInput,userInput,uuid} from '../
 
 export function requireRight(res:Response,permission:string){const context=res.locals.auth as AuthContext;if(!context.access.permissions.includes(permission))throw new AppError(403,'FORBIDDEN','You do not have permission for this action.');return context;}
 export function context(res:Response){return res.locals.auth as AuthContext;}
-export function cookies(c:Config,raw:string,maxAge=43200){return serialize(cookieName(c),raw,{httpOnly:true,secure:c.APP_ENV!=='development'||c.APP_URL.startsWith('https:'),sameSite:'strict',path:'/',maxAge});}
+export function cookies(c:Config,raw:string,maxAge=SESSION_TTL_SECONDS){return serialize(cookieName(c),raw,{httpOnly:true,secure:c.APP_ENV!=='development'||c.APP_URL.startsWith('https:'),sameSite:'strict',path:'/',maxAge});}
 export const pageQuery=z.object({page:z.coerce.number().int().min(1).max(100000).default(1),search:z.string().max(100).default('')});
 export function createApp(c:Config,options:{sessions?:SessionService;admin?:Client;staticDir?:string}={}){
  const app=express(), sessions=options.sessions??createSessionService(c),admin=options.admin??privilegedClient(c);
  const origins=new Set(c.ALLOWED_ORIGINS.split(',').map(s=>s.trim()));const preCookie=c.APP_ENV==='development'?'gbt_dev_csrf':'__Host-gbt_csrf';
  app.disable('x-powered-by');app.set('trust proxy',c.TRUST_PROXY_HOPS);
  app.use(helmet({contentSecurityPolicy:{directives:{defaultSrc:["'self'"],scriptSrc:["'self'"],styleSrc:["'self'","'unsafe-inline'"],imgSrc:["'self'","data:"],fontSrc:["'self'"],connectSrc:["'self'"],objectSrc:["'none'"],frameAncestors:["'none'"],upgradeInsecureRequests:c.APP_ENV==='development'?null:[]}},strictTransportSecurity:c.APP_ENV==='development'?false:undefined}));
- app.use((req,res,next)=>{res.locals.requestId=randomUUID();res.setHeader('X-Request-ID',res.locals.requestId);if(req.path.startsWith('/api'))res.setHeader('Cache-Control','no-store');next();});
+ app.use((req,res,next)=>{res.locals.requestId=randomUUID();res.setHeader('X-Request-ID',res.locals.requestId);if(req.path.startsWith('/api')){res.setHeader('Cache-Control','no-store');res.setHeader('X-Robots-Tag','noindex, nofollow');}next();});
  app.use(express.json({limit:'256kb',strict:true}));
  app.use('/api',(req,res,next)=>{
   const origin=req.get('origin');
@@ -38,6 +41,9 @@ export function createApp(c:Config,options:{sessions?:SessionService;admin?:Clie
   if(origin){res.setHeader('Access-Control-Allow-Origin',origin);res.setHeader('Access-Control-Allow-Credentials','true');res.setHeader('Vary','Origin');}
   next();
  });
+ // This is a private staff application; never advertise customer records to crawlers.
+ app.get('/robots.txt',(_req,res)=>res.type('text/plain').send(`User-agent: *\nDisallow: /\nSitemap: ${new URL('/sitemap.xml',c.APP_URL).href}\n`));
+ app.get('/sitemap.xml',(_req,res)=>res.type('application/xml').send('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>'));
  app.get('/api/health',(_req,res)=>res.json({status:'ok',application:'Gujjar Brother Transport',environment:c.APP_ENV,serviceConnectivity:'not_checked'}));
  app.get('/api/auth/csrf',async(req,res)=>{
   const parsed=parseCookie(req.headers.cookie??'');const raw=parsed[cookieName(c)];
@@ -55,13 +61,14 @@ export function createApp(c:Config,options:{sessions?:SessionService;admin?:Clie
  });
  const secure=express.Router();
  secure.use(async(req,res,next)=>{
-  res.locals.auth=await sessions.authenticate(parseCookie(req.headers.cookie??'')[cookieName(c)]??'');
+  try{res.locals.auth=await sessions.authenticate(parseCookie(req.headers.cookie??'')[cookieName(c)]??'');}catch(error){if(error instanceof AppError&&error.status===401)res.setHeader('Set-Cookie',cookies(c,'',0));throw error;}
   const auth=context(res);
+  if(!auth.access.permissions.length&&!['/auth/me','/auth/logout','/auth/logout-all'].includes(req.path))throw new AppError(403,'ACCESS_PENDING','Your account is created. Ask an administrator to assign your role.');
   if(!['GET','HEAD'].includes(req.method)&&!same(req.get('x-csrf-token')??'',auth.csrf))throw new AppError(403,'CSRF_FAILED','Refresh the page and try again.');
   const limited=await admin.rpc('server_throttle',{p_key:'api:'+auth.access.user.id,p_limit:240,p_seconds:60});dbError(limited.error);if(!limited.data)throw new AppError(429,'RATE_LIMIT','Please wait a minute before retrying.');
   next();
  });
- secure.get('/auth/me',(_req,res)=>res.json({...context(res).access,csrf:context(res).csrf,environment:c.APP_ENV}));
+ secure.get('/auth/me',(_req,res)=>res.json({...context(res).access,csrf:context(res).csrf,environment:c.APP_ENV,session_expires_at:context(res).session?.expires_at??null}));
  secure.post('/auth/logout',async(_req,res)=>{const result=await sessions.logout(context(res));res.setHeader('Set-Cookie',cookies(c,'',0));res.json({ok:true,...result});});
  secure.post('/auth/logout-all',async(_req,res)=>{const result=await context(res).db.rpc('revoke_my_sessions');dbError(result.error);res.setHeader('Set-Cookie',cookies(c,'',0));res.json({ok:true});});
  secure.get('/connection',async(_req,res)=>{const result=await context(res).db.rpc('my_access');dbError(result.error);res.json({database:'connected',authentication:'verified',time:new Date().toISOString()});});
@@ -75,16 +82,26 @@ export function createApp(c:Config,options:{sessions?:SessionService;admin?:Clie
  secure.get('/roles/:id/grants',async(req,res)=>{const auth=requireRight(res,'roles.view');const result=await auth.db.from('role_permissions').select('permission_code,scope').eq('role_id',uuid.parse(req.params.id));dbError(result.error);res.json(result.data);});
  secure.post('/roles',async(req,res)=>{const auth=requireRight(res,'roles.manage');const input=roleInput.parse(req.body);const result=await auth.db.rpc('save_role',{p_id:input.id,p_name:input.name,p_version:input.version,p_grants:input.grants});dbError(result.error);res.json({id:result.data});});
  secure.get('/audit',async(req,res)=>{const auth=requireRight(res,'audit.view');const {page,search}=pageQuery.parse(req.query);let query=auth.db.from('audit_logs').select('id,actor_id,action,record_type,record_id,summary,created_at',{count:'exact'}).order('id',{ascending:false});if(search)query=query.ilike('action',`%${search.replace(/[%_\\]/g,'\\$&')}%`);const result=await query.range((page-1)*25,page*25-1);dbError(result.error);res.json({rows:result.data,count:result.count,page});});
+ secure.use(customFieldsRouter());
  secure.use(formsRouter());
  secure.use(domainRouter());
  secure.use(documentsRouter());
  secure.use(reportsRouter());
  secure.use(referenceReportsRouter());
  secure.use(operationsRouter());
+ secure.use(enhancementsRouter());
  app.use('/api',secure);
  app.use('/api',(_req,res)=>res.status(404).json({error:{code:'NOT_FOUND',message:'API route not found.',requestId:res.locals.requestId}}));
  const staticDir=options.staticDir??resolve(process.cwd(),'dist/client');
- if(existsSync(resolve(staticDir,'index.html'))){app.use(express.static(staticDir,{index:false,maxAge:0,dotfiles:'deny'}));app.get('/{*path}',(_req,res)=>res.sendFile(resolve(staticDir,'index.html')));}
+ if(existsSync(resolve(staticDir,'index.html'))){
+  app.use(express.static(staticDir,{index:false,dotfiles:'deny',maxAge:0,setHeaders:(res,file)=>{
+   const name=file.replaceAll('\\','/');
+   // Only Vite fingerprinted assets are immutable. Brand/vendor files revalidate.
+   res.setHeader('Cache-Control',name.includes('/assets/')?'public, max-age=31536000, immutable':name.endsWith('.html')?'no-cache':'public, max-age=3600, must-revalidate');
+   if(name.endsWith('.html'))res.setHeader('X-Robots-Tag','noindex, nofollow');
+  }}));
+  app.get('/{*path}',(_req,res)=>{res.setHeader('Cache-Control','no-cache');res.setHeader('X-Robots-Tag','noindex, nofollow');res.sendFile(resolve(staticDir,'index.html'));});
+ }
  app.use((error:unknown,_req:Request,res:Response,_next:NextFunction)=>{
   const isValidation=error instanceof ZodError;
   const status=isValidation?422:error instanceof AppError?error.status:400=== (error as {status?:number})?.status?400:500;
