@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "initialScripts": [
+    "/assets/index-CxHVlrtE.js",
+    "/assets/numeric-input-BX3g7_dD.js"
+  ],
+  "hoverCapabilities": {
+    "eligible": false,
+    "transform": "none",
+    "duration": "0.16s, 0.16s, 0.16s, 0.16s, 0.16s"
+  },
+  "checks": [
+    "Protected page chunks deferred until sign-in",
+    "Hover feedback honors pointer capabilities",
+    "Reduced motion disables movement on buttons/cards",
+    "Server-reported expiry returns to login",
+    "No JavaScript errors"
+  ],
+  "scope": "Compiled BFF/local browser; remote Auth and SQL mocked"
+}

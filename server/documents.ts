@@ -16,7 +16,11 @@ export function validateDocument(buffer:Buffer,name:string,mime:string){
  return expected;
 }
 export function documentsRouter(){const router=Router();
+<<<<<<< HEAD
  router.get('/documents',async(req,res)=>{const q=z.object({resource,id:uuid}).parse(req.query);const db=(res.locals.auth as AuthContext).db;const result=await db.from('attachments').select('id,original_name,mime_type,size_bytes,state,created_at,archived_at,version').eq(sourceColumns[q.resource],q.id).neq('state','deleted').order('created_at',{ascending:false});dbError(result.error);res.json(result.data);});
+=======
+ router.get('/documents',async(req,res)=>{const q=z.object({resource,id:uuid}).parse(req.query);const db=(res.locals.auth as AuthContext).db;const result=await db.from('attachments').select('id,original_name,mime_type,size_bytes,state,created_at').eq(sourceColumns[q.resource],q.id).neq('state','deleted').order('created_at',{ascending:false});dbError(result.error);res.json(result.data);});
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
  router.post('/documents/upload',raw({type:['image/jpeg','image/png','application/pdf'],limit:'10mb'}),async(req,res)=>{
   const q=z.object({resource,id:uuid,name:z.string().min(1).max(160).regex(/^[^\r\n/\\]+$/)}).parse(req.query);if(!Buffer.isBuffer(req.body))throw new AppError(422,'FILE_TYPE','Send a PNG, JPEG, or PDF file.');const mime=validateDocument(req.body,q.name,req.get('content-type')?.split(';')[0]??'');const db=(res.locals.auth as AuthContext).db;
   const reserved=await db.rpc('reserve_attachment',{p_resource:q.resource,p_record:q.id,p_name:q.name,p_mime:mime,p_size:req.body.length});dbError(reserved.error);const record=reserved.data as {id:string;bucket_id:string;object_path:string};

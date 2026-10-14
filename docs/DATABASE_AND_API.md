@@ -21,6 +21,7 @@ Every listed path begins with /api. GET health is process liveness and explicitl
 | audit | Read-only audit history |
 
 JSON bodies are limited to 256 KB; uploads 10 MB. Normal lists paginate 25, lookups 25. Exports gather a consistent scoped SQL snapshot and explicitly reject above 50,000 rows instead of truncating silently. SQL identifiers/resources/columns are allowlisted. Financial action keys bind actor, source, action and payload. Reload on a version conflict instead of blindly replaying stale forms. See generated/RPC_CATALOGUE.md for exact SQL parameters.
+<<<<<<< HEAD
 
 ## Record lifecycle API
 
@@ -30,3 +31,5 @@ JSON bodies are limited to 256 KB; uploads 10 MB. Normal lists paginate 25, look
 - `POST /api/lifecycle/cleanup/retry`: retry committed Storage/Auth cleanup jobs.
 
 All mutations use existing Origin, session and CSRF enforcement. Deletion takes the existing workflow locks plus short-lived table locks before recomputing the reviewed dependency graph. A changed graph rejects the request and requires a new preview. Database deletion rolls back as a unit if a constraint fails. Managed Storage/Auth records are deleted with their provider APIs through a durable outbox.
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40

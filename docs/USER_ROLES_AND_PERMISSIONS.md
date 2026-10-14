@@ -78,7 +78,10 @@ Provisioning creates a real Auth account with a task marker before linking the p
 | vehicles.create | — | all | — | — | all | all | — |
 | vehicles.update | — | all | — | — | all | all | — |
 | vehicles.view | all | all | all | assigned | all | all | all |
+<<<<<<< HEAD
 
 ## Record lifecycle permissions (October 14 update)
 
 `records.archive` permits archive and restore; `records.delete` permits permanent deletion after archive and confirmation. These are global administrative capabilities: use **All** scope. They are granted to the reserved Super Admin role by the new migration, and other roles retain their earlier permissions. The SQL layer checks the same rights as the server, so UI visibility is not the security boundary.
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40

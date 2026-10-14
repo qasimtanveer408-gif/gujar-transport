@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 > **Latest release: archive / restore / permanent delete. Start with [START-HERE-ARCHIVE-DELETE.md](START-HERE-ARCHIVE-DELETE.md), including the new-database setup instructions.** The earlier release notes below remain as history.
 
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
 # Current update
 
 Use [MASTER-UPDATE-START-HERE.md](MASTER-UPDATE-START-HERE.md) for this release.

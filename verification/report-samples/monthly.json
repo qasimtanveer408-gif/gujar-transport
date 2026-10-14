@@ -1,0 +1,384 @@
+{
+  "kind": "monthly",
+  "title": "TRANSPORT MONTHLY ACCOUNT",
+  "metadata": {
+    "to": "2026-12-31",
+    "from": "2026-01-01",
+    "phone_1": "TEST",
+    "phone_2": "",
+    "phone_3": "",
+    "currency": "PKR",
+    "timezone": "Asia/Karachi",
+    "generated_at": "2026-10-11T16:34:22.639+00:00",
+    "period_label": "TEST accounting period",
+    "business_name": "Gujjar Brother Transport — TEST DATA ONLY",
+    "contact_email": "test@example.test"
+  },
+  "notes": [
+    "INCOME, Last Main, Total Main, MAIN, MIST, Total Sale and printed final PROFIT LOSS need confirmed business mappings. Percentages, shares, beneficiaries and comparison history are not configured; their slots remain blank.",
+    "DIESEL before MONTH MAINT. is PKR cost; DIESEL after KM is matched measured litres. AVE uses four decimals. Carried balances are not current expenses."
+  ],
+  "sections": [
+    {
+      "title": "",
+      "columns": [
+        {
+          "key": "sn",
+          "label": "S/N",
+          "type": "number",
+          "width": 0.5,
+          "decimals": 0
+        },
+        {
+          "key": "registration",
+          "label": "VEHICLE #",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "driver",
+          "label": "DRIVER",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "income",
+          "label": "INCOME",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "fines",
+          "label": "Punjab Police",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "tolls",
+          "label": "TOLL PLAZA",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "diesel",
+          "label": "DIESEL",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "maintenance",
+          "label": "MONTH MAINT.",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "commission",
+          "label": "DRIVER COMM.",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "last_main",
+          "label": "Last Main",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "total_main",
+          "label": "Total Main",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "office",
+          "label": "OFFICE EXPENSE",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "main",
+          "label": "MAIN",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "mist",
+          "label": "MIST",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "expenses",
+          "label": "TOTAL EXPENSE",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "profit",
+          "label": "PROFIT LOSS",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "km",
+          "label": "KM",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "litres",
+          "label": "DIESEL",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "average",
+          "label": "AVE",
+          "type": "number",
+          "width": 1,
+          "decimals": 4
+        },
+        {
+          "key": "weight",
+          "label": "WEIGHT",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "cycles",
+          "label": "CYCLES",
+          "type": "number",
+          "width": 1,
+          "decimals": 0
+        }
+      ],
+      "rows": [
+        {
+          "sn": 1,
+          "registration": "TEST-001",
+          "driver": "TEST Driver",
+          "income": null,
+          "fines": "0.00",
+          "tolls": "3000.00",
+          "diesel": "29000.00",
+          "maintenance": "1800.00",
+          "commission": "2000.00",
+          "last_main": null,
+          "total_main": null,
+          "office": "0.00",
+          "main": null,
+          "mist": null,
+          "expenses": "37800.00",
+          "profit": null,
+          "km": "538.00",
+          "litres": "68.00",
+          "average": "7.9118",
+          "weight": "12.345",
+          "cycles": 1
+        }
+      ],
+      "total": {
+        "sn": "TOTAL",
+        "fines": "0.00",
+        "tolls": "3000.00",
+        "diesel": "29000.00",
+        "maintenance": "1800.00",
+        "commission": "2000.00",
+        "office": "0.00",
+        "expenses": "37800.00"
+      }
+    },
+    {
+      "title": "Total / net sale and percentage adjustment",
+      "role": "summary",
+      "columns": [
+        {
+          "key": "total",
+          "label": "Total Sale",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "percent",
+          "label": "In the Name of Allah",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "amount",
+          "label": "Amount",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "net",
+          "label": "Net Sale",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {}
+      ]
+    },
+    {
+      "title": "Profit / share allocation",
+      "columns": [
+        {
+          "key": "profit",
+          "label": "TOTAL PROFIT/LOSS",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "shares",
+          "label": "SHARES",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "share",
+          "label": "1 SHARE =",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "allocation",
+          "label": "Allocation",
+          "type": "text",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {}
+      ]
+    },
+    {
+      "title": "MONTH WISE INCOME COMPARISON",
+      "role": "comparison",
+      "columns": [
+        {
+          "key": "period",
+          "label": "Period",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "sale",
+          "label": "Sale",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "expense",
+          "label": "Expense",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "result",
+          "label": "Result",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "period": "Unavailable"
+        }
+      ]
+    },
+    {
+      "title": "Canonical reconciliation (separate from unconfirmed printed subtotals)",
+      "columns": [
+        {
+          "key": "fare",
+          "label": "Gross recognized fare",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "broker",
+          "label": "Brokerage",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "trip",
+          "label": "Trip expense",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "monthly",
+          "label": "Other current costs",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "overhead",
+          "label": "Unallocated overhead",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "profit",
+          "label": "Operating profit",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "trip_result",
+          "label": "Trip result",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "carried",
+          "label": "Carried balances",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "final",
+          "label": "Printed final result",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "trip_result": "44000.00",
+          "carried": null,
+          "final": null,
+          "fare": "80000.00",
+          "broker": "0.00",
+          "trip": "36000.00",
+          "monthly": "1800.00",
+          "overhead": "0.00",
+          "profit": "42200.00"
+        }
+      ]
+    },
+    {
+      "title": "",
+      "role": "signature",
+      "columns": [
+        {
+          "key": "signature_0",
+          "label": "Manager signature"
+        },
+        {
+          "key": "signature_1",
+          "label": "C.E.O. signature"
+        }
+      ],
+      "rows": [
+        {}
+      ]
+    }
+  ],
+  "paper": "A4",
+  "incomplete": true,
+  "orientation": "landscape"
+}

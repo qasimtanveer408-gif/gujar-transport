@@ -37,6 +37,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "accounting_periods",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -49,6 +50,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "alert_rules",
       "column_name": "code",
       "data_type": "text",
@@ -127,6 +130,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "app_users",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -139,6 +143,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "attachments",
       "column_name": "id",
       "data_type": "uuid",
@@ -229,6 +235,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "attachments",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -247,6 +254,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "audit_logs",
       "column_name": "id",
       "data_type": "bigint",
@@ -415,6 +424,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "cash_transactions",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -433,6 +443,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "companies",
       "column_name": "id",
       "data_type": "uuid",
@@ -457,6 +469,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "companies",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -469,6 +482,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "custom_field_definitions",
       "column_name": "id",
       "data_type": "uuid",
@@ -607,6 +622,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "custom_field_definitions",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -619,6 +635,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "custom_field_values",
       "column_name": "resource",
       "data_type": "text",
@@ -679,6 +697,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "driver_duty_sessions",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -697,6 +716,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "driver_earnings",
       "column_name": "id",
       "data_type": "uuid",
@@ -751,6 +772,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "driver_earnings",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -769,6 +791,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "driver_identity_details",
       "column_name": "driver_id",
       "data_type": "uuid",
@@ -859,6 +883,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "driver_loan_transactions",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -877,6 +902,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "driver_loans",
       "column_name": "id",
       "data_type": "uuid",
@@ -907,6 +934,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "driver_loans",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -925,6 +953,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "driver_payment_allocations",
       "column_name": "payment_id",
       "data_type": "uuid",
@@ -985,6 +1015,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "driver_payments",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -1003,6 +1034,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "drivers",
       "column_name": "id",
       "data_type": "uuid",
@@ -1075,6 +1108,7 @@
       "is_nullable": "YES"
     },
     {
+<<<<<<< HEAD
       "table_name": "drivers",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -1087,6 +1121,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "expense_categories",
       "column_name": "code",
       "data_type": "text",
@@ -1267,6 +1303,7 @@
       "is_nullable": "YES"
     },
     {
+<<<<<<< HEAD
       "table_name": "import_batches",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -1285,6 +1322,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "import_rows",
       "column_name": "batch_id",
       "data_type": "uuid",
@@ -1507,12 +1546,15 @@
       "is_nullable": "YES"
     },
     {
+<<<<<<< HEAD
       "table_name": "maintenance_records",
       "column_name": "archive_previous",
       "data_type": "jsonb",
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "notification_reads",
       "column_name": "notification_id",
       "data_type": "uuid",
@@ -1591,6 +1633,7 @@
       "is_nullable": "YES"
     },
     {
+<<<<<<< HEAD
       "table_name": "notifications",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -1609,6 +1652,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "office_bookings",
       "column_name": "id",
       "data_type": "uuid",
@@ -1693,6 +1738,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "office_bookings",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -1705,6 +1751,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "office_expenses",
       "column_name": "id",
       "data_type": "uuid",
@@ -1777,6 +1825,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "office_expenses",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -1789,6 +1838,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "oil_changes",
       "column_name": "maintenance_id",
       "data_type": "uuid",
@@ -2005,6 +2056,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "roles",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -2017,6 +2069,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "routes",
       "column_name": "id",
       "data_type": "uuid",
@@ -2059,6 +2113,7 @@
       "is_nullable": "NO"
     },
     {
+<<<<<<< HEAD
       "table_name": "routes",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -2071,6 +2126,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "settlement_allocations",
       "column_name": "id",
       "data_type": "uuid",
@@ -2329,12 +2386,15 @@
       "is_nullable": "YES"
     },
     {
+<<<<<<< HEAD
       "table_name": "trips",
       "column_name": "archive_previous",
       "data_type": "jsonb",
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "user_roles",
       "column_name": "user_id",
       "data_type": "uuid",
@@ -2413,6 +2473,7 @@
       "is_nullable": "YES"
     },
     {
+<<<<<<< HEAD
       "table_name": "vehicle_driver_assignments",
       "column_name": "archived_at",
       "data_type": "timestamp with time zone",
@@ -2431,6 +2492,8 @@
       "is_nullable": "YES"
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "table_name": "vehicle_financials",
       "column_name": "vehicle_id",
       "data_type": "uuid",
@@ -2579,6 +2642,7 @@
       "column_name": "insurance_expiry",
       "data_type": "date",
       "is_nullable": "YES"
+<<<<<<< HEAD
     },
     {
       "table_name": "vehicles",
@@ -2591,6 +2655,8 @@
       "column_name": "archive_previous",
       "data_type": "jsonb",
       "is_nullable": "YES"
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
     }
   ],
   "functions": [
@@ -2715,12 +2781,15 @@
       "definer": false
     },
     {
+<<<<<<< HEAD
       "name": "form_record_before_lifecycle",
       "args": "p_resource text, p_id uuid, p_from date, p_to date",
       "returns": "jsonb",
       "definer": false
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "name": "form_register",
       "args": "p_resource text, p_from date, p_to date, p_page integer DEFAULT 1, p_limit integer DEFAULT 25, p_search text DEFAULT ''::text, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid, p_status text DEFAULT ''::text, p_sort text DEFAULT 'name'::text, p_direction text DEFAULT 'asc'::text, p_include_archived boolean DEFAULT false",
       "returns": "jsonb",
@@ -2728,12 +2797,15 @@
     },
     {
       "name": "list_records",
+<<<<<<< HEAD
       "args": "p_resource text, p_search text DEFAULT ''::text, p_page integer DEFAULT 1, p_limit integer DEFAULT 25, p_from date DEFAULT NULL::date, p_to date DEFAULT NULL::date, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid, p_include_archived boolean DEFAULT false",
       "returns": "jsonb",
       "definer": false
     },
     {
       "name": "list_records_before_lifecycle",
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "args": "p_resource text, p_search text DEFAULT ''::text, p_page integer DEFAULT 1, p_limit integer DEFAULT 25, p_from date DEFAULT NULL::date, p_to date DEFAULT NULL::date, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid",
       "returns": "jsonb",
       "definer": false
@@ -2787,6 +2859,7 @@
       "definer": true
     },
     {
+<<<<<<< HEAD
       "name": "record_lifecycle_action",
       "args": "p_resource text, p_id text, p_action text, p_version integer, p_reason text, p_token text DEFAULT NULL::text, p_confirmation text DEFAULT NULL::text",
       "returns": "jsonb",
@@ -2805,6 +2878,8 @@
       "definer": true
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "name": "reference_dataset",
       "args": "p_kind text, p_from date, p_to date, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid",
       "returns": "jsonb",
@@ -2937,6 +3012,7 @@
       "definer": true
     },
     {
+<<<<<<< HEAD
       "name": "server_deletion_jobs",
       "args": "",
       "returns": "jsonb",
@@ -2949,6 +3025,8 @@
       "definer": true
     },
     {
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "name": "server_orphan_candidates",
       "args": "",
       "returns": "jsonb",
@@ -4096,6 +4174,7 @@
     },
     {
       "role": "Super Admin",
+<<<<<<< HEAD
       "permission_code": "records.archive",
       "scope": "all"
     },
@@ -4106,6 +4185,8 @@
     },
     {
       "role": "Super Admin",
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
       "permission_code": "reports.export",
       "scope": "all"
     },

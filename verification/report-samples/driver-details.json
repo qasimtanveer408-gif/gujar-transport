@@ -1,0 +1,200 @@
+{
+  "kind": "driver-details",
+  "title": "Driver Details",
+  "metadata": {
+    "to": "2026-12-31",
+    "from": "2026-01-01",
+    "phone_1": "TEST",
+    "phone_2": "",
+    "phone_3": "",
+    "currency": "PKR",
+    "timezone": "Asia/Karachi",
+    "generated_at": "2026-10-11T16:34:23.361+00:00",
+    "period_label": "TEST accounting period",
+    "business_name": "Gujjar Brother Transport — TEST DATA ONLY",
+    "contact_email": "test@example.test"
+  },
+  "notes": [
+    "Supplementary output: the handwritten sheet defines requested information, not a complete printed template.",
+    "Sale, expense and profit here mean recorded approved trip fare, category expense and their difference. Average divides matched distance by litres; mixed or missing fuel bases are unavailable. Fuel basis: measured. Weight is in metric tonnes."
+  ],
+  "sections": [
+    {
+      "title": "Identification",
+      "role": "summary",
+      "columns": [
+        {
+          "key": "driver",
+          "label": "Driver",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "joining",
+          "label": "Joining Date",
+          "type": "date",
+          "width": 1
+        },
+        {
+          "key": "period",
+          "label": "Report period",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "vehicle",
+          "label": "Vehicle",
+          "type": "text",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "driver": "TEST Driver",
+          "joining": "2026-01-01",
+          "period": "TEST accounting period (2026-01-01 to 2026-12-31)",
+          "vehicle": "TEST-001"
+        }
+      ]
+    },
+    {
+      "title": "Supplementary driver details",
+      "columns": [
+        {
+          "key": "name",
+          "label": "Driver name",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "vehicle",
+          "label": "Vehicle number",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "sale",
+          "label": "Sale",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "expense",
+          "label": "Expense",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "profit",
+          "label": "Profit",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "tool",
+          "label": "Tolls",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "pp",
+          "label": "Punjab Police",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "average",
+          "label": "Average (km/L)",
+          "type": "number",
+          "width": 1,
+          "decimals": 2
+        },
+        {
+          "key": "weight",
+          "label": "Weight (tonnes)",
+          "type": "number",
+          "width": 1
+        },
+        {
+          "key": "cycles",
+          "label": "Cycles",
+          "type": "number",
+          "width": 1,
+          "decimals": 0
+        },
+        {
+          "key": "commission",
+          "label": "Driver cycle commission",
+          "type": "money",
+          "width": 1
+        },
+        {
+          "key": "remarks",
+          "label": "Remarks",
+          "type": "text",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "name": "TEST Driver",
+          "vehicle": "TEST-001",
+          "sale": "80000.00",
+          "expense": "36000.00",
+          "profit": "44000.00",
+          "tool": "3000.00",
+          "pp": "0.00",
+          "average": "7.91",
+          "weight": "12.345",
+          "cycles": 1,
+          "commission": "2000.00",
+          "remarks": null
+        }
+      ]
+    },
+    {
+      "title": "Recorded operating result by trip",
+      "role": "chart",
+      "columns": [
+        {
+          "key": "date",
+          "label": "Date",
+          "type": "date",
+          "width": 1
+        },
+        {
+          "key": "profit",
+          "label": "Operating profit",
+          "type": "money",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "date": "2026-10-11",
+          "profit": "44000.00"
+        }
+      ]
+    },
+    {
+      "title": "",
+      "role": "signature",
+      "columns": [
+        {
+          "key": "signature_0",
+          "label": "Driver signature"
+        },
+        {
+          "key": "signature_1",
+          "label": "Authorized officer"
+        }
+      ],
+      "rows": [
+        {}
+      ]
+    }
+  ],
+  "paper": "A4",
+  "incomplete": false,
+  "orientation": "landscape"
+}

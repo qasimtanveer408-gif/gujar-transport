@@ -1,0 +1,1 @@
+TEST DATA ONLY. Generated from isolated PostgreSQL with mocked Supabase Auth/Storage. No live records. Incomplete printed mappings are deliberately blank. Do not use as finalized financial statements.

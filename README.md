@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 > **Latest release: archive / restore / permanent delete. Start with [START-HERE-ARCHIVE-DELETE.md](START-HERE-ARCHIVE-DELETE.md), including the new-database setup instructions.** The earlier release notes below remain as history.
 
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
 # Gujjar Brother Transport
 
 This update improves the existing React/Vite, Express and Supabase application in place. It balances screen sizing, fixes dark-mode form readability and tablet layout, clarifies vehicle/driver selections, verifies the existing user search, and uses email/password staff login.

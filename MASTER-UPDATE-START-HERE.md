@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 > **Latest release: archive / restore / permanent delete. Start with [START-HERE-ARCHIVE-DELETE.md](START-HERE-ARCHIVE-DELETE.md), including the new-database setup instructions.** The earlier release notes below remain as history.
 
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
 # Gujjar Transport — Master Update
 
 Existing project update ho gaya hai. Rebuild ya duplicate modules/database tables nahi banaye gaye. Audit `docs/MASTER_AUDIT.md` aur final results `docs/MASTER_UPDATE_TEST_REPORT.md` mein hain.

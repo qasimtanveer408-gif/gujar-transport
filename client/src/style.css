@@ -145,6 +145,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;font-size:16px;letter-spacing:.02px
  }
  @media(prefers-reduced-motion:reduce){.button,.icon-button,.record-card,button.stat-card,.stat-card[role="button"],.card[role="button"]{transform:none!important}}
 }
+<<<<<<< HEAD
 
 /* Record lifecycle controls wrap within existing cards, rows and form footers. */
 .row-actions,.record-card-actions {flex-wrap:wrap;gap:.45rem;align-items:center;}
@@ -163,3 +164,5 @@ body{font-family:'Segoe UI',Arial,sans-serif;font-size:16px;letter-spacing:.02px
 .lifecycle-dialog .lifecycle-ack {flex-direction:row;}
 .lifecycle-dialog td,.lifecycle-dialog th {white-space:normal;overflow-wrap:anywhere;}
 .lifecycle-dialog td:last-child,.lifecycle-dialog th:last-child {min-width:4rem;text-align:right;}
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40

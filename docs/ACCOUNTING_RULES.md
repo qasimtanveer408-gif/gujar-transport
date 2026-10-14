@@ -19,9 +19,12 @@ Money is NUMERIC(18,2) and serialized as decimal strings. Decimal.js uses 32-dig
 Closed periods block financial changes under the same lock used by posting. Reopen requires a reason and preserves original close snapshots. Unallocated overhead appears separately in vehicle ranking and within company totals. Purchase-based fuel is labelled estimated.
 
 Pending: percentage commission, payroll deductions/advances/recovery, loan/payment reversals, receivable/payable cash allocation entry, approved adjustments/odometer replacement, historical balances and complete reconciliation. Do not imitate these by editing ledger balances or duplicate expense entry.
+<<<<<<< HEAD
 
 ## Explicit administrator deletion (October 14 update)
 
 Routine posting/void/edit rules above remain in place. Separately, an administrator with `records.delete` can permanently delete an archived source record, including posted records, through the reviewed lifecycle workflow. The confirmation includes dependent ledger rows and whole affected payment/cash allocations. The operation is atomic; surviving earnings become unpaid when their allocation is removed. Affected closed periods reopen and obsolete close snapshots are cleared. This is a physical deletion, not a reversal journal or hidden soft delete.
 
 Archiving alone preserves the ledger and financial totals. An archived accounting period keeps its date range reserved and disallows posting; permanent deletion frees that range.
+=======
+>>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
