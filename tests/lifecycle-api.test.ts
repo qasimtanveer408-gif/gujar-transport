@@ -29,3 +29,22 @@ test('failed Storage cleanup remains queued, retries successfully, and missing A
  assert.equal((await drainDeletionJobs(admin)).pending,true);assert.equal(jobs.length,1);
  fail=false;assert.equal((await drainDeletionJobs(admin)).pending,false);assert.equal(jobs.length,0);
 });
+
+test('lifecycle failures include safe database codes and a matching request reference without leaking provider details',async t=>{
+ const c=parseConfig({APP_ENV:'development',APP_URL:'http://localhost:5173',ALLOWED_ORIGINS:'http://localhost:5173',SUPABASE_URL:'https://example.supabase.co',SUPABASE_PUBLISHABLE_KEY:'TEST-publishable-key-only',SUPABASE_SECRET_KEY:'TEST-privileged-key-only',SESSION_ENCRYPTION_KEY:randomBytes(32).toString('hex')});
+ let code='PGRST202',calls=0;
+ const db={rpc:async()=>{calls++;return {data:null,error:{code,message:'TEST provider detail including private row data',details:'TEST secret'}};}};
+ const sessions={authenticate:async()=>({db,access:{user:{id:randomUUID(),display_name:'TEST',email:'test@example.test'},roles:['TEST'],permissions:['records.archive','records.delete']},csrf:'test-csrf'} as unknown as AuthContext)} as SessionService;
+ const admin={rpc:async()=>({data:true,error:null})} as unknown as Client;
+ const server=createApp(c,{sessions,admin}).listen(0,'127.0.0.1');await new Promise<void>(r=>server.once('listening',r));t.after(()=>new Promise<void>(r=>server.close(()=>r())));
+ const address=server.address();if(!address||typeof address==='string')throw new Error();const url=`http://127.0.0.1:${address.port}/api/lifecycle/periods/${randomUUID()}`;
+ const response=await fetch(url);const body=await response.json();
+ assert.equal(response.status,503);assert.equal(body.error.code,'DATABASE_SCHEMA_OUTDATED');
+ assert.equal(body.error.databaseCode,'PGRST202');assert.equal(body.error.requestId,response.headers.get('x-request-id'));
+ assert.doesNotMatch(JSON.stringify(body),/private row data|TEST secret/);
+ code='57014';
+ const deleted=await fetch(url,{method:'POST',headers:{Origin:c.APP_URL,'Content-Type':'application/json','X-CSRF-Token':'test-csrf'},body:JSON.stringify({action:'delete',version:2,reason:'TEST timeout',token:'a'.repeat(32),confirmation:'DELETE'})});
+ const timeout=await deleted.json();assert.equal(deleted.status,504);assert.equal(timeout.error.code,'DATABASE_TIMEOUT');
+ assert.equal(timeout.error.databaseCode,'57014');assert.doesNotMatch(timeout.error.message,/schema/);
+ assert.equal(calls,2,'A failed deletion must not be automatically retried');
+});

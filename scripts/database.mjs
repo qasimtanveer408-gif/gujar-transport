@@ -1,7 +1,6 @@
 import {spawn} from 'node:child_process';
 import {createInterface} from 'node:readline/promises';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
-<<<<<<< HEAD
 import {createRequire} from 'node:module';
 import {dirname,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -43,9 +42,3 @@ export async function main(argv=process.argv.slice(2)) {
  if(action==='types'){await mkdir('shared/generated',{recursive:true});await writeFile('shared/generated/database.types.ts',output);console.info('Types generated from the selected database.');}
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(error=>{console.error(error.message);process.exitCode=1;});
-=======
-const action=process.argv[2],local=process.argv.includes('--local');if(!['migrate','types','test'].includes(action))throw new Error('Unknown command.');if(action==='test'&&!local)throw new Error('Tests require --local and a disposable local stack.');
-if(!local){const ref=(await readFile('supabase/.temp/project-ref','utf8').catch(()=>'' )).trim();if(!ref)throw new Error('Install the official Supabase CLI and run supabase link --project-ref YOUR_CONFIRMED_REFERENCE first.');if(!process.stdin.isTTY)throw new Error('Remote schema commands require interactive target confirmation.');const rl=createInterface({input:process.stdin,output:process.stdout});try{if(await rl.question(`Type the linked project reference ${ref} to ${action}: `)!==ref)throw new Error('Target did not match.');}finally{rl.close();}}
-const args=action==='migrate'?['db','push',local?'--local':'--linked']:action==='test'?['test','db']:['gen','types','typescript',local?'--local':'--linked','--schema','public'];
-const child=spawn('supabase',args,{stdio:action==='types'?['inherit','pipe','inherit']:'inherit',shell:false});let text='';child.stdout?.on('data',b=>text+=b);child.on('error',()=>{console.error('Install the official Supabase CLI on PATH; see SUPABASE_MIGRATIONS.md.');process.exitCode=1;});child.on('close',async code=>{if(code===0&&action==='types'){await mkdir('shared/generated',{recursive:true});await writeFile('shared/generated/database.types.ts',text);console.info('Types generated from selected Supabase schema.');}process.exitCode=code??1;});
->>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40

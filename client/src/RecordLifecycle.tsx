@@ -1,6 +1,6 @@
 import {createPortal} from 'react-dom';
 import {useEffect, useState} from 'react';
-import {api} from './api';
+import {api, ApiError} from './api';
 import {Alert, Badge, Empty, Icon, Loading, Modal, Pagination, Table, type Row} from './components';
 import {hasLifecycleAccess, lifecycleResources, type LifecycleAction, type LifecyclePreview} from '../../shared/lifecycle';
 
@@ -15,6 +15,12 @@ const relatedLabels: Record<string,string> = {
   notification_reads:'Read notifications', attachments:'Documents', import_rows:'Imported rows',
 };
 const labelFor = (name: string) => relatedLabels[name] ?? name.replaceAll('_', ' ');
+function lifecycleError(error: unknown): string {
+  const message = error instanceof Error ? error.message : 'The operation could not be completed.';
+  if (!(error instanceof ApiError)) return message;
+  const {requestId, databaseCode} = error.details;
+  return message + (databaseCode ? ` Database code: ${databaseCode}.` : '') + (requestId ? ` Reference: ${requestId}.` : '');
+}
 export function RecordLifecycle({resource, row, permissions, onChanged}: {
   resource: string; row: Row; permissions: string[]; onChanged: () => void;
 }) {
@@ -39,12 +45,12 @@ export function LifecycleDialog({resource, id, action, permissions, onClose, onC
   const [cleanupPending, setCleanupPending] = useState(false);
   const path = `/lifecycle/${resource}/${id}`;
   useEffect(() => { let live = true; api<LifecyclePreview>(path).then(p => {if (live) setPreview(p);})
-    .catch(e => {if (live) setError(e.message);}); return () => {live = false;}; }, [path]);
+    .catch(e => {if (live) setError(lifecycleError(e));}); return () => {live = false;}; }, [path]);
   const needsArchive = action === 'delete' && preview && !preview.archived_at;
   const actual = needsArchive ? 'archive' : action;
   const title = action === 'delete' ? 'Delete permanently' : action === 'archive' ? 'Archive record' : 'Restore record';
   async function submit() {
-    if (!preview) return;
+    if (!preview || busy || error) return;
     setBusy(true); setError('');
     try {
       const result = await api<{cleanup_pending?: boolean}>(path, 'POST', {
@@ -52,11 +58,16 @@ export function LifecycleDialog({resource, id, action, permissions, onClose, onC
         confirmation: actual === 'delete' ? confirmation : null,
       });
       if (needsArchive) {
-        setPreview(await api<LifecyclePreview>(path)); setConfirmation(''); setAcknowledged(false);
+        setPreview(null); setConfirmation(''); setAcknowledged(false);
+        setPreview(await api<LifecyclePreview>(path));
       } else {
         setCleanupPending(Boolean(result.cleanup_pending)); setFinished(true);
       }
-    } catch (e) { setError((e as Error).message); }
+    } catch (e) {
+      // A lost response may follow a committed transaction. Never automatically
+      // retry a deletion or reuse an old preview after an uncertain outcome.
+      setError(lifecycleError(e)); setPreview(null); setConfirmation(''); setAcknowledged(false);
+    }
     finally { setBusy(false); }
   }
   const close = () => { if (!busy) { onClose(); onChanged(); window.dispatchEvent(new Event('gbt:changed')); } };
@@ -80,13 +91,17 @@ export function LifecycleDialog({resource, id, action, permissions, onClose, onC
           </>}
           <label>Reason<textarea required minLength={3} maxLength={300} value={reason} onChange={e => setReason(e.target.value)}/></label>
           {needsArchive && !permissions.includes('records.archive') && <Alert message="Ask someone with archive permission to archive this record first."/>}
-          {error && <button type="button" className="button secondary small" disabled={busy} onClick={async () => {
-            try { setPreview(await api<LifecyclePreview>(path)); setConfirmation(''); setAcknowledged(false); setError(''); } catch (e) {setError((e as Error).message);}
-          }}>Reload deletion preview</button>}
         </>}
+      {error && !finished && <><p>Reload the preview before retrying. If the record is no longer found, close this dialog and refresh the list to check whether the operation completed.</p>
+        <button type="button" className="button secondary small" disabled={busy} onClick={async () => {
+          setBusy(true);
+          try { setPreview(await api<LifecyclePreview>(path)); setConfirmation(''); setAcknowledged(false); setError(''); }
+          catch (e) {setPreview(null); setError(lifecycleError(e));}
+          finally {setBusy(false);}
+        }}>Reload deletion preview</button></>}
     </div><footer><button type="button" className="button secondary" onClick={close} disabled={busy}>{finished ? 'Done' : 'Cancel'}</button>
       {!finished && <button className={'button ' + (actual === 'delete' ? 'danger' : 'primary')}
-        disabled={busy || !preview || preview.protected || Boolean(needsArchive && !permissions.includes('records.archive')) || actual === 'delete' && (!acknowledged || confirmation !== 'DELETE')}>
+        disabled={busy || Boolean(error) || !preview || preview.protected || Boolean(needsArchive && !permissions.includes('records.archive')) || actual === 'delete' && (!acknowledged || confirmation !== 'DELETE')}>
         {busy ? 'Working…' : needsArchive ? 'Archive and continue' : title}</button>}
     </footer></form></Modal>;
 }

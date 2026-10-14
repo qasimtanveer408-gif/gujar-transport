@@ -1,0 +1,658 @@
+# ULTIMATE MASTER PROMPT — COMPLETE FLEET MANAGEMENT WEBSITE REDESIGN & FUNCTIONAL UPGRADE
+
+## YOUR ROLE
+
+Act as a Senior Full-Stack Developer, Expert UI/UX Designer, Database Architect, Dashboard Designer, and QA Engineer.
+
+I have an existing Fleet, Vehicle, Driver, and Trip Management Website.
+
+I want you to completely redesign and improve my existing website, making it modern, professional, visually beautiful, highly responsive, user-friendly, fast, and fully functional.
+
+This is not a request to create a new website from scratch. You must carefully analyze my existing project and improve it using the current codebase, framework, backend, and database wherever possible.
+
+Do not remove existing important data, working functionality, or essential business logic.
+
+I want an actual working implementation, not just UI mockups, explanations, or suggested changes.
+
+---
+
+## 1. COMPLETE WEBSITE UI/UX REDESIGN
+
+Redesign the entire website, including:
+
+- Main Dashboard
+- Sidebar and Navigation
+- Header and Top Navigation
+- Driver Management
+- Vehicle Management
+- Trip Management
+- Add Driver Forms
+- Add Vehicle Forms
+- Add Trip Forms
+- All Existing Management Modules
+- Tables and Data Grids
+- Cards and Detail Views
+- Reports and Printing
+- Settings and Admin Controls
+- All Modals, Dialogs, and Notifications
+
+### Design Direction
+
+Use a premium, modern SaaS admin dashboard appearance.
+
+Design characteristics:
+
+- Elegant and professional visual identity
+- Beautifully organized layouts
+- Premium typography and consistent spacing
+- Modern rounded cards
+- Subtle shadows and borders
+- Consistent iconography
+- Attractive but restrained accent colors
+- Clean white/light backgrounds with optional dark mode
+- Clearly structured forms and headings
+- Excellent visual hierarchy
+- Responsive layouts for desktop, tablet, and mobile
+- Professional empty states, validation messages, and loading states
+
+The result should look like a premium enterprise fleet management dashboard rather than an outdated administrative website.
+
+Avoid excessively bright colors, unnecessary gradients, oversized buttons, cluttered layouts, and distracting animations.
+
+Maintain one consistent design system throughout the entire website.
+
+---
+
+## 2. REMOVE UNNECESSARY SECTIONS AND CONTENT
+
+Carefully inspect every existing page.
+
+Remove unnecessary, repeated, confusing, and irrelevant website elements.
+
+IMPORTANT:
+
+Remove the unnecessary "Fleet Companies" section/module from the visible website interface, including any irrelevant links or navigation items associated with it.
+
+However, if existing vehicle, driver, or trip data depends on company records, preserve those database relationships and prevent data loss.
+
+Review and correct:
+
+- Meaningless placeholder text
+- Repeated paragraphs
+- Incorrect descriptions
+- Unnecessary headings
+- Poorly written instructions
+- Duplicate UI elements
+- Irrelevant sections
+- Misleading buttons
+- Inconsistent terminology
+- Unnecessary form fields that serve no real purpose
+
+Every page must have concise, meaningful, professional wording.
+
+Do not delete important features merely to make the interface minimal.
+
+---
+
+## 3. CORRECT ALL SPELLING, LABELS, AND FORM ERRORS
+
+Thoroughly review the entire website for English spelling mistakes, grammar problems, and inconsistent labels.
+
+Pay special attention to the "Add Vehicle" form and its Address field.
+
+Correct every incorrect spelling, especially any variations such as "Adress" or "Addres" to "Address".
+
+Also inspect Add Driver, Add Trip, Edit Vehicle, Edit Driver, and all other forms.
+
+Requirements:
+
+- Correct spelling throughout the website
+- Consistent terminology
+- Clearly understandable field names
+- Proper capitalization
+- Professional labels
+- Correct placeholder text
+- Helpful validation error messages
+- Required fields clearly identified
+- Proper formatting for dates, numbers, and addresses
+
+Ensure corrections do not accidentally rename database fields, break API connections, or alter existing saved information.
+
+---
+
+## 4. PROFESSIONAL DRIVER INFORMATION CARDS
+
+Currently, I want to improve how information appears after adding a driver.
+
+When an admin submits the Add Driver form successfully, the saved driver should automatically appear as a beautiful Driver Information Card.
+
+### Each Driver Card Should Display
+
+- Driver name
+- Driver photo, if available
+- Driver ID
+- Contact number
+- Address
+- Driving license number
+- License expiry date
+- Assigned vehicle
+- Current driver status
+- Other relevant saved information
+
+Only display information that exists in the database. Do not invent missing details.
+
+Each card should provide working actions:
+
+- View Details
+- Edit
+- Print
+- Delete (with confirmation)
+
+The card should have a clean, premium layout and easily readable information.
+
+### Driver Management Features
+
+Include:
+
+- Search drivers
+- Filter drivers
+- Sort drivers
+- View active/inactive drivers
+- Assign or update vehicles
+- View individual driver records
+- Print driver information
+
+The default display should be cards. An optional table/list toggle may be provided for administrators who prefer a compact view.
+
+All data must remain persistent after refreshing the website.
+
+---
+
+## 5. VEHICLE AND TRIP CARDS
+
+Apply the same professional card-based design system to Vehicles, Trips, and other relevant records.
+
+### Vehicle Cards
+
+Show saved information such as:
+
+- Vehicle identification
+- Registration number
+- Make and model
+- Vehicle type
+- Assigned driver
+- Current status
+- Relevant dates
+- Other existing vehicle information
+
+### Trip Cards
+
+Show:
+
+- Trip ID
+- Assigned driver
+- Assigned vehicle
+- Starting location
+- Destination
+- Trip date
+- Trip status
+- Relevant financial or operational values
+- Other existing trip information
+
+Each record must support working View, Edit, Print, and authorized Delete actions.
+
+After successful submission of an Add Vehicle or Add Trip form, the newly created record must immediately appear in its relevant management view without requiring a manual refresh.
+
+---
+
+## 6. ADMIN-CONTROLLED CUSTOM CELLS, COLUMNS, AND FIELDS
+
+This is a very important requirement.
+
+I want the administrator to be able to add new custom cells, columns, and data fields according to their own requirements.
+
+The existing interface has some spreadsheet-like cells and calculated values. Improve these properly.
+
+### Custom Field System
+
+Allow an authorized administrator to:
+
+- Add a new field or column
+- Choose its name
+- Select its data type
+- Set a default value
+- Mark it required or optional
+- Change its display order
+- Edit its label
+- Hide or display it
+- Delete or archive unused custom fields safely
+- Configure whether it appears on cards, forms, tables, and printouts
+
+Supported field types should include:
+
+- Text
+- Number
+- Date
+- Currency
+- Percentage
+- Dropdown
+- Checkbox
+- Formula / Calculated Field
+
+All custom fields must be stored properly in the database and remain available after page refresh.
+
+An administrator adding a field should not need to edit application source code.
+
+Ensure dynamic fields also work correctly in Edit, View, and Print modes.
+
+---
+
+## 7. FIX ALL NON-WORKING FORMULA CELLS
+
+Several existing cells that should perform calculations are currently not working.
+
+I want you to inspect the entire existing calculation system and find all broken formulas.
+
+### Required Work
+
+1. Audit every existing formula and calculated cell.
+2. Identify incorrect references and broken dependencies.
+3. Fix formulas producing blank or incorrect results.
+4. Ensure calculations update automatically when their input values change.
+5. Ensure saved calculated values remain consistent with source data.
+6. Handle missing values, zero values, decimal numbers, and division by zero.
+7. Preserve correct existing calculation logic.
+8. Prevent circular formula dependencies.
+9. Display readable errors when a formula cannot be calculated.
+
+### Dynamic Formula Builder
+
+Allow administrators to create new calculated fields using supported formulas.
+
+Examples:
+
+Total Amount = Quantity × Rate
+
+Balance = Total Amount − Paid Amount
+
+Net Amount = Gross Amount − Deductions
+
+Trip Profit = Trip Revenue − Trip Expenses
+
+These are examples only. Use actual existing data fields and business rules when implementing the real system.
+
+Formula fields should automatically recalculate whenever relevant values change.
+
+Do not use unsafe arbitrary JavaScript evaluation for user-created formulas.
+
+Create a secure calculation engine with proper field validation and dependency management.
+
+All formula functionality must work on real saved records, not only in demonstrations.
+
+---
+
+## 8. FULLY FUNCTIONAL PRINTING SYSTEM
+
+This is one of my highest-priority requirements.
+
+Add a clearly visible, functional Print button at the top of all relevant information and management screens.
+
+Include printing for:
+
+- Driver Information
+- Vehicle Information
+- Trip Information
+- Individual Record Details
+- Relevant Reports
+- Other existing printable management documents
+
+Each record card should also have its own Print action.
+
+### Print Functionality
+
+When the user clicks Print:
+
+1. Open a professional print preview.
+2. Load accurate information from the selected saved record.
+3. Apply the correct document template.
+4. Hide website navigation, buttons, menus, and unnecessary interface elements.
+5. Produce a properly formatted printable document.
+6. Support printing and Save as PDF through the browser.
+7. Preserve proper alignment, margins, typography, and page breaks.
+
+All buttons must actually work.
+
+Do not create decorative buttons without event handlers or backend functionality.
+
+---
+
+## 9. MATCH MY ATTACHED PRINT REFERENCE IMAGES
+
+I will attach reference images showing the exact style and structure I want for printed documents.
+
+Study all attached images carefully before implementing the final print templates.
+
+Recreate their document layouts as accurately as possible.
+
+Match:
+
+- Heading placement
+- Information order
+- Table structure
+- Borders and lines
+- Page spacing
+- Header design
+- Font hierarchy
+- Information alignment
+- Signature blocks
+- Blank signing spaces
+- Overall professional document appearance
+
+The final printed document should closely resemble my provided images, while automatically inserting the correct information from my website.
+
+Do not reproduce example names or fake data from reference images.
+
+If reference images are not available yet, build the print infrastructure and leave the template styling configurable until they are supplied.
+
+---
+
+## 10. SIGNATURE-READY PRINT DOCUMENTS
+
+Printed documents will be used by an administrator to obtain signatures from drivers and other authorized persons.
+
+The document must show all necessary information at the top and leave clearly organized blank spaces at the bottom for physical signatures.
+
+### Signature Section
+
+Provide configurable signature areas for relevant parties, including:
+
+- Driver Signature
+- Admin / Authorized Officer Signature
+- Vehicle Handover / Receiving Signature, where applicable
+- Other required signatures based on document type
+
+Each signature area should include:
+
+- Signature line
+- Printed name, where appropriate
+- Date field
+- Optional designation
+- Adequate blank space for handwritten signing
+
+The actual required signature labels must depend on the printed document.
+
+The admin must be able to configure which signature areas appear.
+
+Do not automatically fill handwritten signature spaces or create artificial signatures.
+
+---
+
+## 11. PROFESSIONAL PRINT DOCUMENT DESIGN
+
+Print templates must be separate from the normal website interface.
+
+Requirements:
+
+- A4 paper support
+- Portrait and landscape layouts where appropriate
+- High-quality monochrome printing
+- Consistent page margins
+- Proper table borders
+- Readable text sizes
+- Correct spacing and alignment
+- No cut-off information
+- Proper handling of long names and addresses
+- Automatic page breaks where required
+- Repeat table headers for multipage reports
+- No unnecessary colored backgrounds
+- Document heading and relevant record identifiers
+- Print timestamp where appropriate
+
+Use appropriate print-specific CSS, including @media print and @page rules.
+
+The output should look like an official administrative document suitable for office records and physical signatures.
+
+---
+
+## 12. CLEAN AND LIGHTWEIGHT ANIMATIONS
+
+Introduce subtle, professional animations across the website without reducing performance.
+
+Examples:
+
+- Smooth sidebar transitions
+- Gentle card appearance animations
+- Soft hover effects
+- Button interaction feedback
+- Smooth modal opening
+- Subtle notification transitions
+- Elegant tab switching
+- Loading skeletons where needed
+
+### Animation Rules
+
+- Prefer opacity and transform-based animations.
+- Keep most transitions around 150–250 milliseconds.
+- Avoid excessive animations.
+- Avoid large animation libraries unless already justified.
+- Support prefers-reduced-motion accessibility settings.
+- Prevent layout shifts.
+- Avoid unnecessary re-renders.
+- Ensure smooth scrolling and interactions.
+- Prioritize performance on average laptops and mobile devices.
+
+I want the website to feel polished, not heavy or slow.
+
+---
+
+## 13. IMPROVE ALL EXISTING WORKFLOWS
+
+Inspect and fix all Add, Edit, View, Delete, Search, Filter, and Save functionality across the website.
+
+Ensure:
+
+- Every form submits correctly.
+- Every record saves to the database.
+- Existing saved records load correctly.
+- Editing updates the correct record.
+- Deleting requires appropriate confirmation.
+- User permissions are respected.
+- Driver and vehicle assignments are consistent.
+- Trip information remains linked correctly.
+- The dashboard updates with accurate data.
+- Filters and search work properly.
+- Print uses the currently selected record.
+- Dynamic fields work in all relevant modules.
+- Calculations update reliably.
+- Refreshing or reopening pages does not lose saved data.
+
+Use real backend integration. Do not rely on hardcoded or temporary mock data.
+
+---
+
+## 14. ADMIN MANAGEMENT AND PERMISSIONS
+
+Administrators must have the ability to manage relevant website data and configurable fields.
+
+Build clear management controls for:
+
+- Custom fields
+- Custom formulas
+- Field visibility
+- Display order
+- Print template settings
+- Signature field configuration
+- Record management
+
+Only authorized administrators should be allowed to modify global field structures, formulas, print templates, or sensitive records.
+
+Protect these permissions at the backend/API level, not just by hiding frontend buttons.
+
+Use appropriate validation, audit logging, and safeguards against accidental deletion.
+
+---
+
+## 15. DASHBOARD IMPROVEMENTS
+
+Redesign the main dashboard with useful, real information.
+
+Where supported by existing records, show:
+
+- Total Drivers
+- Active Drivers
+- Total Vehicles
+- Available Vehicles
+- Active Trips
+- Completed Trips
+- Pending Tasks
+- Important Expiry Alerts
+
+Use visually consistent summary cards, compact tables, and useful charts only where they add genuine value.
+
+All displayed numbers must be calculated from real records.
+
+Avoid fake statistics, unnecessary graphs, and meaningless dashboard content.
+
+---
+
+## 16. PERFORMANCE AND RESPONSIVENESS
+
+Optimize the entire website.
+
+Requirements:
+
+- Fast initial page loading
+- Efficient API requests
+- Proper component reuse
+- Optimized database queries
+- Efficient table rendering
+- Pagination or virtualization for large record collections
+- Debounced search where appropriate
+- Lazy loading where useful
+- Optimized images and icons
+- Minimal unnecessary dependencies
+- No console errors
+- No avoidable layout shifts
+- Smooth interactions on mobile and desktop
+
+The improved UI must not slow down existing business operations.
+
+---
+
+## 17. DEVELOPMENT AND IMPLEMENTATION RULES
+
+Before making changes:
+
+1. Examine the complete project structure.
+2. Identify the existing technology stack.
+3. Inspect all existing pages, routes, components, database schemas, and APIs.
+4. Identify reusable working features.
+5. Document existing broken functionality.
+6. Identify formula-related problems and printing limitations.
+7. Identify any database dependencies before removing unnecessary modules.
+
+Then implement the improvements systematically.
+
+### Mandatory Rules
+
+- Preserve existing user data.
+- Do not break working features.
+- Do not unnecessarily rewrite the entire backend.
+- Use compatible database migrations where required.
+- Maintain proper relationships between drivers, vehicles, and trips.
+- Avoid introducing new bugs.
+- Create reusable components.
+- Follow existing project conventions where practical.
+- Do not silently replace real features with mock implementations.
+- Keep the project maintainable and production-ready.
+
+---
+
+## 18. COMPLETE FUNCTIONAL TESTING
+
+After implementation, test the full system.
+
+### Driver Test
+
+Add Driver → Save → Driver Card Appears → View → Edit → Print → Confirm Persisted Data
+
+### Vehicle Test
+
+Add Vehicle → Validate Address → Save → Vehicle Card Appears → Edit → Print
+
+### Trip Test
+
+Add Trip → Assign Driver and Vehicle → Save → Trip Card Appears → Edit → Print
+
+### Custom Fields Test
+
+Admin Adds New Field → Field Appears → User Enters Data → Data Saves → Data Displays → Field Prints Correctly
+
+### Formula Test
+
+Admin Creates Formula → Enters Values → Calculation Updates → Saves Record → Reloads Record → Calculation Remains Correct
+
+### Printing Test
+
+Open Record → Click Print → Correct Preview Appears → Reference Layout Matches → Signature Spaces Remain Blank → A4 Print/PDF Works
+
+### Additional Tests
+
+- Mobile responsiveness
+- Search and filter functionality
+- Permissions
+- Validation
+- Empty data handling
+- Large record collections
+- No broken navigation
+- No console errors
+- No lost records
+- No broken formulas
+
+Fix all problems discovered during testing.
+
+---
+
+## 19. FINAL SUCCESS CRITERIA
+
+The redesign is complete only when:
+
+- The entire website looks modern and professional.
+- Unnecessary "Fleet Companies" UI is removed safely.
+- Unnecessary text and redundant elements are cleaned up.
+- All spelling mistakes, including Address labels, are fixed.
+- Drivers appear in attractive information cards.
+- Vehicles and trips have consistent, functional record views.
+- Administrators can add custom fields, cells, and columns.
+- Administrators can configure safe calculation formulas.
+- All existing broken formula cells are repaired.
+- Newly entered information saves and displays correctly.
+- Print buttons work across all relevant modules.
+- Printed records match my reference images.
+- All signature spaces are properly provided.
+- Animations are subtle and lightweight.
+- The website remains fast and responsive.
+- Existing important data and business functionality remain safe.
+
+## FINAL INSTRUCTION
+
+Do not stop after generating a redesign proposal or displaying sample screens.
+
+I want the existing working application actually updated.
+
+Inspect the project, implement the changes, connect frontend and backend functionality, repair the broken calculations, complete the print system, and test each important workflow.
+
+Prioritize in this order:
+
+1. Data safety and existing functionality.
+2. Fix broken forms, cells, and formulas.
+3. Implement custom fields and calculations.
+4. Implement professional card-based record views.
+5. Implement printing and signature-ready documents.
+6. Redesign all website pages.
+7. Add lightweight animations and performance improvements.
+8. Run complete functional and visual testing.
+
+Deliver a complete, consistent, professional fleet management application that is ready for practical administrative use.
+
+When finished, provide a concise summary of actual changes made, tests performed, remaining issues, and any features that could not be completed. Do not claim something works unless it has been implemented and verified.

@@ -1,0 +1,60 @@
+import {RecordsArchivePage} from './RecordLifecycle';
+import {NotificationBell,NotificationCenter,RoutesPage} from './Enhancements';
+import React,{useState,useEffect,lazy,Suspense,type FormEvent} from 'react';
+import {createRoot} from 'react-dom/client';
+import {api,refreshCsrf,ApiError} from './api';
+import {Alert,Icon,Loading} from './components';
+const ImportsPage=lazy(()=>import('./OperationsPages').then(m=>({default:m.ImportsPage})));
+const ReportsPage=lazy(()=>import('./ReportsPage').then(m=>({default:m.ReportsPage})));
+const Dashboard=lazy(()=>import('./Dashboard').then(m=>({default:m.Dashboard})));
+const ResourcePage=lazy(()=>import('./ResourcePage').then(m=>({default:m.ResourcePage})));
+const ExactFormsPage=lazy(()=>import('./ExactFormsPage').then(m=>({default:m.ExactFormsPage})));
+const CustomFieldsPage=lazy(()=>import('./CustomFieldsPage').then(m=>({default:m.CustomFieldsPage})));
+import {isFormResource} from '../../shared/form-contract';
+const UsersPage=lazy(()=>import('./AdminPages').then(m=>({default:m.UsersPage})));
+const RolesPage=lazy(()=>import('./AdminPages').then(m=>({default:m.RolesPage})));
+const SettingsPage=lazy(()=>import('./AdminPages').then(m=>({default:m.SettingsPage})));
+const AuditPage=lazy(()=>import('./AdminPages').then(m=>({default:m.AuditPage})));
+import {modules} from '../../shared/modules';
+import './style.css';
+type UserAccess={user:{id:string;display_name:string;email:string};permissions:string[];roles:string[];environment:string;session_expires_at?:string|null};
+function Login({onLogin}:{onLogin:()=>void}){
+ const [email,setEmail]=useState(''),[password,setPassword]=useState(''),[error,setError]=useState(''),[busy,setBusy]=useState(false),[show,setShow]=useState(false);
+ async function submit(e:FormEvent){e.preventDefault();setBusy(true);setError('');try{await refreshCsrf();await api('/auth/login','POST',{email,password});setPassword('');onLogin();}catch(e){setError(e instanceof Error?e.message:'Sign in failed.');}finally{setBusy(false);}}
+ return <main className="login-page"><section className="login-brand"><div className="wordmark"><img src="/brand/logo.png" alt=""/><div>GUJJAR BROTHER<span>TRANSPORT</span></div></div><div className="login-story"><span className="login-tag">YOUR TRANSPORT WORKSPACE</span><h1>Every journey.<br/>Every rupee.<br/><em>All in one place.</em></h1><p>A clear view of your vehicles, drivers and accounts.</p><div className="login-features"><span><Icon name="truck"/>Fleet operations</span><span><Icon name="graph-up"/>Business insights</span><span><Icon name="printer"/>Ready to print</span></div></div><div className="brand-contact"><span>Gujjar Brother Transport</span><span>attiqgujjar360gb@gmail.com</span><span>03481201249 · 03003486360 · 03002676328</span></div></section><section className="login-form"><div className="login-card"><div className="login-icon"><Icon name="shield-lock"/></div><div className="eyebrow">STAFF ACCESS</div><h2>Welcome back</h2><p className="muted">Sign in to continue to your workspace.</p><Alert message={error}/><form onSubmit={submit}><label>Email address<input type="email" required value={email} onChange={e=>setEmail(e.target.value)} autoComplete="username" placeholder="you@company.com"/></label><label>Password<div className="password-field"><input aria-label="Password" type={show?'text':'password'} required value={password} onChange={e=>setPassword(e.target.value)} autoComplete="current-password" placeholder="Enter your password"/><button type="button" className="icon-button" aria-label={show?'Hide password':'Show password'} onClick={()=>setShow(!show)}><Icon name={show?'eye-slash':'eye'}/></button></div></label><button className="button primary" disabled={busy}>{busy?'Signing in…':'Sign in'}<Icon name="arrow-right"/></button></form><div className="login-help"><Icon name="shield-check"/><p>For account access or a password reset, contact your administrator.</p></div></div><span className="login-footer">Gujjar Brother Transport · Secure staff access</span></section></main>;
+}
+function App(){const [access,setAccess]=useState<UserAccess|null>(null),[loading,setLoading]=useState(true),[error,setError]=useState('');async function load(){setLoading(true);setError('');try{setAccess(await api<UserAccess>('/auth/me'));}catch(e){setAccess(null);if(!(e instanceof ApiError)||e.status!==401)setError(e instanceof Error?e.message:'Connection failed.');}finally{setLoading(false);}}useEffect(()=>{void load();},[]);useEffect(()=>{
+ const ended=()=>{setAccess(null);setError('Your session ended. Sign in again.');};
+ addEventListener('gbt:session-ended',ended);
+ const expiry=access?.session_expires_at?Date.parse(access.session_expires_at):NaN;
+ const timer=Number.isFinite(expiry)?setTimeout(ended,Math.max(0,expiry-Date.now())):undefined;
+ return()=>{removeEventListener('gbt:session-ended',ended);clearTimeout(timer);};
+ },[access]);if(loading)return <Loading/>;if(!access)return <><Alert message={error}/><Login onLogin={()=>void load()}/></>;return <Workspace access={access} onLogout={()=>void load()}/>;}
+function Workspace({access,onLogout}:{access:UserAccess;onLogout:()=>void}){
+ const [path,setPath]=useState(location.pathname),[mobile,setMobile]=useState(false),[search,setSearch]=useState(''),[theme,setTheme]=useState(()=>{try{return localStorage.getItem('gbt-theme')??'light';}catch{return 'light';}});
+ useEffect(()=>{document.documentElement.dataset.theme=theme;try{localStorage.setItem('gbt-theme',theme);}catch{/* Theme storage is optional. */}},[theme]);
+ useEffect(()=>{const listener=()=>setPath(location.pathname),escape=(e:KeyboardEvent)=>{if(e.key==='Escape')setMobile(false);};addEventListener('popstate',listener);addEventListener('keydown',escape);return()=>{removeEventListener('popstate',listener);removeEventListener('keydown',escape);};},[]);
+ function go(p:string){history.pushState({},'',p);setPath(p);setMobile(false);setSearch('');}
+ const nav=(url:string,icon:string,label:string)=>!search||label.toLowerCase().includes(search.toLowerCase())?<button key={url} className={path===url?'active':''} onClick={()=>go(url)}><Icon name={icon}/>{label}</button>:null;
+ const isSuperAdmin=access.roles.includes('Super Admin'),displayName=isSuperAdmin?'Attiq gujjar':access.user.display_name;
+ const displayRoles=access.roles.map(role=>role==='Super Admin'?'Administrator':role).join(', ');
+ const adminPages=[['/archives','archive','Records & archives','records.archive'],['/users','people','Users','users.view'],['/roles','shield-check','Roles & permissions','roles.view'],['/fields','sliders','Fields & print settings','settings.manage'],['/settings','gear','Business settings','settings.manage'],['/audit','clock-history','Audit history','audit.view']];
+ let page:React.ReactNode;
+ if(!access.permissions.length)page=<div className="card"><div className="card-body"><h1>Your account is created</h1><p>Welcome, {access.user.display_name}. Ask your administrator to assign your role in Users. Your dashboard will be available after access is enabled.</p></div></div>;
+ else if(path==='/')page=<Dashboard go={go} permissions={access.permissions}/>;
+ else if(path==='/archives'&&access.permissions.some(p=>['records.archive','records.delete'].includes(p)))page=<RecordsArchivePage permissions={access.permissions}/>;
+ else if(path==='/routes'&&access.permissions.some(p=>['trips.view','bookings.view'].includes(p)))page=<RoutesPage permissions={access.permissions}/>;
+ else if(path==='/maintenance/invoices')page=<><div className="page-heading"><div><h1>Maintenance invoices & oil</h1><p>Verified repair costs and oil-change readings.</p></div><button className="button secondary" onClick={()=>go('/maintenance')}>Back to maintenance</button></div><ResourcePage resource="maintenance" permissions={access.permissions}/></>;
+ else if(path==='/fields'&&access.permissions.includes('settings.manage'))page=<CustomFieldsPage permissions={access.permissions}/>;
+ else if(modules[path.slice(1)]&&path!=='/companies'){const r=path.slice(1);page=isFormResource(r)?<ExactFormsPage key={r} resource={r} permissions={access.permissions}/>:<ResourcePage key={r} resource={r} permissions={access.permissions}/>;}
+ else if(path==='/reports'&&access.permissions.includes('reports.export'))page=<ReportsPage permissions={access.permissions}/>;
+ else if(path==='/alerts'||path==='/notifications')page=<NotificationCenter permissions={access.permissions} go={go}/>;
+ else if(path==='/imports'&&access.permissions.includes('imports.manage'))page=<ImportsPage permissions={access.permissions}/>;
+ else if(path==='/users'&&access.permissions.includes('users.view'))page=<UsersPage permissions={access.permissions}/>;
+ else if(path==='/roles'&&access.permissions.includes('roles.view'))page=<RolesPage permissions={access.permissions}/>;
+ else if(path==='/settings'&&access.permissions.includes('settings.manage'))page=<SettingsPage/>;
+ else if(path==='/audit'&&access.permissions.includes('audit.view'))page=<AuditPage/>;
+ else page=<Alert message="This page is unavailable or you do not have permission to view it."/>;
+ return <div className="app-shell"><aside className={'sidebar '+(mobile?'is-open':'')}><a className="sidebar-brand" href="/" onClick={e=>{e.preventDefault();go('/');}}><img src="/brand/logo.png" alt=""/><strong>GUJJAR BROTHER<span>TRANSPORT</span></strong></a><div className="nav-search"><Icon name="search"/><input aria-label="Find a page" placeholder="Find a page…" value={search} onChange={e=>setSearch(e.target.value)}/></div><nav aria-label="Main navigation"><span className="nav-section">WORKSPACE</span>{nav('/','grid-1x2','Overview')}<span className="nav-section">FLEET & ACCOUNTS</span>{Object.entries(modules).filter(([key,m])=>key!=='companies'&&access.permissions.includes(m.permission)).map(([key,m])=>nav('/'+key,m.icon,m.title))}{access.permissions.includes('reports.export')&&nav('/reports','file-earmark-bar-graph','Reports & exports')}{access.permissions.length>0&&nav('/notifications','bell','Notifications')}{access.permissions.some(p=>['trips.view','bookings.view'].includes(p))&&nav('/routes','signpost-2','Routes')}{access.permissions.includes('imports.manage')&&nav('/imports','file-earmark-arrow-up','CSV imports')}<span className="nav-section">ADMINISTRATION</span>{adminPages.filter(x=>access.permissions.includes(x[3])||x[0]==='/archives'&&access.permissions.includes('records.delete')).map(([url,icon,label])=>nav(url,icon,label))}</nav><div className="sidebar-bottom"><div className="avatar">{displayName.slice(0,1)}</div><div><strong>{displayName}</strong><small>{displayRoles}</small></div></div></aside>{mobile&&<button aria-label="Close navigation" className="sidebar-backdrop" onClick={()=>setMobile(false)}/>}<div className="main-shell"><header className="topbar"><div><button className="icon-button menu-toggle" aria-label="Open navigation" onClick={()=>setMobile(true)}><Icon name="list"/></button><span className="workspace-label">Transport workspace</span></div><div><span className="environment">{access.environment==='development'?'Development':access.environment==='local-live'?'LIVE DATA · Local':'Live'}</span>{access.permissions.length>0&&<NotificationBell go={go}/>}<button className="icon-button" aria-label={theme==='light'?'Switch to dark theme':'Switch to light theme'} onClick={()=>setTheme(theme==='light'?'dark':'light')}><Icon name={theme==='light'?'moon':'sun'}/></button><button className="button secondary small" onClick={async()=>{try{await api('/auth/logout','POST');onLogout();}catch(e){alert((e as Error).message);}}}>Sign out</button></div></header>{access.environment==='local-live'&&<div className="live-warning">LIVE DATA — Changes here also affect the hosted application.</div>}<main className="workspace-content"><Suspense fallback={<Loading/>}>{page}</Suspense></main><footer className="app-footer">Gujjar Brother Transport<span>Asia/Karachi · PKR</span></footer></div></div>;
+}
+createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);

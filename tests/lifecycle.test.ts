@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
-import {readFile} from 'node:fs/promises';
+import {readFile,readdir} from 'node:fs/promises';
 import {formFixture} from './helpers/form-fixture.js';
 import {createTestDatabase} from '../scripts/test-sql.js';
 import type {LifecyclePreview} from '../shared/lifecycle.js';
@@ -87,10 +87,55 @@ test('loan disbursement deletion includes repayments; routes, companies, duties 
 test('fresh SQL-editor installer applies all migrations, registers history and rejects accidental reuse',async()=>{
  const db=await createTestDatabase({throughMigration:'000'});try{
   const sql=await readFile('supabase/setup/NEW_DATABASE_SETUP.sql','utf8');await db.exec(sql);
-  assert.equal(Number((await db.query<{n:number}>('select count(*) n from supabase_migrations.schema_migrations')).rows[0].n),17);
+  const migrationCount=(await readdir('supabase/migrations')).filter(name=>/^\d+_.+\.sql$/.test(name)).length;
+  assert.equal(Number((await db.query<{n:number}>('select count(*) n from supabase_migrations.schema_migrations')).rows[0].n),migrationCount);
   await assert.rejects(db.exec(sql),/already contains the app/);await db.exec('rollback');
   assert.equal((await db.query('select count(*) from public.roles')).rows.length,1);
  }finally{await db.close();}
+});
+
+test('empty accounting period deletion removes exactly the reviewed row and preserves other periods and transactions',async()=>{
+ const f=await formFixture();try{
+  const period=await f.scalar<string>('select public.create_period($1,$2,$3)',['TEST empty October','2099-10-01','2099-10-31']);
+  const p=await purge(f,'periods',period);
+  assert.deepEqual(p.counts,[{table:'accounting_periods',count:1}]);assert.equal(p.total,1);
+  assert.equal(await count(f,'accounting_periods'),1);assert.equal(await count(f,'trips'),1);
+  assert.equal(await count(f,'vehicles'),1);assert.equal(await count(f,'drivers'),1);
+  assert.ok(await f.scalar('select public.create_period($1,$2,$3)',['TEST October replacement','2099-10-01','2099-10-31']));
+ }finally{await f.db.close();}
+});
+
+test('SQL-editor repair restores a missing delete RPC, preserves records, and can be rerun',async()=>{
+ const f=await formFixture({throughMigration:'20261014120000_record_lifecycle.sql'});try{
+  const period=await f.scalar<string>('select public.create_period($1,$2,$3)',['TEST repair October','2099-10-01','2099-10-31']);
+  await act(f,'periods',period,'archive',1);
+  const before=await preview(f,'periods',period);
+  await f.db.exec('reset role');
+  await f.db.exec('drop function public.record_lifecycle_action(text,text,text,integer,text,text,text)');
+  const sql=await readFile('supabase/setup/REPAIR_RECORD_DELETE.sql','utf8');
+  await f.db.exec(sql);await f.db.exec(sql);
+  assert.equal(await f.scalar("select has_function_privilege('anon','public.record_lifecycle_action(text,text,text,integer,text,text,text)','EXECUTE')"),false);
+  assert.equal(await f.scalar("select has_function_privilege('authenticated','public.record_lifecycle_action(text,text,text,integer,text,text,text)','EXECUTE')"),true);
+  assert.equal(Number(await f.scalar("select count(*) from supabase_migrations.schema_migrations where version in ('20261014120000','20261014143000')")),2);
+  await f.asUser();
+  assert.equal(await count(f,'accounting_periods'),2);assert.equal(await count(f,'trips'),1);
+  assert.deepEqual(await preview(f,'periods',period),before);
+  await act(f,'periods',period,'delete',before.version,before.token,'DELETE');
+  assert.equal(await count(f,'accounting_periods'),1);assert.equal(await count(f,'trips'),1);
+ }finally{await f.db.close();}
+});
+
+test('SQL-editor repair installs missing lifecycle migration on an existing app without removing data',async()=>{
+ const f=await formFixture({throughMigration:'20261011160000_master_review.sql'});try{
+  await f.db.exec('reset role');
+  const sql=await readFile('supabase/setup/REPAIR_RECORD_DELETE.sql','utf8');
+  await f.db.exec(sql);await f.db.exec(sql);await f.asUser();
+  assert.equal(await count(f,'trips'),1);assert.equal(await count(f,'vehicles'),1);
+  assert.equal((await f.read('vehicles',f.vehicle)).registration,'TEST-001');
+  await purge(f,'periods',f.period);
+  assert.equal(await count(f,'accounting_periods'),0);assert.equal(await count(f,'trips'),0);
+  assert.equal(await count(f,'vehicles'),1);assert.equal(await count(f,'drivers'),1);
+ }finally{await f.db.close();}
 });
 
 test('maintenance, office expenses, bookings, import batches, notifications, custom values and accounts support archive and purge',async()=>{

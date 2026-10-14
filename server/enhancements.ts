@@ -15,16 +15,10 @@ export function enhancementsRouter(){
   const result=await a.db.rpc('transfer_driver',{p_driver:z.string().uuid().parse(req.params.id),p_vehicle:q.vehicle_id,p_date:q.assigned_date,p_reason:q.reason,p_assignment:q.assignment_id});dbError(result.error);await a.db.rpc('refresh_alerts_after_change');res.json({id:result.data});
  });
  r.get('/routes',async(req,res)=>{
-<<<<<<< HEAD
   const q=z.object({search:z.string().max(100).default(''),page:z.coerce.number().int().min(1).max(100000).default(1),archived:z.enum(['true','false']).default('false')}).parse(req.query),a=res.locals.auth as AuthContext;
   if(!a.access.permissions.some(p=>['trips.view','bookings.view'].includes(p)))throw new AppError(403,'FORBIDDEN','Route view permission is required.');
   let query=a.db.from('routes').select('id,origin,destination,version,archived,archived_at',{count:'exact'}).order('origin').order('destination');
   if(q.archived!=='true')query=query.eq('archived',false).is('archived_at',null);
-=======
-  const q=z.object({search:z.string().max(100).default(''),page:z.coerce.number().int().min(1).max(100000).default(1)}).parse(req.query),a=res.locals.auth as AuthContext;
-  if(!a.access.permissions.some(p=>['trips.view','bookings.view'].includes(p)))throw new AppError(403,'FORBIDDEN','Route view permission is required.');
-  let query=a.db.from('routes').select('id,origin,destination,version',{count:'exact'}).eq('archived',false).order('origin').order('destination');
->>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
   // Two independent search columns are combined by the database, with quoted
   // filter syntax to keep punctuation in city names from changing the query.
   if(q.search){const term=q.search.replace(/[\\%_]/g,'\\$&').replace(/"/g,'\\"');query=query.or(`origin.ilike."%${term}%",destination.ilike."%${term}%"`);}
