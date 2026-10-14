@@ -1,0 +1,18 @@
+import {randomUUID} from 'node:crypto';
+import {createTestDatabase} from '../../scripts/test-sql.js';
+import type {DataRow} from '../../shared/report-contract.js';
+export async function formFixture(options:{throughMigration?:string}={}){const db=await createTestDatabase(options);
+ async function scalar<T>(sql:string,args:unknown[]=[]):Promise<T>{return Object.values((await db.query<Record<string,T>>(sql,args)).rows[0])[0];}
+ const owner=randomUUID(),session=randomUUID(),viewer=randomUUID(),vs=randomUUID();
+ const task=await scalar<{id:string}>('select public.server_bootstrap_begin($1)',['forms-owner@example.test']);await db.query('insert into auth.users(id,email,raw_app_meta_data) values($1,$2,$3)',[owner,'forms-owner@example.test',JSON.stringify({gbt_provisioning_id:task.id})]);await db.query('select public.server_provision_finish($1,$2)',[task.id,owner]);await db.query("insert into auth.users(id,email) values($1,'forms-viewer@example.test')",[viewer]);await db.query("insert into public.app_users(id,email,display_name) values($1,'forms-viewer@example.test','TEST Viewer')",[viewer]);await db.query("insert into public.user_roles select $1,id from public.roles where name='Viewer'",[viewer]);
+ for(const [uid,sid] of [[owner,session],[viewer,vs]]){await db.query('insert into auth.sessions(id,user_id) values($1,$2)',[sid,uid]);await db.query('select public.server_session_create($1,$2,$3,$4)',[uid.replaceAll('-','').repeat(2),uid,sid,'TEST ONLY']);}
+ async function asUser(restricted=false){await db.exec('reset role');await db.query("select set_config('request.jwt.claims',$1,false)",[JSON.stringify({sub:restricted?viewer:owner,session_id:restricted?vs:session,role:'authenticated'})]);await db.exec('set role authenticated');}await asUser();
+ const today=await scalar<string>("select (now() at time zone 'Asia/Karachi')::date::text"),from=today.slice(0,4)+'-01-01',to=today.slice(0,4)+'-12-31';await db.query('select public.save_business_settings($1,1)',[JSON.stringify({period_confirmed:true})]);const period=await scalar<string>('select public.create_period($1,$2,$3)',['TEST accounting period',from,to]);
+ const permissions=await scalar<string[]>("select jsonb_agg(permission_code) from public.role_permissions rp join public.roles r on r.id=rp.role_id where r.reserved");
+ const save=(resource:string,data:DataRow,id:string|null=null,version:number|null=null,identity:number|null=null,assignment:string|null=null)=>scalar<string>('select public.save_form($1,$2,$3,$4,$5,$6)',[resource,id,version,JSON.stringify(data),identity,assignment]);
+ const read=(resource:string,id:string)=>scalar<DataRow>('select public.form_record($1,$2,$3,$4)',[resource,id,from,to]);
+ const vehicle=await save('vehicles',{registration:'TEST-001',manufacturer:'TEST Manufacturer',purchase_year:'2020',purchase_price:'1234567.89',major_maintenance_work:'TEST overhaul notes',remarks:'TEST vehicle remarks'});
+ const driver=await save('drivers',{vehicle_id:vehicle,full_name:'TEST Driver',father_name:'TEST Parent',cnic:'0012300000001',licence_number:'00123',mobile:'03000000001',emergency_contact:'03000000002',joining_date:from,leaving_date:'',address:'TEST address with\nsecond line'});
+ const tripData={business_date:today,vehicle_id:vehicle,driver_id:driver,cycle_number:'TEST-CYCLE-001',fare:'80000',diesel:'29000',tolls:'3000',fines_permits:'0',food:'1200',reward:'0',service:'0',parking:'0',engine_oil:'0',other:'800',commission:'2000',start_odometer:'144844',end_odometer:'145382',fuel_litres:'68',weight:'12.345',remarks:'TEST trip remarks'};
+ const trip=await save('trips',tripData);return {db,scalar,asUser,save,read,vehicle,driver,trip,tripData,today,from,to,period,permissions};
+}
