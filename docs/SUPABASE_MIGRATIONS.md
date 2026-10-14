@@ -39,4 +39,8 @@ Remote scripts require interactive project-reference confirmation. Use a private
 For local disposable Supabase, start Docker then run `supabase start`, `npm run db:migrate -- --local`, `npm run db:types -- --local` and `npm run db:test -- --local`. Never run reset against live data. Compare migration history before attempting any repair.
 
 `schema:snapshot` generates SQL row types and data dictionaries from actually applied migrations in isolated PostgreSQL. These are not claimed as hosted-generated Supabase client types. `db:types` writes shared/generated/database.types.ts from the selected real Supabase schema. Numeric Data API columns are generally numbers; application financial RPCs explicitly return decimal strings.
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00

@@ -32,7 +32,11 @@ All functions have explicit grants and fixed search paths. Server-prefixed actio
 =======
 | form_register | p_resource text, p_from date, p_to date, p_page integer DEFAULT 1, p_limit integer DEFAULT 25, p_search text DEFAULT ''::text, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid, p_status text DEFAULT ''::text, p_sort text DEFAULT 'name'::text, p_direction text DEFAULT 'asc'::text, p_include_archived boolean DEFAULT false | jsonb | caller RLS |
 | list_records | p_resource text, p_search text DEFAULT ''::text, p_page integer DEFAULT 1, p_limit integer DEFAULT 25, p_from date DEFAULT NULL::date, p_to date DEFAULT NULL::date, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid | jsonb | caller RLS |
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 | loan_transaction | p_loan uuid, p_driver uuid, p_date date, p_kind text, p_amount numeric, p_reference text, p_due date, p_key uuid | uuid | definer + explicit authorization |
 | mark_notification_read | p_id uuid | void | definer + explicit authorization |
 | monthly_accounts | p_from date, p_to date, p_basis text DEFAULT 'measured'::text | jsonb | caller RLS |
@@ -46,7 +50,11 @@ All functions have explicit grants and fixed search paths. Server-prefixed actio
 | record_lifecycle_list | p_resource text, p_state text DEFAULT 'active'::text, p_page integer DEFAULT 1, p_search text DEFAULT ''::text | jsonb | definer + explicit authorization |
 | record_lifecycle_preview | p_resource text, p_id text | jsonb | definer + explicit authorization |
 =======
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 | reference_dataset | p_kind text, p_from date, p_to date, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid | jsonb | caller RLS |
 | refresh_alerts_after_change |  | void | definer + explicit authorization |
 | reopen_period | p_period uuid, p_version integer, p_reason text | void | definer + explicit authorization |
@@ -73,7 +81,11 @@ All functions have explicit grants and fixed search paths. Server-prefixed actio
 | server_deletion_jobs |  | jsonb | definer + explicit authorization |
 | server_finish_deletion_job | p_id uuid | void | definer + explicit authorization |
 =======
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 | server_orphan_candidates |  | jsonb | definer + explicit authorization |
 | server_orphan_finish | p_id uuid | void | definer + explicit authorization |
 | server_provision_finish | p_task uuid, p_user uuid | void | definer + explicit authorization |

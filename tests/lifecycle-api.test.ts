@@ -29,6 +29,7 @@ test('failed Storage cleanup remains queued, retries successfully, and missing A
  assert.equal((await drainDeletionJobs(admin)).pending,true);assert.equal(jobs.length,1);
  fail=false;assert.equal((await drainDeletionJobs(admin)).pending,false);assert.equal(jobs.length,0);
 });
+<<<<<<< HEAD
 
 test('lifecycle failures include safe database codes and a matching request reference without leaking provider details',async t=>{
  const c=parseConfig({APP_ENV:'development',APP_URL:'http://localhost:5173',ALLOWED_ORIGINS:'http://localhost:5173',SUPABASE_URL:'https://example.supabase.co',SUPABASE_PUBLISHABLE_KEY:'TEST-publishable-key-only',SUPABASE_SECRET_KEY:'TEST-privileged-key-only',SESSION_ENCRYPTION_KEY:randomBytes(32).toString('hex')});
@@ -48,3 +49,5 @@ test('lifecycle failures include safe database codes and a matching request refe
  assert.equal(timeout.error.databaseCode,'57014');assert.doesNotMatch(timeout.error.message,/schema/);
  assert.equal(calls,2,'A failed deletion must not be automatically retried');
 });
+=======
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00

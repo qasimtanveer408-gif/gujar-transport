@@ -27,4 +27,8 @@ Routine posting/void/edit rules above remain in place. Separately, an administra
 
 Archiving alone preserves the ledger and financial totals. An archived accounting period keeps its date range reserved and disallows posting; permanent deletion frees that range.
 =======
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00

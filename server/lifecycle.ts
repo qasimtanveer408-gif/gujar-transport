@@ -63,13 +63,21 @@ export function lifecycleRouter(admin: Client) {
     const result = await (res.locals.auth as AuthContext).db.rpc('record_lifecycle_list', {
       p_resource: resource.parse(req.params.resource), p_state: q.state, p_page: q.page, p_search: q.search,
     });
+<<<<<<< HEAD
     dbError(result.error, 'record_lifecycle_list'); res.json(result.data);
+=======
+    dbError(result.error); res.json(result.data);
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
   });
   r.get('/lifecycle/:resource/:id', async (req, res) => {
     const result = await (res.locals.auth as AuthContext).db.rpc('record_lifecycle_preview', {
       p_resource: resource.parse(req.params.resource), p_id: id.parse(req.params.id),
     });
+<<<<<<< HEAD
     dbError(result.error, 'record_lifecycle_preview'); res.json(result.data);
+=======
+    dbError(result.error); res.json(result.data);
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
   });
   r.post('/lifecycle/:resource/:id', async (req, res) => {
     const q = actionInput.parse(req.body), a = res.locals.auth as AuthContext;
@@ -81,7 +89,11 @@ export function lifecycleRouter(admin: Client) {
       p_resource: resource.parse(req.params.resource), p_id: id.parse(req.params.id), p_action: q.action,
       p_version: q.version, p_reason: q.reason, p_token: q.token ?? null, p_confirmation: q.confirmation ?? null,
     });
+<<<<<<< HEAD
     dbError(result.error, 'record_lifecycle_action');
+=======
+    dbError(result.error);
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
     const cleanup = q.action === 'delete' ? await drainDeletionJobs(admin) : {pending: false};
     res.json({...result.data, cleanup_pending: cleanup.pending});
   });

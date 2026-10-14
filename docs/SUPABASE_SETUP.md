@@ -2,7 +2,11 @@
 > For this release, use [START-HERE-ARCHIVE-DELETE.md](../START-HERE-ARCHIVE-DELETE.md) for the complete new-database setup.
 
 =======
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 # Supabase setup
 
 Account-side execution is pending. Configure credentials privately, never in chat.
@@ -14,7 +18,11 @@ Account-side execution is pending. Configure credentials privately, never in cha
 4. Use the single SQL installer, or run `npm run db:login`, `npm run db:link -- --project-ref YOUR_CONFIRMED_REFERENCE`, `npm run db:check`, then `npm run db:migrate`. Confirm the displayed reference.
 =======
 4. Install the official Supabase CLI. From this repository run `supabase login`, then `supabase link --project-ref YOUR_CONFIRMED_REFERENCE`. Review `supabase db push --linked --dry-run`. Run `npm run db:migrate` and confirm the displayed reference.
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 5. Migrations create RLS, roles/functions and five private Storage buckets. Do not expose the private schema through the Data API. Run `npm run db:types` against the same project.
 6. Generate an encryption key with `npm run secrets:generate`. Copy it privately into SESSION_ENCRYPTION_KEY, protect an encrypted recovery copy and delete the temporary file.
 7. Temporarily set ADMIN_BOOTSTRAP_ENABLED=true, ADMIN_EMAIL and a unique ADMIN_PASSWORD of at least 14 characters. Run `npm run seed:admin` in an interactive terminal and confirm the target. Remove the password and set the flag false afterwards. Web startup rejects retained setup credentials.

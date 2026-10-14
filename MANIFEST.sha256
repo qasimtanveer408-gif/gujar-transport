@@ -24,7 +24,11 @@ ec5fedb8a149afe8bf808b6dc5979b8d00298879fc17d1a26d673bb4ded1a68b  REPORT_DATA_MA
 896cf104b1ab7c819bdd69e8a04bc3d9f1877891154b3f2df30f54ca43757b1a  START-WINDOWS.cmd
 9dfdbad302437b2a29df785432784c03d3b4ec247f0cd3b25a5293b22283274e  UPDATE_INSTRUCTIONS.md
 dec703bc8f7a4debe2b43bb2b6382ca7333fed0012cd0104c146f1bc2769bf30  UPGRADE-START-HERE.md
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 4e6ab3bef1a3d24b9c8b050e75184eb5608c932df2c0703cbe618633b64217a8  client/index.html
 b070146103e8a53bae77dbc13d589799c671c0cb6124391fdeecd6f796f8d1e2  client/public/brand/favicon.png
 c03c11df56dbc53227e732352f30078289bb2ede9b716c1fccb3cb01f30d1c06  client/public/brand/logo.png
@@ -117,7 +121,11 @@ c69bf1ccae5f13b5aa4345dcfeb209a8148ad0bfa1e0678b93792aae0429c764  dist/client/as
 22607f352238d6b8cfb284b60307da7c63aaa29fb8edcd6c275feafe144f21ad  dist/client/assets/index-CxHVlrtE.js
 98c76b3f8e98bb6885b9c5fe4babc079001572eadd876ef904170d8a3e0dccec  dist/client/assets/numeric-input-BX3g7_dD.js
 faddf794493d070aadc37c7423742cae0981f8a5d26c87ab0751f87642a04cff  dist/client/assets/print-BbRJ2j33.js
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 b070146103e8a53bae77dbc13d589799c671c0cb6124391fdeecd6f796f8d1e2  dist/client/brand/favicon.png
 c03c11df56dbc53227e732352f30078289bb2ede9b716c1fccb3cb01f30d1c06  dist/client/brand/logo.png
 01cd5ffb3a528c219a86e49a814c6c53bd8a69b9a3c305dd237074ba1c811af7  dist/client/fonts/OFL.txt
@@ -127,7 +135,11 @@ c53aceea2dcf5b4098099c0c4d0a061d17e178a049317b42a422b1a9f7f8eb59  dist/client/fo
 330fc0ae8f2a7bebe7f101ed0740c2b494a40df52075e7e645e720c43f32a6ff  dist/client/index.html
 =======
 425749ffdca2df837aa04de2b65d8dd70f1d6a95839656bdfee6bbb1d0b342b8  dist/client/index.html
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 84f9e9ad89223f69679041c573399076c013bb1b899a1807d82a1d992c51104a  dist/client/vendor/bootstrap-icons.min.css
 ed543fad13bc30e383940aa8f59962145d26c366f5304015cabbc133af306a5c  dist/client/vendor/bootstrap.min.css
 13977b4a8d61d533db87feb04007efb034c3bd29e34a6f3dba26a34eedec3b13  dist/client/vendor/fonts/bootstrap-icons.woff
@@ -160,7 +172,11 @@ ff3e246a6793100070346e3cb3706bb4f713a94a8d5213bbb7de7750ef87389e  dist/server/do
 b064b8c4463bab29c430909769bf9e5796ce386fb2e3c0bb735ca48ff5779266  dist/server/forms.js
 0c5d94d783f2ee192bc57f2f53350ea36035d01107eb21a62ce5506dfceb3aa2  dist/server/index.js
 49fad03b7bb8f2a1464eae39a9284eec8419bfc28d577053ad66b5839e652500  dist/server/operations.js
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 c5bfce75711b7b40c627c0c50d0ed5973fb9cab7f945b714787b008fe93c6d0a  dist/server/provision.js
 4ceee8e80ee8c5fa26b175f4c75ccc8f8b193a7cdad78037ddb6bd2cdeffb272  dist/server/record-print.js
 517d411bf8c20d6e9ce81393930407980ac97bbc9e5fbf4497ae99898313ec75  dist/server/reference-reports.js
@@ -177,7 +193,11 @@ b3303befecf598ce5ed447222cfb479002a77834c8829bbf0859dc0e7adb337d  dist/shared/ca
 <<<<<<< HEAD
 56d471c6edcafb0033a71723ed5a28e6d083f50512b4e2ae82745d88e0db6030  dist/shared/lifecycle.js
 =======
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 7d95dfe15975551ad790f842d0f3d69ef944acb766fbdffe86ae286e346a43bb  dist/shared/modules.js
 e32e4e685868c9609b7ecebe6bec95c9e23bbed53f517118c32d960fef7620d1  dist/shared/numeric-input.js
 44ff1622f80fd06db7a418115e700d81928e8e8d5473892e58c0b595d497d003  dist/shared/report-contract.js
@@ -199,7 +219,11 @@ eb78e59433d80809839ef80029849836ddd858bbe5bfbdd09b7a55298f92f7ae  docs/ADMIN_AND
 c04f3cb888c48befd916f26aac26657aca1ed4947245de994abe78f7e4fcb3fe  docs/BACKUP_RESTORE_AND_ROLLBACK.md
 f0028c505992b45668f427ba0a9d23ae180928e9a52960ffe416842da1ed798c  docs/CUSTOM_FIELDS_AND_PRINT.md
 b9bb6798771b35851dd23e7e6640c13eebe376b94f17cccda6eeca77a7d4497a  docs/DATABASE_AND_API.md
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 b6cc87c3361fc30fb519aeeb3f53e0e8e8950d4c8819b2a4aefa120a106bbb33  docs/ENHANCEMENT_TEST_REPORT.md
 02f95c72f21c6d2a89c5e2b330c69a5f9982854536be88f73da5c02b79105654  docs/ENVIRONMENT_VARIABLES.md
 949364f35a915b223a553681342d610fedf9453968ade291b74303b107c760cc  docs/HOSTINGER_MANAGED_SETUP.md
@@ -209,7 +233,11 @@ d30b2e7ae7a1f59cc80dde133f7489a86a9c16eaa3d81d519ae21f8a29b77e69  docs/HOSTINGER
 0f77f8575efb5606e67380aa316d27e8b5bb1d0a5a14e307e7c1dfd842b6166b  docs/LOCAL_SETUP_WINDOWS.md
 =======
 58c43fa6dc68e44256887d874a6575725375125963c53d68a47eefe24f0bd0e2  docs/LOCAL_SETUP_WINDOWS.md
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 e88c771d00e5efec14b3034cb6194bd420872ac119da09b53b57cc0603e9d99f  docs/LOCAL_SUPABASE_TESTING.md
 ceb6d047bd8b0322db20bd79b66ac66c3847798f38847e6f334ecb345370d49d  docs/MASTER_AUDIT.md
 8c2a65be8517b6520af01dc24d4a8f66e7cce223faebea1f5c2fe37690b203b4  docs/MASTER_REQUIREMENTS.txt
@@ -226,7 +254,11 @@ a6109c31f2ab668c7d13e1b2ba714ddcb6aa44b800b4f3da8ef811200152bffb  docs/SUPABASE_
 a084277deb1a8ff23ea1b17245dd5c0bb9a56428ff645098def02379bb7cbe59  docs/SUPABASE_MIGRATIONS.md
 b9121d1b9145ab1dfc3849480ffc4f7c73bfaeb8b3ecabf1829437de89547462  docs/SUPABASE_SCHEMA_AND_RLS.md
 f905058a7b5cb8d5d66fc1d0bd202203de12eb702fc9910a6cb6254736dee496  docs/SUPABASE_SETUP.md
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 b3a88e35766c970d28965016ac6c382cb69b5b2c75301c7b855b6e2ada466a3a  docs/SUPABASE_STORAGE.md
 3b1f4802f8cf7123008f105756c2a00b4c493c2e4388e690d2dc7566c4e788f1  docs/TEMPLATE_INTEGRATION.md
 55d35f639a0364bd066085523edaffee883034de5911961578dd890681c1e18c  docs/TEST_REPORT.md
@@ -235,7 +267,11 @@ cf5ca67d11efe31df937bcb94988c6a270f63711ec487d3d6371e9b9bcc5ee70  docs/TROUBLESH
 03df7c329b3eb19fa73381bd5762e6db671f4553ee3560fc9bd53f4d978f0494  docs/USER_ROLES_AND_PERMISSIONS.md
 =======
 640ce0f17d293ddb3ee1b3822baf5eb24e8851d7ff571e649ac36a39fbe3eb03  docs/USER_ROLES_AND_PERMISSIONS.md
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 4af2dffbd2d3dcc75f4addd42ae2ad501b87ce5b9105d06072156aad9e91ce5a  docs/forms-reports/GAP_MATRIX.md
 da4bd6a5012670685393ba0ed4e618083007a2c771b74d062aa2ee58f2d62eb1  docs/forms-reports/REFERENCE_IMAGE_MAPPING.md
 e83512af41bcf2003f53da670efb4b839edf442d5640284e9da9c800fe5a5b61  docs/forms-reports/REMAINING_QUESTIONS.md
@@ -254,7 +290,11 @@ e738d3872b2cee48972bd4154fbabf5e8f8b673b0e904aacaf652e76cf8bcab4  docs/generated
 3c39b0b66b98fb7ed1c81b1cfdc535bb776c02bc64842e7f09fe9d3b5ec268d0  eslint.config.js
 355cf3b2bfa5feca81fdf42f04fd791a9e759cc928ba2e4450e4da78022cacbb  package-lock.json
 7a09ab6dfd633ad0bbc92313618bf3f48847c81053889151c346a973a50d9df5  package.json
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 795d0980bd1f6ce62b20240be7dad8d58cfe4fc94b79bfd980a3dbb225180dd2  playwright-artifacts/dashboard-desktop.png
 95e93f96f034afc5a7a646b14e3ca1054824be54b0782fe07ab015ba888e0e5a  playwright-artifacts/dashboard-mobile.png
 404fc3021f18e3c6d004b66b5e67728265490f9236d1aaa6d6abc1d1167b29b1  playwright-artifacts/imports-mobile.png
@@ -269,7 +309,11 @@ a92f2b49cb7ca5fb779a6975d236799b20a097a4c9ad448d151b530978d3a8c6  scripts/before
 f944531f7db4ce5499c7db2d7a8cd0c1fa054fda8cad7d7911038070c553f256  scripts/database.mjs
 =======
 addd27bc70de6d484883942e34fa896740ef48d8abefc3201b150ddc0e52ce98  scripts/database.mjs
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 739188ac7f453cfe31086378e470b648d04cdb5e66075b4a66fa4b55654ac748  scripts/dev.mjs
 cbb855e4b72232b559fe3cc7f4dfcb8eaeedebebc7b96a15da48f420df620643  scripts/e2e.mjs
 844d7928fddfc65d6cc4a2d07d7b43a7b6ad350784f4970d670b4ee733a3f743  scripts/form-docs.ts
@@ -277,7 +321,11 @@ c8803051ae80ca74e0b40ddef1e5b5ce392a896fa043154e5aa54b13f79ec8b5  scripts/forms-
 <<<<<<< HEAD
 44b2dad23cc2dd0824072f52fb2c1198eae4b52407afd04c556754d9442030b9  scripts/lifecycle-e2e.ts
 =======
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 0585b8a3dd170606ae61877605a997b3ab8920408ff9ac303e3b2b2a6afb73b1  scripts/master-performance-e2e.mjs
 d007526f13bffa58084b223fe6a06f8f5dcc5691c59f8ae2c562663541e30e56  scripts/production-smoke.mjs
 6e5efca6e9651ae9498f5c87c25d88f4fa8dd1bda8835b8554f605b319dd537f  scripts/redesign-e2e.ts
@@ -314,7 +362,11 @@ e808e91213e63328575dee859775572a468c8ad099541ff9f68c5dfb35c29e79  server/form-va
 c7b4d9dbcfa7aeb88fcbac24bdd9c564797897501cf3aea8de5555d8a25d93ae  server/forms.ts
 6c696e97ba135461c87ae6e6885c24038fa32c350a73354995a823eebafb5aa1  server/index.ts
 1f5ddf60c8d6769de9f755b027281b2ed65cc94db1fad00c1af73bbcdd25b3ae  server/operations.ts
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 f478d2b734ce765a45dbc3e26e20b2a69aa5868fe6d9b7731b9fc2aa229162d5  server/provision.ts
 186379135a2b1da1b1880e093739024ae917dce89012436fba37274b97d0249f  server/record-print.ts
 8514bc0f28556f53353d25880e1612c9447a7e4c1757886ca0fc9d4d006363d0  server/reference-reports.ts
@@ -332,7 +384,11 @@ ff9292cebdb69c38afe0df0c27e0b35c01c9e92f5abecac818e16597bfa99377  shared/generat
 5b161d03e87033d0567058ce9087517c89fb0fd362ddd7a0bf9a917f6756bf89  shared/lifecycle.ts
 =======
 da18a852ed689d876a049e761f76d62da7e3284d43229ac8591a9d03588a7657  shared/generated/schema.ts
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 2b7d81e9344ba02a86e4e01c7b57aa5496d3db3b4890c65e9009c786c1479257  shared/modules.ts
 e97beb55fc5588f5559954fb14ef5539beb094adfc0758639326361df8bad038  shared/numeric-input.ts
 309022855f5adb69d40b87d7f7a57185f5ffef8ed5e492f2528b92f33314f61f  shared/report-contract.ts
@@ -350,7 +406,11 @@ ae4a4319416ed25f30404134539ea058782ec39da93b26ce11d28945cdd33846  supabase/.temp
 6e0ed20fa5527e7ec0dd772c3daef920dfc130557dcb466a5d8a819117280acb  supabase/.temp/rest-version
 9e45e77af8dcc30d61add3034e122f92058b22a3baa659a26e31d310619b4257  supabase/.temp/storage-migration
 35a36e21b88988644c289c8c010494baba3adb401db3ebe86d3dec38671ce189  supabase/.temp/storage-version
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 e302b48cc1afc5b58f8cf696cb02fb3b0fa3a0d96652906349fe20e4ef570a21  supabase/config.toml
 f1aa21c1e959d717eca5bb935f78c0801120335fb5f2f0d802edb66b11eaec36  supabase/migrations/20261005160027_identity.sql
 ae45c71115a4c95cee985c1880fcb67910f76d8f709317035cedff4c7f15ca1f  supabase/migrations/20261005161100_throttle.sql
@@ -374,7 +434,11 @@ aa0babdfe330426e13f9b4050a18af796f84b13a3fd6ce520d517c3031c91f1a  supabase/migra
 42030ed815ae868d1b9cb40bde8629b2abd38131258c79eeae0fbe0bb3d3c4f0  supabase/setup/NEW_DATABASE_SETUP.sql
 =======
 338dd8d9922d1a413b9487e95dc35c787dbcae8b4917aeda4e842e8639f2986d  supabase/optional/alerts-cron.sql
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 9dbde103201b3caac8363411d96c1324e0466767d8ef29267ac12311d87451e1  supabase/tests/security.test.sql
 f91d0d284b001327a9d79c669dfd9df37a87febf9541eb52b8b4fdee3ca5b77c  tests/api.test.ts
 9c769d15ef1470ce081347aefcc0df99e31445d2a528c8ae604bb8440416074c  tests/core.test.ts
@@ -388,7 +452,11 @@ c2a8e68eb5d343b710f1f856e1a4fc980dce9e9d7f39aea69d7b94a8cd2736db  tests/helpers/
 4d58343a754c64e4701000f4320a2a7bf26884c4d9f3042a4b4a374a00a078b3  tests/lifecycle-api.test.ts
 55784efddfe2c4569b63b85ecf6d8e819b46ef244129d51be3e10809a08a6559  tests/lifecycle.test.ts
 =======
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 5a539cafc46edb815c826d6d94ecd96d792dc14f6d8d812e4dd43178ebe52326  tests/master-review.test.ts
 12444824c16dd4cf751f3368e6fddf1b741a910403506fabf43b645d29f3f20b  tests/redesign-api.test.ts
 b431d14fa1ac69c43454884228ff83645fee8b6ac25167e28be6e546a22e1a7c  tests/reference-reports.test.ts
@@ -452,5 +520,9 @@ cb709c489222a9bf93b67f6732df5122ad1f3750c95f1c6b9b8d9e82305f37bc  verification/r
 11f73ffc02c420bd52ba452e9a99b366b1c9bc44c36de677c6412a82641566e5  verification/ui-review/production-audit.json
 3cf399d7c5368238f00a0847e37099372e831efb28145f214f6551b6602e17db  verification/ui-review/production-smoke.json
 c168efb91f3ed601c7449285e26232604102351595d3cdd97a4759b178c014ac  verification/ui-review/results.json
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 1a85db11f55de14c583f0cd0a27107a5cfa91bf17523c5095f134f4e2479e8b4  vite.config.ts

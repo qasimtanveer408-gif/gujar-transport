@@ -1,7 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
+<<<<<<< HEAD
 import {readFile,readdir} from 'node:fs/promises';
+=======
+import {readFile} from 'node:fs/promises';
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 import {formFixture} from './helpers/form-fixture.js';
 import {createTestDatabase} from '../scripts/test-sql.js';
 import type {LifecyclePreview} from '../shared/lifecycle.js';
@@ -87,13 +91,18 @@ test('loan disbursement deletion includes repayments; routes, companies, duties 
 test('fresh SQL-editor installer applies all migrations, registers history and rejects accidental reuse',async()=>{
  const db=await createTestDatabase({throughMigration:'000'});try{
   const sql=await readFile('supabase/setup/NEW_DATABASE_SETUP.sql','utf8');await db.exec(sql);
+<<<<<<< HEAD
   const migrationCount=(await readdir('supabase/migrations')).filter(name=>/^\d+_.+\.sql$/.test(name)).length;
   assert.equal(Number((await db.query<{n:number}>('select count(*) n from supabase_migrations.schema_migrations')).rows[0].n),migrationCount);
+=======
+  assert.equal(Number((await db.query<{n:number}>('select count(*) n from supabase_migrations.schema_migrations')).rows[0].n),17);
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
   await assert.rejects(db.exec(sql),/already contains the app/);await db.exec('rollback');
   assert.equal((await db.query('select count(*) from public.roles')).rows.length,1);
  }finally{await db.close();}
 });
 
+<<<<<<< HEAD
 test('empty accounting period deletion removes exactly the reviewed row and preserves other periods and transactions',async()=>{
  const f=await formFixture();try{
   const period=await f.scalar<string>('select public.create_period($1,$2,$3)',['TEST empty October','2099-10-01','2099-10-31']);
@@ -138,6 +147,8 @@ test('SQL-editor repair installs missing lifecycle migration on an existing app 
  }finally{await f.db.close();}
 });
 
+=======
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 test('maintenance, office expenses, bookings, import batches, notifications, custom values and accounts support archive and purge',async()=>{
  const f=await formFixture();try{
   const maintenance=await f.scalar<string>('select public.save_maintenance(null,null,$1,$2,null)',[JSON.stringify({vehicle_id:f.vehicle,driver_id:f.driver,business_date:f.today,odometer:'145400',category:'parts',description:'TEST repair'}),JSON.stringify([{kind:'Parts',description:'TEST filter',amount:500}])]);

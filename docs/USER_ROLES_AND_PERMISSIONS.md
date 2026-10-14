@@ -84,4 +84,8 @@ Provisioning creates a real Auth account with a task marker before linking the p
 
 `records.archive` permits archive and restore; `records.delete` permits permanent deletion after archive and confirmation. These are global administrative capabilities: use **All** scope. They are granted to the reserved Super Admin role by the new migration, and other roles retain their earlier permissions. The SQL layer checks the same rights as the server, so UI visibility is not the security boundary.
 =======
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00

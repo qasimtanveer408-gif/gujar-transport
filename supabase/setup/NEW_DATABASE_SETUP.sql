@@ -2505,6 +2505,7 @@ notify pgrst, 'reload schema';
 
 insert into supabase_migrations.schema_migrations(version,name,statements) values('20261014120000','record_lifecycle',array[]::text[]);
 
+<<<<<<< HEAD
 -- Migration: 20261014143000_lifecycle_delete_repair.sql
 -- Reinstall the archive/delete RPC definitions on an existing application.
 -- This migration changes functions and privileges only; it does not delete or
@@ -2819,5 +2820,7 @@ notify pgrst, 'reload schema';
 
 insert into supabase_migrations.schema_migrations(version,name,statements) values('20261014170000','lifecycle_delete_where_guard',array[]::text[]);
 
+=======
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
 notify pgrst, 'reload schema';
 commit;

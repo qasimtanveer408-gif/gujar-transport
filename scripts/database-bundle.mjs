@@ -21,6 +21,7 @@ for(const file of files){
 sql+="\nnotify pgrst, 'reload schema';\ncommit;\n";
 await mkdir('supabase/setup',{recursive:true});await writeFile('supabase/setup/NEW_DATABASE_SETUP.sql',sql);
 console.log(`Generated new-database setup from ${files.length} ordered migrations.`);
+<<<<<<< HEAD
 
 // The repair installer targets an existing app and is safe to rerun. It never
 // resets the database or performs a record deletion on the administrator's behalf.
@@ -64,3 +65,5 @@ select 'Archive/delete database repair applied. Redeploy the updated app, refres
 `;
 await writeFile('supabase/setup/REPAIR_RECORD_DELETE.sql',repair);
 console.log('Generated existing-database repair: supabase/setup/REPAIR_RECORD_DELETE.sql');
+=======
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00

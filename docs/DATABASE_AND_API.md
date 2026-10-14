@@ -32,4 +32,8 @@ JSON bodies are limited to 256 KB; uploads 10 MB. Normal lists paginate 25, look
 
 All mutations use existing Origin, session and CSRF enforcement. Deletion takes the existing workflow locks plus short-lived table locks before recomputing the reviewed dependency graph. A changed graph rejects the request and requires a new preview. Database deletion rolls back as a unit if a constraint fails. Managed Storage/Auth records are deleted with their provider APIs through a durable outbox.
 =======
+<<<<<<< HEAD
 >>>>>>> d1a492683f98713288c02ce0dbffae1d235f6a40
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
+>>>>>>> c44b1c5f20bc867d0d0ff98c100dd40351076c00
