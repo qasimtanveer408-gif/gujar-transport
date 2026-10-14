@@ -1,0 +1,127 @@
+{
+  "kind": "oil",
+  "title": "VEHICLES OIL CHANGE RECORD",
+  "metadata": {
+    "to": "2026-12-31",
+    "from": "2026-01-01",
+    "phone_1": "TEST",
+    "phone_2": "",
+    "phone_3": "",
+    "currency": "PKR",
+    "timezone": "Asia/Karachi",
+    "generated_at": "2026-10-11T16:34:22.474+00:00",
+    "period_label": "TEST accounting period",
+    "business_name": "Gujjar Brother Transport — TEST DATA ONLY",
+    "contact_email": "test@example.test"
+  },
+  "notes": [
+    "One row per vehicle: latest approved oil change through period end; previous stored reading or preceding approved change. Closing meter uses dated approved trip/maintenance observations through the cutoff, never today’s vehicle meter."
+  ],
+  "sections": [
+    {
+      "title": "",
+      "columns": [
+        {
+          "key": "sn",
+          "label": "S/N",
+          "type": "number",
+          "width": 0.5,
+          "decimals": 0
+        },
+        {
+          "key": "registration",
+          "label": "Vehicle Number",
+          "type": "text",
+          "width": 1
+        },
+        {
+          "key": "previous_odometer",
+          "label": "Previous Oil Change Meter (km)",
+          "type": "number",
+          "width": 1.3,
+          "decimals": 0
+        },
+        {
+          "key": "previous_date",
+          "label": "DATE",
+          "type": "date",
+          "width": 1
+        },
+        {
+          "key": "odometer",
+          "label": "Oil Change Meter (km)",
+          "type": "number",
+          "width": 1.2,
+          "decimals": 0
+        },
+        {
+          "key": "date",
+          "label": "DATE",
+          "type": "date",
+          "width": 1
+        },
+        {
+          "key": "distance",
+          "label": "Distance",
+          "type": "number",
+          "width": 1,
+          "decimals": 0
+        },
+        {
+          "key": "closing",
+          "label": "Closing Meter (km)",
+          "type": "number",
+          "width": 1.2,
+          "decimals": 0
+        },
+        {
+          "key": "travel",
+          "label": "Travel after oil change (km)",
+          "type": "number",
+          "width": 1.5,
+          "decimals": 0
+        },
+        {
+          "key": "driver",
+          "label": "DRIVER",
+          "type": "text",
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "sn": 1,
+          "registration": "TEST-001",
+          "previous_odometer": "140000.000",
+          "previous_date": "2026-01-01",
+          "odometer": "144700.000",
+          "date": "2026-01-01",
+          "distance": "4700.00",
+          "closing": "145382.000",
+          "travel": "682.00",
+          "driver": "TEST Driver"
+        }
+      ]
+    },
+    {
+      "title": "",
+      "role": "signature",
+      "columns": [
+        {
+          "key": "signature_0",
+          "label": "Driver signature"
+        },
+        {
+          "key": "signature_1",
+          "label": "Authorized officer"
+        }
+      ],
+      "rows": [
+        {}
+      ]
+    }
+  ],
+  "paper": "A4",
+  "incomplete": false,
+  "orientation": "landscape"
+}

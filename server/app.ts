@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import {lifecycleRouter} from './lifecycle.js';
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 import {enhancementsRouter} from './enhancements.js';
 import {referenceReportsRouter} from './reference-reports.js';
 import {customFieldsRouter} from './custom-fields.js';
@@ -75,15 +78,25 @@ export function createApp(c:Config,options:{sessions?:SessionService;admin?:Clie
  secure.get('/connection',async(_req,res)=>{const result=await context(res).db.rpc('my_access');dbError(result.error);res.json({database:'connected',authentication:'verified',time:new Date().toISOString()});});
  secure.get('/settings',async(_req,res)=>{const result=await context(res).db.from('business_settings').select('business_name,contact_email,phone_1,phone_2,phone_3,address,currency,timezone,period_start_day,period_confirmed,refresh_seconds,version').single();dbError(result.error);res.json(result.data);});
  secure.patch('/settings',async(req,res)=>{const auth=requireRight(res,'settings.manage');const {version,...data}=settingsInput.parse(req.body);const result=await auth.db.rpc('save_business_settings',{p_data:data,p_version:version});dbError(result.error);res.json({ok:true});});
+<<<<<<< HEAD
  secure.get('/users',async(req,res)=>{const auth=requireRight(res,'users.view');const {page,search}=pageQuery.parse(req.query);let query=auth.db.from('app_users').select('id,email,display_name,active,version,created_at,archived_at,user_roles(role_id)',{count:'exact'}).order('created_at',{ascending:false});if(search)query=query.ilike('display_name',`%${search.replace(/[%_\\]/g,'\\$&')}%`);const result=await query.range((page-1)*25,page*25-1);dbError(result.error);res.json({rows:result.data,count:result.count,page});});
  secure.post('/users',async(req,res)=>{const auth=requireRight(res,'users.create');const input=userInput.parse(req.body);const begun=await auth.db.rpc('begin_user_provisioning',{p_email:input.email,p_name:input.display_name,p_role:input.role_id});dbError(begun.error);const id=await finishProvision(admin,begun.data as ProvisionTask,input.password);res.status(201).json({id});});
  secure.patch('/users/:id',async(req,res)=>{const auth=requireRight(res,'users.disable');const input=accessInput.parse(req.body);const result=await auth.db.rpc('set_user_access',{p_user:uuid.parse(req.params.id),p_active:input.active,p_role:input.role_id,p_version:input.version,p_reason:input.reason});dbError(result.error);res.json({ok:true});});
  secure.get('/roles',async(_req,res)=>{const auth=context(res);if(!['roles.view','users.view','users.create'].some(p=>auth.access.permissions.includes(p)))throw new AppError(403,'FORBIDDEN','Permission denied.');const result=await auth.db.from('roles').select('id,name,reserved,version,archived_at').order('name');dbError(result.error);res.json(result.data);});
+=======
+ secure.get('/users',async(req,res)=>{const auth=requireRight(res,'users.view');const {page,search}=pageQuery.parse(req.query);let query=auth.db.from('app_users').select('id,email,display_name,active,version,created_at,user_roles(role_id)',{count:'exact'}).order('created_at',{ascending:false});if(search)query=query.ilike('display_name',`%${search.replace(/[%_\\]/g,'\\$&')}%`);const result=await query.range((page-1)*25,page*25-1);dbError(result.error);res.json({rows:result.data,count:result.count,page});});
+ secure.post('/users',async(req,res)=>{const auth=requireRight(res,'users.create');const input=userInput.parse(req.body);const begun=await auth.db.rpc('begin_user_provisioning',{p_email:input.email,p_name:input.display_name,p_role:input.role_id});dbError(begun.error);const id=await finishProvision(admin,begun.data as ProvisionTask,input.password);res.status(201).json({id});});
+ secure.patch('/users/:id',async(req,res)=>{const auth=requireRight(res,'users.disable');const input=accessInput.parse(req.body);const result=await auth.db.rpc('set_user_access',{p_user:uuid.parse(req.params.id),p_active:input.active,p_role:input.role_id,p_version:input.version,p_reason:input.reason});dbError(result.error);res.json({ok:true});});
+ secure.get('/roles',async(_req,res)=>{const auth=context(res);if(!['roles.view','users.view','users.create'].some(p=>auth.access.permissions.includes(p)))throw new AppError(403,'FORBIDDEN','Permission denied.');const result=await auth.db.from('roles').select('id,name,reserved,version').order('name');dbError(result.error);res.json(result.data);});
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
  secure.get('/permissions',async(_req,res)=>{const auth=requireRight(res,'roles.view');const result=await auth.db.from('permissions').select('code,description').order('code');dbError(result.error);res.json(result.data);});
  secure.get('/roles/:id/grants',async(req,res)=>{const auth=requireRight(res,'roles.view');const result=await auth.db.from('role_permissions').select('permission_code,scope').eq('role_id',uuid.parse(req.params.id));dbError(result.error);res.json(result.data);});
  secure.post('/roles',async(req,res)=>{const auth=requireRight(res,'roles.manage');const input=roleInput.parse(req.body);const result=await auth.db.rpc('save_role',{p_id:input.id,p_name:input.name,p_version:input.version,p_grants:input.grants});dbError(result.error);res.json({id:result.data});});
  secure.get('/audit',async(req,res)=>{const auth=requireRight(res,'audit.view');const {page,search}=pageQuery.parse(req.query);let query=auth.db.from('audit_logs').select('id,actor_id,action,record_type,record_id,summary,created_at',{count:'exact'}).order('id',{ascending:false});if(search)query=query.ilike('action',`%${search.replace(/[%_\\]/g,'\\$&')}%`);const result=await query.range((page-1)*25,page*25-1);dbError(result.error);res.json({rows:result.data,count:result.count,page});});
+<<<<<<< HEAD
  secure.use(lifecycleRouter(admin));
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
  secure.use(customFieldsRouter());
  secure.use(formsRouter());
  secure.use(domainRouter());

@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 > Current full setup: [START-HERE-ARCHIVE-DELETE.md](../START-HERE-ARCHIVE-DELETE.md).
 
 # Local setup — Windows
 
 1. Use Node.js 24 through 26. Open a fresh PowerShell terminal and run node --version and npm --version. If execution policy blocks npm.ps1, use npm.cmd rather than changing the machine-wide policy.
+=======
+# Local setup — Windows
+
+1. Install Node.js 24. Open a fresh PowerShell terminal and run node --version and npm --version. If execution policy blocks npm.ps1, use npm.cmd rather than changing the machine-wide policy.
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 2. Extract the ZIP. Open the gujjar-brother-transport folder containing package.json in your editor. Open a terminal there; Get-ChildItem package.json should find it.
 3. Run npm ci. Copy-Item .env.example .env, then edit .env privately for a disposable development project. Follow SUPABASE_SETUP.md for migrations and first administrator.
 4. Generate and securely copy the encryption key. Run check:env. Complete seed:admin interactively, remove ADMIN_PASSWORD and disable bootstrap.

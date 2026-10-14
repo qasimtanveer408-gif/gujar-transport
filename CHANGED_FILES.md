@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Archive/delete update — 14 October 2026
 
 - Added `server/lifecycle.ts`, `shared/lifecycle.ts` and `client/src/RecordLifecycle.tsx` for shared archive, restore, reviewed deletion and retryable external cleanup.
@@ -13,6 +14,8 @@
 
 ---
 
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 # Changes in the master review update
 
 Reviewed and updated the supplied developed project. Existing modules, database identities, financial ledgers, formulas and driver transfer history are retained. No duplicate modules/tables were added. All 15 historical SQL migrations remain byte-identical; apply the new forward migration described in MASTER-UPDATE-START-HERE.md. No hosted customer data was accessed or changed.

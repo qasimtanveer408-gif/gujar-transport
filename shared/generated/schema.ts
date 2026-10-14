@@ -7,8 +7,11 @@ export interface SqlRows {
 "end_date": string;
 "status": string;
 "version": number;
+<<<<<<< HEAD
 "archived_at": string | null;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "alert_rules": {
 "code": string;
@@ -26,8 +29,11 @@ export interface SqlRows {
 "updated_at": string;
 "avatar_url": string | null;
 "auth_provider": string;
+<<<<<<< HEAD
 "archived_at": string | null;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "attachments": {
 "id": string;
@@ -45,9 +51,12 @@ export interface SqlRows {
 "created_by": string;
 "created_at": string;
 "updated_at": string;
+<<<<<<< HEAD
 "archived_at": string | null;
 "version": number;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "audit_logs": {
 "id": string;
@@ -82,17 +91,23 @@ export interface SqlRows {
 "loan_transaction_id": string | null;
 "driver_payment_id": string | null;
 "created_by": string;
+<<<<<<< HEAD
 "archived_at": string | null;
 "version": number;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "companies": {
 "id": string;
 "name": string;
 "created_by": string | null;
 "version": number;
+<<<<<<< HEAD
 "archived_at": string | null;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "custom_field_definitions": {
 "id": string;
@@ -118,8 +133,11 @@ export interface SqlRows {
 "version": number;
 "created_by": string;
 "created_at": string;
+<<<<<<< HEAD
 "archived_at": string | null;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "custom_field_values": {
 "resource": string;
@@ -134,9 +152,12 @@ export interface SqlRows {
 "started_at": string;
 "ended_at": string | null;
 "created_by": string;
+<<<<<<< HEAD
 "archived_at": string | null;
 "version": number;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "driver_earnings": {
 "id": string;
@@ -148,9 +169,12 @@ export interface SqlRows {
 "trip_line_id": string | null;
 "rule_snapshot": string;
 "created_by": string;
+<<<<<<< HEAD
 "archived_at": string | null;
 "version": number;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "driver_identity_details": {
 "driver_id": string;
@@ -170,9 +194,12 @@ export interface SqlRows {
 "reference": string;
 "created_by": string;
 "created_at": string;
+<<<<<<< HEAD
 "archived_at": string | null;
 "version": number;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "driver_loans": {
 "id": string;
@@ -180,9 +207,12 @@ export interface SqlRows {
 "reference": string;
 "due_date": string | null;
 "created_by": string;
+<<<<<<< HEAD
 "archived_at": string | null;
 "version": number;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "driver_payment_allocations": {
 "payment_id": string;
@@ -197,9 +227,12 @@ export interface SqlRows {
 "reference": string;
 "created_by": string;
 "created_at": string;
+<<<<<<< HEAD
 "archived_at": string | null;
 "version": number;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "drivers": {
 "id": string;
@@ -214,8 +247,11 @@ export interface SqlRows {
 "created_at": string;
 "version": number;
 "photo_attachment_id": string | null;
+<<<<<<< HEAD
 "archived_at": string | null;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "expense_categories": {
 "code": string;
@@ -254,9 +290,12 @@ export interface SqlRows {
 "created_by": string;
 "created_at": string;
 "committed_at": string | null;
+<<<<<<< HEAD
 "archived_at": string | null;
 "version": number;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "import_rows": {
 "batch_id": string;
@@ -306,7 +345,10 @@ export interface SqlRows {
 "created_at": string;
 "version": number;
 "archived_at": string | null;
+<<<<<<< HEAD
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "notification_reads": {
 "notification_id": string;
@@ -324,9 +366,12 @@ export interface SqlRows {
 "action_link": string;
 "created_at": string;
 "resolved_at": string | null;
+<<<<<<< HEAD
 "archived_at": string | null;
 "version": number;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "office_bookings": {
 "id": string;
@@ -343,8 +388,11 @@ export interface SqlRows {
 "state": string;
 "created_by": string;
 "version": number;
+<<<<<<< HEAD
 "archived_at": string | null;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "office_expenses": {
 "id": string;
@@ -359,8 +407,11 @@ export interface SqlRows {
 "state": string;
 "created_by": string;
 "version": number;
+<<<<<<< HEAD
 "archived_at": string | null;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "oil_changes": {
 "maintenance_id": string;
@@ -411,8 +462,11 @@ export interface SqlRows {
 "name": string;
 "reserved": boolean;
 "version": number;
+<<<<<<< HEAD
 "archived_at": string | null;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "routes": {
 "id": string;
@@ -422,8 +476,11 @@ export interface SqlRows {
 "version": number;
 "created_by": string;
 "created_at": string;
+<<<<<<< HEAD
 "archived_at": string | null;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "settlement_allocations": {
 "id": string;
@@ -477,7 +534,10 @@ export interface SqlRows {
 "created_at": string;
 "version": number;
 "archived_at": string | null;
+<<<<<<< HEAD
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "user_roles": {
 "user_id": string;
@@ -497,9 +557,12 @@ export interface SqlRows {
 "created_by": string;
 "previous_assignment_id": string | null;
 "transfer_date": string | null;
+<<<<<<< HEAD
 "archived_at": string | null;
 "version": number;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 "vehicle_financials": {
 "vehicle_id": string;
@@ -529,7 +592,10 @@ export interface SqlRows {
 "address": string | null;
 "permit_expiry": string | null;
 "insurance_expiry": string | null;
+<<<<<<< HEAD
 "archived_at": string | null;
 "archive_previous": unknown | null;
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 };
 }

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 > **Latest release: archive / restore / permanent delete. Start with [START-HERE-ARCHIVE-DELETE.md](START-HERE-ARCHIVE-DELETE.md), including the new-database setup instructions.** The earlier release notes below remain as history.
 
+=======
+>>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 # Latest project update
 
 Start with [MASTER-UPDATE-START-HERE.md](MASTER-UPDATE-START-HERE.md). It covers this ZIP, the new 3-hour/driver-remarks migration, existing .env preservation, Windows commands, verification and print mapping limits.
