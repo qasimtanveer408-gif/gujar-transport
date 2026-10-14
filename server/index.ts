@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import {drainDeletionJobs} from './lifecycle.js';
 import {privilegedClient} from './supabase.js';
-=======
->>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
 import {readConfig} from './config.js';
 import {createApp} from './app.js';
 
@@ -19,15 +16,12 @@ try {
     );
   }
 
-<<<<<<< HEAD
   const cleanupClient = privilegedClient(config);
   let cleaning = false;
   const cleanup = async () => { if (cleaning) return; cleaning = true; try { await drainDeletionJobs(cleanupClient); } finally { cleaning = false; } };
   const cleanupTimer = setInterval(() => { void cleanup(); }, 60_000);
   cleanupTimer.unref();
   void cleanup();
-=======
->>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
   const server = createApp(config).listen(
     config.PORT,
     '0.0.0.0',
@@ -40,10 +34,7 @@ try {
 
   for (const signal of ['SIGTERM', 'SIGINT']) {
     process.on(signal, () => {
-<<<<<<< HEAD
       clearInterval(cleanupTimer);
-=======
->>>>>>> 2aef45882bd9ec54781d025e3620f1f2677a5c83
       server.close(() => process.exit(0));
     });
   }
