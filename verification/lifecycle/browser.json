@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "viewports": [
+    "1440x1000",
+    "390x844"
+  ],
+  "checks": [
+    "Actual browser archive/cancel/restore/delete workflow against isolated PostgreSQL",
+    "Vehicle purge removes linked trip, retains unrelated driver",
+    "Accounting period deleted through its form",
+    "Edit form and record buttons do not overlap",
+    "No page-wide mobile overflow",
+    "No browser JavaScript errors"
+  ],
+  "externalServices": "Supabase Auth and Storage simulated; no hosted project used"
+}

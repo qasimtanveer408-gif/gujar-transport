@@ -1,0 +1,71 @@
+{
+  "name": "gujjar-brother-transport",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <27"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "vite build && tsc -p tsconfig.server.json",
+    "start": "node dist/server/index.js",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "lint": "eslint client/src server shared scripts tests",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:e2e": "node scripts/e2e.mjs && node --import tsx scripts/forms-e2e.ts && node --import tsx scripts/ui-review-e2e.ts && node --import tsx scripts/redesign-e2e.ts && node scripts/master-performance-e2e.mjs",
+    "test:production": "node scripts/production-smoke.mjs",
+    "check:env": "node --import tsx scripts/check-env.ts",
+    "seed:admin": "node --import tsx scripts/admin.ts seed",
+    "reset:admin": "node --import tsx scripts/admin.ts reset",
+    "db:migrate": "node scripts/database.mjs migrate",
+    "db:types": "node scripts/database.mjs types",
+    "db:test": "node scripts/database.mjs test",
+    "test:sql": "node --import tsx scripts/test-sql.ts",
+    "secrets:generate": "node scripts/secrets.mjs",
+    "schema:snapshot": "node --import tsx scripts/schema-snapshot.ts",
+    "report:samples": "node --import tsx scripts/report-samples.ts",
+    "db:login": "node scripts/database.mjs login",
+    "db:link": "node scripts/database.mjs link",
+    "db:status": "node scripts/database.mjs status",
+    "db:check": "node scripts/database.mjs migrate --dry-run",
+    "db:bundle": "node scripts/database-bundle.mjs",
+    "test:lifecycle": "node --import tsx --test tests/lifecycle.test.ts tests/lifecycle-api.test.ts"
+  },
+  "dependencies": {
+    "@supabase/server": "^1.9.1",
+    "@supabase/supabase-js": "2.117.2",
+    "cookie": "1.0.2",
+    "decimal.js": "10.6.0",
+    "dotenv": "16.6.1",
+    "exceljs": "4.4.0",
+    "express": "5.2.1",
+    "helmet": "8.1.0",
+    "pdfkit": "0.20.2",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.3.14",
+    "@sparticuz/chromium": "131.0.1",
+    "@types/express": "5.0.3",
+    "@types/node": "22.19.19",
+    "@types/pdfkit": "0.17.6",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "eslint": "9.39.4",
+    "playwright": "1.62.1",
+    "supabase": "2.119.0",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.1",
+    "vite": "8.3.4"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "11.1.1"
+    }
+  }
+}

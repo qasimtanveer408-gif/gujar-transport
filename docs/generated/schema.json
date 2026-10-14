@@ -1,0 +1,4253 @@
+{
+  "columns": [
+    {
+      "table_name": "accounting_periods",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "accounting_periods",
+      "column_name": "name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "accounting_periods",
+      "column_name": "start_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "accounting_periods",
+      "column_name": "end_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "accounting_periods",
+      "column_name": "status",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "accounting_periods",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "accounting_periods",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "accounting_periods",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "alert_rules",
+      "column_name": "code",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "alert_rules",
+      "column_name": "threshold",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "alert_rules",
+      "column_name": "enabled",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "alert_rules",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "email",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "display_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "active",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "avatar_url",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "auth_provider",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "app_users",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "vehicle_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "trip_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "maintenance_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "office_expense_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "bucket_id",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "object_path",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "original_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "mime_type",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "size_bytes",
+      "data_type": "bigint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "state",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attachments",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "id",
+      "data_type": "bigint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "actor_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "record_type",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "record_id",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "summary",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "id",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "business_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "contact_email",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "phone_1",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "phone_2",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "phone_3",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "address",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "currency",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "timezone",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "period_start_day",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "period_confirmed",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "refresh_seconds",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "business_settings",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "cash_transactions",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "cash_transactions",
+      "column_name": "business_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "cash_transactions",
+      "column_name": "direction",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "cash_transactions",
+      "column_name": "amount",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "cash_transactions",
+      "column_name": "reference",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "cash_transactions",
+      "column_name": "loan_transaction_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "cash_transactions",
+      "column_name": "driver_payment_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "cash_transactions",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "cash_transactions",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "cash_transactions",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "cash_transactions",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "companies",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "companies",
+      "column_name": "name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "companies",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "companies",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "companies",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "companies",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "resource",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "key",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "label",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "type",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "default_value",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "required",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "display_order",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "show_form",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "show_card",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "show_table",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "show_print",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "hidden",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "archived",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "restricted",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "options",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "formula",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "ast",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "dependencies",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "required_permissions",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "custom_field_definitions",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "custom_field_values",
+      "column_name": "resource",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_values",
+      "column_name": "record_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_values",
+      "column_name": "field_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "custom_field_values",
+      "column_name": "value",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "custom_field_values",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_duty_sessions",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_duty_sessions",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_duty_sessions",
+      "column_name": "started_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_duty_sessions",
+      "column_name": "ended_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_duty_sessions",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_duty_sessions",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_duty_sessions",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_duty_sessions",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "business_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "kind",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "amount",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "state",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "trip_line_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "rule_snapshot",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_earnings",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_identity_details",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_identity_details",
+      "column_name": "father_name",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_identity_details",
+      "column_name": "cnic",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_identity_details",
+      "column_name": "licence_number",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_identity_details",
+      "column_name": "address",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_identity_details",
+      "column_name": "emergency_contact",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_identity_details",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loan_transactions",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loan_transactions",
+      "column_name": "loan_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loan_transactions",
+      "column_name": "business_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loan_transactions",
+      "column_name": "kind",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loan_transactions",
+      "column_name": "amount",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loan_transactions",
+      "column_name": "reference",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loan_transactions",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loan_transactions",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loan_transactions",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_loan_transactions",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loan_transactions",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_loans",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loans",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loans",
+      "column_name": "reference",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loans",
+      "column_name": "due_date",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_loans",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loans",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_loans",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_loans",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_payment_allocations",
+      "column_name": "payment_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_payment_allocations",
+      "column_name": "earning_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_payment_allocations",
+      "column_name": "amount",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_payments",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_payments",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_payments",
+      "column_name": "business_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_payments",
+      "column_name": "amount",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_payments",
+      "column_name": "reference",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_payments",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_payments",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_payments",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "driver_payments",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "driver_payments",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "full_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "mobile",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "joining_date",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "leaving_date",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "licence_expiry",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "employment_status",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "remarks",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "photo_attachment_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "expense_categories",
+      "column_name": "code",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "expense_categories",
+      "column_name": "label",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "expense_categories",
+      "column_name": "active",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "business_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "amount",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "category",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "vehicle_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "trip_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "trip_line_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "maintenance_item_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "office_expense_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "earning_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "reversal_of",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "expense_entries",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "idempotency_keys",
+      "column_name": "key",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "idempotency_keys",
+      "column_name": "actor_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "idempotency_keys",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "idempotency_keys",
+      "column_name": "record_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "idempotency_keys",
+      "column_name": "payload_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "idempotency_keys",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_batches",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_batches",
+      "column_name": "resource",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_batches",
+      "column_name": "original_reference",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_batches",
+      "column_name": "state",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_batches",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_batches",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_batches",
+      "column_name": "committed_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "import_batches",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "import_batches",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_batches",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "import_rows",
+      "column_name": "batch_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_rows",
+      "column_name": "row_number",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_rows",
+      "column_name": "data",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_rows",
+      "column_name": "record_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "job_runs",
+      "column_name": "job_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "job_runs",
+      "column_name": "last_completed_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "job_runs",
+      "column_name": "run_count",
+      "data_type": "bigint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_categories",
+      "column_name": "code",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_categories",
+      "column_name": "label",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_components",
+      "column_name": "maintenance_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_components",
+      "column_name": "category",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_components",
+      "column_name": "work_detail",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_items",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_items",
+      "column_name": "maintenance_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_items",
+      "column_name": "kind",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_items",
+      "column_name": "description",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_items",
+      "column_name": "amount",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_items",
+      "column_name": "part_identifier",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_items",
+      "column_name": "tyre_position",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_items",
+      "column_name": "warranty_until",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "vehicle_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "trip_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "business_date",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "odometer",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "category",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "description",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "supplier",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "next_service_date",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "next_service_odometer",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "remarks",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "state",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "maintenance_records",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "notification_reads",
+      "column_name": "notification_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "notification_reads",
+      "column_name": "user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "notification_reads",
+      "column_name": "read_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "dedup_key",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "type",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "message",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "vehicle_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "trip_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "action_link",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "resolved_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "notifications",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "business_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "trip_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "external_vehicle",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "driver_contact",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "cargo",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "origin",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "destination",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "quoted_freight",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "commission",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "description",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "state",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_bookings",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "business_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "category",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "description",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "amount",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "vehicle_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "payment_method",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "remarks",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "state",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "office_expenses",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "oil_changes",
+      "column_name": "maintenance_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "oil_changes",
+      "column_name": "specification",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "oil_changes",
+      "column_name": "quantity_litres",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "oil_changes",
+      "column_name": "previous_date",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "oil_changes",
+      "column_name": "previous_odometer",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "oil_changes",
+      "column_name": "next_due_odometer",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "period_close_snapshots",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "period_close_snapshots",
+      "column_name": "period_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "period_close_snapshots",
+      "column_name": "close_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "period_close_snapshots",
+      "column_name": "summary",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "period_close_snapshots",
+      "column_name": "closed_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "period_close_snapshots",
+      "column_name": "closed_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "permissions",
+      "column_name": "code",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "permissions",
+      "column_name": "description",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "print_template_settings",
+      "column_name": "kind",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "print_template_settings",
+      "column_name": "orientation",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "print_template_settings",
+      "column_name": "signatures",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "print_template_settings",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "revenue_entries",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "revenue_entries",
+      "column_name": "business_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "revenue_entries",
+      "column_name": "amount",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "revenue_entries",
+      "column_name": "kind",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "revenue_entries",
+      "column_name": "vehicle_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "revenue_entries",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "revenue_entries",
+      "column_name": "trip_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "revenue_entries",
+      "column_name": "booking_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "revenue_entries",
+      "column_name": "reversal_of",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "revenue_entries",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "revenue_entries",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "role_permissions",
+      "column_name": "role_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "role_permissions",
+      "column_name": "permission_code",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "role_permissions",
+      "column_name": "scope",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "roles",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "roles",
+      "column_name": "name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "roles",
+      "column_name": "reserved",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "roles",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "roles",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "roles",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "origin",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "destination",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "archived",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "routes",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "settlement_allocations",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "settlement_allocations",
+      "column_name": "cash_transaction_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "settlement_allocations",
+      "column_name": "revenue_entry_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "settlement_allocations",
+      "column_name": "expense_entry_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "settlement_allocations",
+      "column_name": "amount",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_expense_lines",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_expense_lines",
+      "column_name": "trip_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_expense_lines",
+      "column_name": "category",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_expense_lines",
+      "column_name": "business_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_expense_lines",
+      "column_name": "amount",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_expense_lines",
+      "column_name": "description",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_financials",
+      "column_name": "trip_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_financials",
+      "column_name": "fare",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_status_history",
+      "column_name": "id",
+      "data_type": "bigint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_status_history",
+      "column_name": "trip_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_status_history",
+      "column_name": "state",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_status_history",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "trip_status_history",
+      "column_name": "actor_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trip_status_history",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "trip_number",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "business_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "vehicle_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "cycle_number",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "origin",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "destination",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "route_description",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "cargo",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "customer_reference",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "operational_state",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "financial_state",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "start_odometer",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "end_odometer",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "fuel_litres",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "fuel_basis",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "weight",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "weight_unit",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "remarks",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "trips",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "user_roles",
+      "column_name": "user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "user_roles",
+      "column_name": "role_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "user_vehicle_scopes",
+      "column_name": "user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "user_vehicle_scopes",
+      "column_name": "vehicle_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "vehicle_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "driver_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "started_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "ended_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "remarks",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "previous_assignment_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "transfer_date",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicle_driver_assignments",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicle_financials",
+      "column_name": "vehicle_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicle_financials",
+      "column_name": "purchase_price",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "registration",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "manufacturer",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "model",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "owner_company_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "vehicle_class",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "purchase_date",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "opening_odometer",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "current_odometer",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "status",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "service_interval_km",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "fuel_target",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "document_expiry",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "remarks",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "purchase_year",
+      "data_type": "integer",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "major_maintenance_work",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "address",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "permit_expiry",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "insurance_expiry",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "archive_previous",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    }
+  ],
+  "functions": [
+    {
+      "name": "accrue_earning",
+      "args": "p_driver uuid, p_date date, p_kind text, p_amount numeric, p_rule text, p_key uuid",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "approve_booking",
+      "args": "p_id uuid, p_version integer, p_key uuid",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "approve_maintenance",
+      "args": "p_id uuid, p_version integer, p_key uuid",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "archive_form_record",
+      "args": "p_resource text, p_id uuid, p_version integer, p_reason text",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "assign_driver",
+      "args": "p_vehicle uuid, p_driver uuid, p_reason text",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "begin_user_provisioning",
+      "args": "p_email text, p_name text, p_role uuid",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "close_period",
+      "args": "p_period uuid, p_version integer, p_reason text",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "commit_import",
+      "args": "p_batch uuid",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "complete_form_trip",
+      "args": "p_id uuid, p_version integer",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "create_period",
+      "args": "p_name text, p_start date, p_end date",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "custom_field_catalog",
+      "args": "p_resource text, p_archived boolean DEFAULT false",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "dashboard",
+      "args": "p_from date, p_to date, p_basis text DEFAULT 'measured'::text, p_min_distance numeric DEFAULT 100",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "delete_attachment_state",
+      "args": "p_id uuid, p_finish boolean",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "driver_statement",
+      "args": "p_driver uuid",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "driver_vehicle_history",
+      "args": "p_driver uuid, p_page integer DEFAULT 1, p_limit integer DEFAULT 25",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "expense_action",
+      "args": "p_id uuid, p_action text, p_version integer, p_reason text, p_key uuid",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "export_records",
+      "args": "p_resource text, p_from date DEFAULT NULL::date, p_to date DEFAULT NULL::date, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "finalize_attachment",
+      "args": "p_id uuid",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "form_export",
+      "args": "p_resource text, p_from date, p_to date, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "form_record",
+      "args": "p_resource text, p_id uuid, p_from date, p_to date",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "form_record_before_lifecycle",
+      "args": "p_resource text, p_id uuid, p_from date, p_to date",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "form_register",
+      "args": "p_resource text, p_from date, p_to date, p_page integer DEFAULT 1, p_limit integer DEFAULT 25, p_search text DEFAULT ''::text, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid, p_status text DEFAULT ''::text, p_sort text DEFAULT 'name'::text, p_direction text DEFAULT 'asc'::text, p_include_archived boolean DEFAULT false",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "list_records",
+      "args": "p_resource text, p_search text DEFAULT ''::text, p_page integer DEFAULT 1, p_limit integer DEFAULT 25, p_from date DEFAULT NULL::date, p_to date DEFAULT NULL::date, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid, p_include_archived boolean DEFAULT false",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "list_records_before_lifecycle",
+      "args": "p_resource text, p_search text DEFAULT ''::text, p_page integer DEFAULT 1, p_limit integer DEFAULT 25, p_from date DEFAULT NULL::date, p_to date DEFAULT NULL::date, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "loan_transaction",
+      "args": "p_loan uuid, p_driver uuid, p_date date, p_kind text, p_amount numeric, p_reference text, p_due date, p_key uuid",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "mark_notification_read",
+      "args": "p_id uuid",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "monthly_accounts",
+      "args": "p_from date, p_to date, p_basis text DEFAULT 'measured'::text",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "my_access",
+      "args": "",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "notification_center",
+      "args": "p_status text DEFAULT 'all'::text, p_page integer DEFAULT 1",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "prepare_import",
+      "args": "p_resource text, p_reference text, p_rows jsonb",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "print_templates",
+      "args": "",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "reconcile_alerts",
+      "args": "",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "record_lifecycle_action",
+      "args": "p_resource text, p_id text, p_action text, p_version integer, p_reason text, p_token text DEFAULT NULL::text, p_confirmation text DEFAULT NULL::text",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "record_lifecycle_list",
+      "args": "p_resource text, p_state text DEFAULT 'active'::text, p_page integer DEFAULT 1, p_search text DEFAULT ''::text",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "record_lifecycle_preview",
+      "args": "p_resource text, p_id text",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "reference_dataset",
+      "args": "p_kind text, p_from date, p_to date, p_vehicle uuid DEFAULT NULL::uuid, p_driver uuid DEFAULT NULL::uuid",
+      "returns": "jsonb",
+      "definer": false
+    },
+    {
+      "name": "refresh_alerts_after_change",
+      "args": "",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "reopen_period",
+      "args": "p_period uuid, p_version integer, p_reason text",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "reserve_attachment",
+      "args": "p_resource text, p_record uuid, p_name text, p_mime text, p_size bigint",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "revoke_my_sessions",
+      "args": "",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "save_alert_rule",
+      "args": "p_code text, p_enabled boolean, p_threshold numeric, p_version integer",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "save_booking",
+      "args": "p_data jsonb",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "save_business_settings",
+      "args": "p_data jsonb, p_version integer",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "save_company",
+      "args": "p_name text",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "save_custom_field",
+      "args": "p_id uuid, p_version integer, p_data jsonb",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "save_driver",
+      "args": "p_id uuid, p_version integer, p_data jsonb",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "save_driver_identity",
+      "args": "p_driver uuid, p_version integer, p_data jsonb",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "save_form",
+      "args": "p_resource text, p_id uuid, p_version integer, p_data jsonb, p_identity_version integer DEFAULT NULL::integer, p_assignment uuid DEFAULT NULL::uuid",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "save_maintenance",
+      "args": "p_id uuid, p_version integer, p_data jsonb, p_items jsonb, p_oil jsonb",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "save_office_expense",
+      "args": "p_id uuid, p_version integer, p_data jsonb",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "save_print_template",
+      "args": "p_kind text, p_version integer, p_orientation text, p_signatures text[]",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "save_role",
+      "args": "p_id uuid, p_name text, p_version integer, p_grants jsonb",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "save_route",
+      "args": "p_id uuid, p_version integer, p_origin text, p_destination text, p_archived boolean DEFAULT false",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "save_trip",
+      "args": "p_id uuid, p_version integer, p_data jsonb, p_lines jsonb",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "save_vehicle",
+      "args": "p_id uuid, p_version integer, p_data jsonb",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "server_admin_reset",
+      "args": "p_user uuid, p_email text, p_stage text",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "server_bootstrap_begin",
+      "args": "p_email text",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "server_deletion_jobs",
+      "args": "",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "server_finish_deletion_job",
+      "args": "p_id uuid",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "server_orphan_candidates",
+      "args": "",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "server_orphan_finish",
+      "args": "p_id uuid",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "server_provision_finish",
+      "args": "p_task uuid, p_user uuid",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "server_reconcile_alerts",
+      "args": "",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "server_session_claim",
+      "args": "p_hash text, p_version integer, p_owner uuid",
+      "returns": "boolean",
+      "definer": true
+    },
+    {
+      "name": "server_session_create",
+      "args": "p_hash text, p_user uuid, p_auth_session uuid, p_credentials text",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "server_session_read",
+      "args": "p_hash text",
+      "returns": "jsonb",
+      "definer": true
+    },
+    {
+      "name": "server_session_revoke",
+      "args": "p_hash text",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "server_session_rotate",
+      "args": "p_hash text, p_version integer, p_owner uuid, p_credentials text",
+      "returns": "boolean",
+      "definer": true
+    },
+    {
+      "name": "server_throttle",
+      "args": "p_key text, p_limit integer, p_seconds integer",
+      "returns": "boolean",
+      "definer": true
+    },
+    {
+      "name": "set_driver_duty",
+      "args": "p_driver uuid, p_on_duty boolean",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "set_driver_photo",
+      "args": "p_driver uuid, p_attachment uuid, p_version integer",
+      "returns": "integer",
+      "definer": true
+    },
+    {
+      "name": "set_user_access",
+      "args": "p_user uuid, p_active boolean, p_role uuid, p_version integer, p_reason text",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "set_vehicle_scope",
+      "args": "p_user uuid, p_vehicle uuid, p_enabled boolean",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "settle_driver_payment",
+      "args": "p_driver uuid, p_date date, p_reference text, p_allocations jsonb, p_key uuid",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "transfer_driver",
+      "args": "p_driver uuid, p_vehicle uuid, p_date date, p_reason text, p_assignment uuid",
+      "returns": "uuid",
+      "definer": true
+    },
+    {
+      "name": "trip_action",
+      "args": "p_trip uuid, p_action text, p_version integer, p_reason text, p_key uuid",
+      "returns": "void",
+      "definer": true
+    },
+    {
+      "name": "trip_finance",
+      "args": "p_trip uuid",
+      "returns": "jsonb",
+      "definer": true
+    }
+  ],
+  "policies": [
+    {
+      "tablename": "accounting_periods",
+      "policyname": "periods_read",
+      "cmd": "SELECT",
+      "qual": "private.active_session()"
+    },
+    {
+      "tablename": "alert_rules",
+      "policyname": "rules_read",
+      "cmd": "SELECT",
+      "qual": "private.can('settings.manage'::text)"
+    },
+    {
+      "tablename": "app_users",
+      "policyname": "users_read",
+      "cmd": "SELECT",
+      "qual": "(private.can('users.view'::text) OR ((id = auth.uid()) AND private.active_session()))"
+    },
+    {
+      "tablename": "attachments",
+      "policyname": "attachment_read",
+      "cmd": "SELECT",
+      "qual": "((state = ANY (ARRAY['ready'::text, 'deleting'::text])) AND private.can_attachment(id, 'view'::text))"
+    },
+    {
+      "tablename": "audit_logs",
+      "policyname": "audit_read",
+      "cmd": "SELECT",
+      "qual": "private.can('audit.view'::text)"
+    },
+    {
+      "tablename": "business_settings",
+      "policyname": "settings_read",
+      "cmd": "SELECT",
+      "qual": "private.active_session()"
+    },
+    {
+      "tablename": "cash_transactions",
+      "policyname": "cash_read",
+      "cmd": "SELECT",
+      "qual": "private.can('reports.financial.view'::text)"
+    },
+    {
+      "tablename": "companies",
+      "policyname": "companies_read",
+      "cmd": "SELECT",
+      "qual": "private.can('vehicles.view'::text, NULL::uuid, created_by)"
+    },
+    {
+      "tablename": "custom_field_definitions",
+      "policyname": "field_read",
+      "cmd": "SELECT",
+      "qual": "(private.can('settings.manage'::text) OR (private.has_capability((resource || '.view'::text)) AND (NOT (EXISTS ( SELECT 1\n   FROM unnest(custom_field_definitions.required_permissions) p(p)\n  WHERE (NOT private.has_capability(p.p)))))))"
+    },
+    {
+      "tablename": "custom_field_values",
+      "policyname": "custom_value_read",
+      "cmd": "SELECT",
+      "qual": "(private.record_permission(resource, record_id, (resource || '.view'::text)) AND (EXISTS ( SELECT 1\n   FROM custom_field_definitions f\n  WHERE ((f.id = custom_field_values.field_id) AND (f.resource = custom_field_values.resource) AND (NOT (EXISTS ( SELECT 1\n           FROM unnest(f.required_permissions) p(p)\n          WHERE (NOT private.record_permission(custom_field_values.resource, custom_field_values.record_id, p.p)))))))))"
+    },
+    {
+      "tablename": "driver_duty_sessions",
+      "policyname": "duty_read",
+      "cmd": "SELECT",
+      "qual": "private.can_driver('drivers.view'::text, driver_id, created_by)"
+    },
+    {
+      "tablename": "driver_earnings",
+      "policyname": "earnings_read",
+      "cmd": "SELECT",
+      "qual": "private.can_driver('payments.view'::text, driver_id, created_by)"
+    },
+    {
+      "tablename": "driver_identity_details",
+      "policyname": "driver_identity_read",
+      "cmd": "SELECT",
+      "qual": "private.can_driver('drivers.identity.view'::text, driver_id, NULL::uuid)"
+    },
+    {
+      "tablename": "driver_loan_transactions",
+      "policyname": "loan_transactions_read",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM driver_loans l\n  WHERE ((l.id = driver_loan_transactions.loan_id) AND private.can_driver('loans.view'::text, l.driver_id, l.created_by))))"
+    },
+    {
+      "tablename": "driver_loans",
+      "policyname": "loans_read",
+      "cmd": "SELECT",
+      "qual": "private.can_driver('loans.view'::text, driver_id, created_by)"
+    },
+    {
+      "tablename": "driver_payment_allocations",
+      "policyname": "payment_allocations_read",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM driver_payments p\n  WHERE ((p.id = driver_payment_allocations.payment_id) AND private.can_driver('payments.view'::text, p.driver_id, p.created_by))))"
+    },
+    {
+      "tablename": "driver_payments",
+      "policyname": "payments_read",
+      "cmd": "SELECT",
+      "qual": "private.can_driver('payments.view'::text, driver_id, created_by)"
+    },
+    {
+      "tablename": "drivers",
+      "policyname": "drivers_read",
+      "cmd": "SELECT",
+      "qual": "private.can_driver('drivers.view'::text, id, created_by)"
+    },
+    {
+      "tablename": "expense_categories",
+      "policyname": "categories_read",
+      "cmd": "SELECT",
+      "qual": "private.active_session()"
+    },
+    {
+      "tablename": "expense_entries",
+      "policyname": "expense_read",
+      "cmd": "SELECT",
+      "qual": "private.can('reports.financial.view'::text, vehicle_id, created_by)"
+    },
+    {
+      "tablename": "import_batches",
+      "policyname": "imports_read",
+      "cmd": "SELECT",
+      "qual": "((created_by = auth.uid()) AND private.can('imports.manage'::text))"
+    },
+    {
+      "tablename": "import_rows",
+      "policyname": "rows_read",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM import_batches b\n  WHERE ((b.id = import_rows.batch_id) AND (b.created_by = auth.uid()) AND private.can('imports.manage'::text))))"
+    },
+    {
+      "tablename": "job_runs",
+      "policyname": "jobs_read",
+      "cmd": "SELECT",
+      "qual": "private.can('settings.manage'::text)"
+    },
+    {
+      "tablename": "maintenance_categories",
+      "policyname": "maintenance_categories_read",
+      "cmd": "SELECT",
+      "qual": "private.active_session()"
+    },
+    {
+      "tablename": "maintenance_components",
+      "policyname": "component_read",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM maintenance_records m\n  WHERE ((m.id = maintenance_components.maintenance_id) AND private.can('maintenance.view'::text, m.vehicle_id, m.created_by))))"
+    },
+    {
+      "tablename": "maintenance_items",
+      "policyname": "maintenance_items_read",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM maintenance_records m\n  WHERE ((m.id = maintenance_items.maintenance_id) AND private.can('maintenance.view'::text, m.vehicle_id, m.created_by))))"
+    },
+    {
+      "tablename": "maintenance_records",
+      "policyname": "maintenance_read",
+      "cmd": "SELECT",
+      "qual": "private.can('maintenance.view'::text, vehicle_id, created_by)"
+    },
+    {
+      "tablename": "notification_reads",
+      "policyname": "reads_read",
+      "cmd": "SELECT",
+      "qual": "((user_id = auth.uid()) AND private.can_notification(notification_id))"
+    },
+    {
+      "tablename": "notifications",
+      "policyname": "alerts_read",
+      "cmd": "SELECT",
+      "qual": "private.can_notification(id)"
+    },
+    {
+      "tablename": "office_bookings",
+      "policyname": "bookings_read",
+      "cmd": "SELECT",
+      "qual": "private.can('bookings.view'::text, NULL::uuid, created_by)"
+    },
+    {
+      "tablename": "office_expenses",
+      "policyname": "office_expenses_read",
+      "cmd": "SELECT",
+      "qual": "private.can('expenses.view'::text, vehicle_id, created_by)"
+    },
+    {
+      "tablename": "oil_changes",
+      "policyname": "oil_read",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM maintenance_records m\n  WHERE ((m.id = oil_changes.maintenance_id) AND private.can('maintenance.view'::text, m.vehicle_id, m.created_by))))"
+    },
+    {
+      "tablename": "period_close_snapshots",
+      "policyname": "closes_read",
+      "cmd": "SELECT",
+      "qual": "private.can('reports.financial.view'::text)"
+    },
+    {
+      "tablename": "permissions",
+      "policyname": "permissions_read",
+      "cmd": "SELECT",
+      "qual": "private.can('roles.view'::text)"
+    },
+    {
+      "tablename": "print_template_settings",
+      "policyname": "print_setting_read",
+      "cmd": "SELECT",
+      "qual": "private.active_session()"
+    },
+    {
+      "tablename": "revenue_entries",
+      "policyname": "revenue_read",
+      "cmd": "SELECT",
+      "qual": "private.can('reports.financial.view'::text, vehicle_id, created_by)"
+    },
+    {
+      "tablename": "role_permissions",
+      "policyname": "role_permissions_read",
+      "cmd": "SELECT",
+      "qual": "private.can('roles.view'::text)"
+    },
+    {
+      "tablename": "roles",
+      "policyname": "roles_read",
+      "cmd": "SELECT",
+      "qual": "(private.can('roles.view'::text) OR private.can('users.create'::text) OR private.can('users.view'::text))"
+    },
+    {
+      "tablename": "routes",
+      "policyname": "routes_read",
+      "cmd": "SELECT",
+      "qual": "(private.has_capability('trips.view'::text) OR private.has_capability('bookings.view'::text))"
+    },
+    {
+      "tablename": "settlement_allocations",
+      "policyname": "settlements_read",
+      "cmd": "SELECT",
+      "qual": "private.can('reports.financial.view'::text)"
+    },
+    {
+      "tablename": "trip_expense_lines",
+      "policyname": "expense_lines_read",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM trips t\n  WHERE ((t.id = trip_expense_lines.trip_id) AND private.can('trips.finance.view'::text, t.vehicle_id, t.created_by))))"
+    },
+    {
+      "tablename": "trip_financials",
+      "policyname": "trip_finance_read",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM trips t\n  WHERE ((t.id = trip_financials.trip_id) AND private.can('trips.finance.view'::text, t.vehicle_id, t.created_by))))"
+    },
+    {
+      "tablename": "trip_status_history",
+      "policyname": "history_read",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM trips t\n  WHERE ((t.id = trip_status_history.trip_id) AND private.can('trips.view'::text, t.vehicle_id, t.created_by))))"
+    },
+    {
+      "tablename": "trips",
+      "policyname": "trips_read",
+      "cmd": "SELECT",
+      "qual": "private.can('trips.view'::text, vehicle_id, created_by)"
+    },
+    {
+      "tablename": "user_roles",
+      "policyname": "user_roles_read",
+      "cmd": "SELECT",
+      "qual": "private.can('users.view'::text)"
+    },
+    {
+      "tablename": "user_vehicle_scopes",
+      "policyname": "scopes_read",
+      "cmd": "SELECT",
+      "qual": "private.can('users.view'::text)"
+    },
+    {
+      "tablename": "vehicle_driver_assignments",
+      "policyname": "assignments_read",
+      "cmd": "SELECT",
+      "qual": "private.can('vehicles.view'::text, vehicle_id, created_by)"
+    },
+    {
+      "tablename": "vehicle_financials",
+      "policyname": "vehicle_financials_read",
+      "cmd": "SELECT",
+      "qual": "private.can('reports.financial.view'::text, vehicle_id)"
+    },
+    {
+      "tablename": "vehicles",
+      "policyname": "vehicles_read",
+      "cmd": "SELECT",
+      "qual": "private.can('vehicles.view'::text, id, created_by)"
+    }
+  ],
+  "grants": [
+    {
+      "role": "Accountant",
+      "permission_code": "accounts.close",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "accounts.create",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "accounts.reopen",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "accounts.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "alerts.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "bookings.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "bookings.create",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "bookings.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "drivers.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "expenses.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "expenses.create",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "expenses.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "expenses.void",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "loans.issue",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "loans.repay",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "loans.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "maintenance.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "maintenance.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "payments.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "payments.create",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "payments.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "reports.export",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "reports.financial.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "reports.operational.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "trips.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "trips.finance.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "trips.reject",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "trips.view",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "trips.void",
+      "scope": "all"
+    },
+    {
+      "role": "Accountant",
+      "permission_code": "vehicles.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "accounts.close",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "accounts.create",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "accounts.reopen",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "accounts.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "alerts.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "assignments.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "audit.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "bookings.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "bookings.create",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "bookings.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "documents.delete",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "documents.upload",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "documents.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "drivers.create",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "drivers.update",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "drivers.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "duty.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "expenses.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "expenses.create",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "expenses.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "expenses.void",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "imports.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "loans.issue",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "loans.repay",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "loans.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "maintenance.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "maintenance.create",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "maintenance.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "payments.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "payments.create",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "payments.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "reports.export",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "reports.financial.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "reports.operational.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "roles.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "settings.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "settings.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "trips.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "trips.create",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "trips.finance.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "trips.reject",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "trips.submit",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "trips.update",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "trips.update_own_draft",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "trips.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "trips.void",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "users.create",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "users.disable",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "users.view",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "vehicles.archive",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "vehicles.create",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "vehicles.update",
+      "scope": "all"
+    },
+    {
+      "role": "Admin",
+      "permission_code": "vehicles.view",
+      "scope": "all"
+    },
+    {
+      "role": "Data Entry",
+      "permission_code": "documents.upload",
+      "scope": "all"
+    },
+    {
+      "role": "Data Entry",
+      "permission_code": "documents.view",
+      "scope": "own"
+    },
+    {
+      "role": "Data Entry",
+      "permission_code": "drivers.view",
+      "scope": "all"
+    },
+    {
+      "role": "Data Entry",
+      "permission_code": "trips.create",
+      "scope": "own"
+    },
+    {
+      "role": "Data Entry",
+      "permission_code": "trips.finance.view",
+      "scope": "own"
+    },
+    {
+      "role": "Data Entry",
+      "permission_code": "trips.submit",
+      "scope": "own"
+    },
+    {
+      "role": "Data Entry",
+      "permission_code": "trips.update_own_draft",
+      "scope": "own"
+    },
+    {
+      "role": "Data Entry",
+      "permission_code": "trips.view",
+      "scope": "own"
+    },
+    {
+      "role": "Data Entry",
+      "permission_code": "vehicles.view",
+      "scope": "all"
+    },
+    {
+      "role": "Maintenance Manager",
+      "permission_code": "documents.upload",
+      "scope": "assigned"
+    },
+    {
+      "role": "Maintenance Manager",
+      "permission_code": "documents.view",
+      "scope": "assigned"
+    },
+    {
+      "role": "Maintenance Manager",
+      "permission_code": "maintenance.create",
+      "scope": "assigned"
+    },
+    {
+      "role": "Maintenance Manager",
+      "permission_code": "maintenance.view",
+      "scope": "assigned"
+    },
+    {
+      "role": "Maintenance Manager",
+      "permission_code": "vehicles.view",
+      "scope": "assigned"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "alerts.view",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "assignments.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "drivers.create",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "drivers.update",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "drivers.view",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "duty.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "maintenance.view",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "reports.operational.view",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "trips.create",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "trips.submit",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "trips.update",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "trips.view",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "vehicles.create",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "vehicles.update",
+      "scope": "all"
+    },
+    {
+      "role": "Operations Manager",
+      "permission_code": "vehicles.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "accounts.close",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "accounts.create",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "accounts.reopen",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "accounts.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "alerts.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "assignments.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "audit.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "bookings.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "bookings.create",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "bookings.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "documents.delete",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "documents.upload",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "documents.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "drivers.archive",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "drivers.create",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "drivers.documents.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "drivers.identity.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "drivers.identity.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "drivers.update",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "drivers.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "duty.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "expenses.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "expenses.create",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "expenses.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "expenses.void",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "imports.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "loans.issue",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "loans.repay",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "loans.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "maintenance.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "maintenance.create",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "maintenance.delete_draft",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "maintenance.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "payments.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "payments.create",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "payments.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "records.archive",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "records.delete",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "reports.export",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "reports.financial.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "reports.operational.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "roles.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "roles.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "settings.manage",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "settings.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "trips.approve",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "trips.create",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "trips.delete_draft",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "trips.finance.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "trips.reject",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "trips.submit",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "trips.update",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "trips.update_own_draft",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "trips.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "trips.void",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "users.create",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "users.disable",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "users.roles",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "users.view",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "vehicles.archive",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "vehicles.create",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "vehicles.update",
+      "scope": "all"
+    },
+    {
+      "role": "Super Admin",
+      "permission_code": "vehicles.view",
+      "scope": "all"
+    },
+    {
+      "role": "Viewer",
+      "permission_code": "drivers.view",
+      "scope": "all"
+    },
+    {
+      "role": "Viewer",
+      "permission_code": "reports.operational.view",
+      "scope": "all"
+    },
+    {
+      "role": "Viewer",
+      "permission_code": "trips.view",
+      "scope": "all"
+    },
+    {
+      "role": "Viewer",
+      "permission_code": "vehicles.view",
+      "scope": "all"
+    }
+  ]
+}

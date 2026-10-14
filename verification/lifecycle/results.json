@@ -1,0 +1,14 @@
+{
+  "release": "0.2.0",
+  "date": "2026-10-14",
+  "node": "24.19.0",
+  "tests": 83,
+  "failures": 0,
+  "migrations": 17,
+  "original_migrations_unchanged": 16,
+  "typecheck": "passed",
+  "lint": "passed",
+  "build": "passed",
+  "browser": "passed",
+  "external_services": "Not connected; test Auth/Storage schemas and provider responses only."
+}
